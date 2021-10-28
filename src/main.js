@@ -3,15 +3,34 @@ import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+//console.log(example, data);
 
 
-window.onload= function (){
+window.onload = function () {
     printNav();
+
 }
+let arrayNav = ["Champions", "Ranking","imagen", "Download", "News"];
 
 function printNav() {
-    var temp = document.getElementsByTagName("template")[0];
-    var clon = temp.content.cloneNode(true);
-    document.body.appendChild(clon);
-  }
+    let temp, item, a, i;
+    temp = document.getElementById("idTemplate");
+    //get the div element from the template:
+    item = temp.querySelector("ul");
+    //for each item in the array: 
+    for (i = 0; i < arrayNav.length; i++) {
+        //create elemnts li
+        a = document.createElement("li");
+        //Add data from the array:
+     
+        //(arrayNav[2]).innerHtml= <img src='./img/"+cards[rand][0]+"' />
+        a.textContent += arrayNav[i];
+        //append the new node wherever you like:
+        //document.temp2.appendChild(a);
+        item.appendChild(a);
+    }
+}
+
+/* function printFoot(){
+
+} */
