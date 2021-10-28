@@ -1,18 +1,22 @@
 import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
+import data from './data/lol/lol.js';
+// import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-//console.log(example, data);
+
+console.log(example, data);
 
 
 window.onload = function () {
     printNav();
+    printChampions();
+
 
 }
 let arrayNav = ["Champions", "Ranking","imagen", "Download", "News"];
 
 function printNav() {
+
     let temp, item, a,b, i;
     temp = document.getElementById("idTemplate");
     //get the div element from the template:
@@ -37,9 +41,13 @@ function printNav() {
         //document.temp2.appendChild(a);
         item.appendChild(a);
    
+
+
     }
 }
 
-/* function printFoot(){
 
-} */
+function printChampions(){
+  alert(data)
+}
+
