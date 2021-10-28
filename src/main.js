@@ -13,7 +13,7 @@ window.onload = function () {
 let arrayNav = ["Champions", "Ranking","imagen", "Download", "News"];
 
 function printNav() {
-    let temp, item, a, i;
+    let temp, item, a,b, i;
     temp = document.getElementById("idTemplate");
     //get the div element from the template:
     item = temp.querySelector("ul");
@@ -21,13 +21,22 @@ function printNav() {
     for (i = 0; i < arrayNav.length; i++) {
         //create elemnts li
         a = document.createElement("li");
-        //Add data from the array:
-     
-        //(arrayNav[2]).innerHtml= <img src='./img/"+cards[rand][0]+"' />
+    
+       if(arrayNav[i] == arrayNav[2]){
+          
+       b=document.createElement("img");
+       b.src= "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png";
+       console.log(b);
+       a = b;
+       
+    }else  
+     {
         a.textContent += arrayNav[i];
+    }
         //append the new node wherever you like:
         //document.temp2.appendChild(a);
         item.appendChild(a);
+   
     }
 }
 

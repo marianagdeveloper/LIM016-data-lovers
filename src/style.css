@@ -7,6 +7,10 @@ header {
     
  
   }
+  img{
+    padding-top: 5px;
+    width: 10%;
+  }
  
   nav ul {
     list-style: none;
