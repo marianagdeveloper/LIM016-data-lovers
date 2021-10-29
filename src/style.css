@@ -39,7 +39,7 @@ header{
   
   } 
   nav ul li a:hover {
-    color: goldenrod;
+    color: rgb(186,120,2);
     font-size: 14px;
   }
 
@@ -104,7 +104,7 @@ button {
   font-size: 18px;
 }
 button:hover {
-  opacity: 0.9;
+  background: #1988ff;
 }
 
 
