@@ -3,30 +3,13 @@
   margin:0;
   padding:0;
   }
-/* class section champions */
 
-/* .container{
-  background-size: cover;
-  background-image: url(http://www.plusgamingmagazine.com/wp-content/uploads/2020/07/LOL_PROMOART_4.jpg);
-  background-color: transparent;
-  width:100%;
-  height:800px; 
-
-} */
-.container{
-  width: 100%;
-  background: black;
-  margin: auto;
-}
+/*------ TagName HEADER and NAV (ul - li - a) -------*/
 header{
   width: 100%;
   height: 50px;
   background: black;
 }
-
-
-/*------ TagName HEADER and NAV (ul - li) -------*/
-
 
   nav ul {
     display: flex;
@@ -53,14 +36,14 @@ header{
     justify-content: space-between;
     text-transform: uppercase;
     padding: 20px 10px;
-   /*  margin-bottom: -20px; */
+  
   } 
   nav ul li a:hover {
     color: goldenrod;
     font-size: 14px;
   }
 
-  img{
+ li a > img{
     display: inline-block;
     margin: auto;
     width: 100px;
@@ -68,18 +51,60 @@ header{
   }
 
 /*   ----------------- end nav ----------------------- */
+/* ------------- class section champions -------------- */
+
 .sectionChampions{
   width: 100%;
   height: 800px;
   background-image:url(http://www.plusgamingmagazine.com/wp-content/uploads/2020/07/LOL_PROMOART_4.jpg) ;
   background-position: center;
   background-size: cover;
+  padding: 100px;
 
 }
 .champions{
-  height: 1000px;
-  width: 600px;
-/*   background-color: hotpink; */
+  display: flex;
+ 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0 ,0, 0.7);
   margin: auto;
-  padding-top: 30px;
+ padding-top: 40px;
+ justify-content: space-between;
+
+
 }
+/* ----------------------- */
+/* ------Cards Champions----------- */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+  width: 250px;
+   height:300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+   
+}
+.imagen{
+  width: 100%;
+  display:block;
+     height:250px;
+  }
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 15px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+

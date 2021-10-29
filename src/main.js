@@ -2,7 +2,7 @@ import { example } from './data.js';
 
 import data from './data/lol/lol.js';
 const dataGet = JSON.stringify(data);
-console.log(" " + dataGet);
+//console.log(" " + dataGet);
 let obj = {
 
     "data": {
@@ -81,7 +81,7 @@ let obj = {
 window.onload = function () {
     printNav();
     //printChampions();
-    printChampions(obj);
+    printChampions(dataGet);
 
 }
 let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
@@ -89,7 +89,7 @@ let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/up
 function printNav() {
 
     let temp, item, list, b, i, enlace;
-    temp = document.getElementById("idTemplate");
+    temp = document.getElementById("navDinamic");
     //get the div element from the template:
     item = temp.querySelector("ul");
     //for each item in the array: 
@@ -112,34 +112,35 @@ function printNav() {
     }
 }
 
-//// practicando kjnjnewc kjnwejnjew kjnjqnwd knknmklqdw kjnklqnmkwd mnkjlqnwldkqw lkjqnwld kqn wkjdnkqwld ,m kjlnjklqwd 
-// mnlkwejfnj knkjlnf nwlknef,m ,bkjenf, w,mejkf wef, 
-
-
 
 ///---------fin de la data
 
-let divChampions;
-
-divChampions = document.getElementById("divShowChampions");
+let divCard = document.getElementById("divCard");
 
 function printChampions(a) {
-
-    let aux = Object.values(a);
-    aux.map(c => {
-        console.log(aux);
-        console.log(aux[0]["Aatrox"]);
-
-        if ((aux[0]["Aatrox"]).id == "Aatrox") {
-
-            let imagen = (aux[0]["Aatrox"]).img;
-            let x = document.createElement("img");
-            divChampions.appendChild(x);
-            x.src = imagen;
-
+    let imagen;
+    let aatrox;
+    let aux = JSON.parse(a);
+    console.log(aux);
+    let array = Object.values(aux)
+    console.log(array)
+    console.log(array[3]["Aatrox"])
+    array.map(c => {
+        aatrox = array[3]["Aatrox"];
+        if (aatrox) {
+            console.log("dsfdsf");
+            imagen = (aatrox).splash;
         }
-
     });
 
+    let x = document.createElement("img");
+    divCard.appendChild(x);
+    x.setAttribute("class","imagen");
+    x.src = imagen;
+    let y = document.createElement("button");
+    divCard.appendChild(y);
+    console.log("nombre "+aatrox.id);
+    let text=document.createTextNode(aatrox.id)
+    y.appendChild(text);
 
 }
