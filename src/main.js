@@ -7,12 +7,24 @@ let arrayData = Object.values(aux);
 let champion;
 window.onload = function () {
     printNav();
-
+  //  recorrerData();
     printChampions(arrayData,"Aatrox");
     printChampions(arrayData,"Alistar");
     printChampions(arrayData,"Vladimir");
-    printChampions(arrayData,"Akali");
+    printChampions(arrayData,"Akali"); 
+    printChampions(arrayData,"Alistar");
+    printChampions(arrayData,"Vladimir");
+    printChampions(arrayData,"Akali"); 
+    printChampions(arrayData,"Aatrox");
+    printChampions(arrayData,"Akali"); 
+    printChampions(arrayData,"Alistar");
 }
+
+/* function recorrerData(){
+ 
+} */
+
+
 /* ---Create array Nav dinamic------ */
 let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
 /* ----Create function Nav dinamic --- */
@@ -45,22 +57,38 @@ function printNav() {
 ///---------End of function Nav -------
 /* ------------ Get Id div Cards ----- */
 
-let divCard = document.getElementById("divCard");
+let divChampion = document.getElementById("divShowChampions");
+
+
 /* --Create function PrintChampions in cards-- */
 function printChampions(arrayData,champion) {
     let imagen, varChampion;
     console.log("imprime",arrayData) 
     varChampion = arrayData[3][champion];
-    imagen = (varChampion.splash).toString();
+    imagen = varChampion.splash;
+    let cards = document.createElement("div");
+    divChampion.appendChild(cards);
+    cards.setAttribute("class","card");
+    let imgbox = document.createElement("div");
+    cards.appendChild(imgbox);
+    imgbox.setAttribute("class","img-box");
     let x = document.createElement("img");
-    divCard.appendChild(x);
+    imgbox.appendChild(x);
     x.setAttribute("class","imagen");
     x.src = imagen;
-    let y = document.createElement("button");
-    divCard.appendChild(y);
+    let conten = document.createElement("div");
+    cards.appendChild(conten);
+    conten.setAttribute("class","content");
+    let y = document.createElement("h2");
+    conten.appendChild(y);
     console.log("nombre "+varChampion.id);
     let text=document.createTextNode(varChampion.id);
     y.appendChild(text);
+    let p = document.createElement("p");
+    conten.appendChild(p);
+    console.log("texto "+varChampion.id);
+    let texto=document.createTextNode(varChampion.id);
+    p.appendChild(texto);
 }
 ///// esto es una prueba despues de comentar el map y ahora enviare parametros
 //// a comenxrarara aaaaaa !!!!

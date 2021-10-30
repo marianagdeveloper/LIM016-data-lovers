@@ -7,7 +7,7 @@
 /*------ TagName HEADER and NAV (ul - li - a) -------*/
 header{
   width: 100%;
-  height: 50px;
+  height: 70px;
   background: black;
 }
 
@@ -31,7 +31,7 @@ header{
   nav ul li a {
     display: inline-block; 
     color: #fff;
-    font-size: 12px;
+    font-size: 18px;
     text-decoration: none;
     justify-content: space-between;
     text-transform: uppercase;
@@ -40,71 +40,153 @@ header{
   } 
   nav ul li a:hover {
     color: rgb(186,120,2);
-    font-size: 14px;
+ 
   }
 
  li a > img{
     display: inline-block;
     margin: auto;
-    width: 100px;
-    margin-top: -15px;
+    width: 130px;
+    margin-top: -10px;
   }
 
 /*   ----------------- end nav ----------------------- */
 /* ------------- class section champions -------------- */
 
 .sectionChampions{
+ 
   width: 100%;
-  height: 800px;
+  height: 1000px;
   background-image:url(http://www.plusgamingmagazine.com/wp-content/uploads/2020/07/LOL_PROMOART_4.jpg) ;
   background-position: center;
   background-size: cover;
-  padding: 100px;
+  padding: 60px;
 
 }
-.champions{
-  display: flex;
- 
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0 ,0, 0.7);
+.search{
+  background-color: rgba(0,0 ,0, 0.9);
+  width: 95%;
+  height: 80px;
   margin: auto;
- padding-top: 40px;
- justify-content: space-between;
+  margin-top: -20px;
 
+}.champions {
+  background-color: #000000b3;
+  display: flex;
+  position: relative;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 95%;
+  height: 680px;
+  margin-top: -90px;
+  padding-top: 30px;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow-y: scroll;
+  background-color: rgba(0,0 ,0, 0.9);
 
 }
+
+
 /* ----------------------- */
 /* ------Cards Champions----------- */
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
-  width: 250px;
-   height:300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-   
+
+.champions .card {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  margin-bottom: 30px;
+  padding: 0;
+  height: 200px;
+ 
 }
-.imagen{
+
+.champions .card:hover {
+  -webkit-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
+  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+.champions .card .img-box {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 250px;
   width: 100%;
-  display:block;
-     height:250px;
-  }
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 15px;
-  color: white;
-  background-color: #000;
-  text-align: center;
+  height: auto;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   cursor: pointer;
+}
+
+.champions .card:hover .img-box {
+  opacity: 0.5;
+}
+
+.champions .card .img-box img {
   width: 100%;
-  font-size: 18px;
+  margin-bottom: 0px;
+
+  height: 200px;
 }
-button:hover {
-  background: #1988ff;
+
+.champions .card .content {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  bottom: -100%;
+  padding: 20px;
+  padding-top: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.champions .card:hover .content {
+  bottom: 0;
+  
+}
+
+.champions .card:nth-child(n) .content {
+  background: -webkit-gradient(linear, left bottom, left top, from(#0075F2), to(transparent));
+  background: -webkit-linear-gradient(bottom, #0075F2, transparent);
+  background: -o-linear-gradient(bottom, #0075F2, transparent);
+  background: linear-gradient(0deg, #0075F2, transparent);
+}
+
+.champions .card .content h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  color: #fff;
+  font-size: 20px;
 }
 
 
+.champions .card .content p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 15px;
+}
+
+/* ---- End card---- */
