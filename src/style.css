@@ -46,8 +46,8 @@ header{
  li a > img{
     display: inline-block;
     margin: auto;
-    width: 130px;
-    margin-top: -10px;
+    width: 180px;
+    margin-top: -15px;
   }
 
 /*   ----------------- end nav ----------------------- */
@@ -69,18 +69,44 @@ header{
   height: 80px;
   margin: auto;
   margin-top: -20px;
+  display: flex;
+  justify-content: right;
+  padding: 20px;
+}
+#inputSearch{
+width: 300px;
+height: 40px;
+padding: 5px;
+margin-left: 10px;
+margin-right: 10px;
+margin-bottom: 10px;
+background: #a2c7ee;
+font-size: 16px;
 
-}.champions {
+  }
+  #selectDificult{
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    margin-left: 10px;
+margin-bottom: 10px;
+background: #3386df;
+margin-right: 10px;
+color: white;
+  }
+
+.champions {
   background-color: #000000b3;
   display: flex;
   position: relative;
   top:50%;
-  left: 50%;
+  left: 57.4%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 80%;
   max-width: 95%;
   height: 680px;
-  margin-top: -90px;
+  margin-top: -100px;
   padding-top: 30px;
   justify-content: space-around;
   -webkit-box-align: center;
@@ -150,10 +176,10 @@ header{
 .champions .card .content {
   position: absolute;
   width: 100%;
-  height: 60%;
+  height: 100%;
   bottom: -100%;
-  padding: 20px;
-  padding-top: 50px;
+  padding: 10px;
+  padding-top:40px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
@@ -168,25 +194,27 @@ header{
 }
 
 .champions .card:nth-child(n) .content {
-  background: -webkit-gradient(linear, left bottom, left top, from(#0075F2), to(transparent));
-  background: -webkit-linear-gradient(bottom, #0075F2, transparent);
-  background: -o-linear-gradient(bottom, #0075F2, transparent);
-  background: linear-gradient(0deg, #0075F2, transparent);
+  background: -webkit-gradient(linear, left bottom, left top, from(#006fe6), to(transparent));
+  background: -webkit-linear-gradient(bottom, #006fe6, transparent);
+  background: -o-linear-gradient(bottom, #006fe6, transparent);
+  background: linear-gradient(0deg, #006fe6, transparent);
 }
 
 .champions .card .content h2 {
   margin: 0 0 10px;
   padding: 0;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 
 .champions .card .content p {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
+  text-align: center;
 }
 
 /* ---- End card---- */
