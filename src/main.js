@@ -1,32 +1,20 @@
 import { example } from './data.js';
-import data from './data/lol/lol.js';
 
-const dataGet = JSON.stringify(data);
-
-const aux = JSON.parse(dataGet);
-const arrayData=(aux.data);
-console.log("imprime aca ",arrayData);
-let arraychampion= Object.values(arrayData)
-/* let arrayData = Object.values(aux);
-
-console.log("imprime en 4 elemen", arrayData); */
-let champion;
+let arraychampion = example();
 
 window.onload = function () {
     printNav();
-    //  recorrerData();
-    recorrerData();  
+    recorrerData();
 }
-function recorrerData(){ 
-    for(let i=0;i<arraychampion.length;i++){
-        printChampions(arraychampion[i]); 
+function recorrerData() {
+    for (let i = 0; i < arraychampion.length; i++) {
+        printChampions(arraychampion[i]);
     }
 }
 /* ---Create array Nav dinamic------ */
 let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
 /* ----Create function Nav dinamic --- */
 function printNav() {
-
     let temp, item, list, b, i, enlace;
     temp = document.getElementById("navDinamic");
     //get the div element from the template:
@@ -52,17 +40,11 @@ function printNav() {
 }
 ///---------End of function Nav -------
 /* ------------ Get Id div Cards ----- */
-
 let divChampion = document.getElementById("divShowChampions");
-
 /* --Create function PrintChampions in cards-- */
 function printChampions(arraychampion) {
-    let imagen, varChampion;  
-    
-   /*  console.log("imprime aca funcion ", arraychampion);
-    console.log("imprime aca ", arraychampion); */
-    varChampion =arraychampion;
-    imagen = varChampion.splash;
+    let imagen;
+    imagen = arraychampion.splash;
     let cards = document.createElement("div");
     divChampion.appendChild(cards);
     cards.setAttribute("class", "card");
@@ -78,13 +60,12 @@ function printChampions(arraychampion) {
     conten.setAttribute("class", "content");
     let y = document.createElement("h2");
     conten.appendChild(y);
-    let text = document.createTextNode(varChampion.id);
+    let text = document.createTextNode(arraychampion.id);
     y.appendChild(text);
     let p = document.createElement("p");
     conten.appendChild(p);
-    let texto = document.createTextNode(varChampion.blurb);
+    let texto = document.createTextNode(arraychampion.blurb);
     p.appendChild(texto);
 }
-///// esto es una prueba despues de comentar el map y ahora enviare parametros
-//// a comenxrarara aaaaaa !!!!
-///// listtoooo
+//// acaaa estoy empezando de nuevooo
+/// esto es para regresarrr hasta donde estaba bien jujuju
