@@ -1,15 +1,15 @@
-import { example } from './data.js';
-
-let arraychampion = example();
+import { dataChampions } from './data.js';
+// listo funcion en data hecha
+let arraychampion = dataChampions();
 
 window.onload = function () {
     printNav();
     recorrerData();
 }
+//probando foreach listoo o
 function recorrerData() {
-    for (let i = 0; i < arraychampion.length; i++) {
-        printChampions(arraychampion[i]);
-    }
+
+    arraychampion.forEach(element =>  printChampions(element));
 }
 /* ---Create array Nav dinamic------ */
 let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
@@ -69,3 +69,4 @@ function printChampions(arraychampion) {
 }
 //// acaaa estoy empezando de nuevooo
 /// esto es para regresarrr hasta donde estaba bien jujuju
+// areglare estilos de roles

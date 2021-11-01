@@ -95,18 +95,29 @@ background: #3386df;
 margin-right: 10px;
 color: white;
   }
-
+ #rolChampion{
+  
+  position: relative;
+  width: 95%;
+  max-width: 95%;
+  height: 100px;
+  background-color: rgba(0,0 ,0, 0.9);
+ }
+ .containerChampionsRol{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: chartreuse;
+  width: 95%;
+  margin: auto;
+ }
 .champions {
   background-color: #000000b3;
   display: flex;
-  position: relative;
-  top:50%;
-  left: 57.4%;
-  transform: translate(-50%, -50%);
-  width: 80%;
+  width: 95%;
   max-width: 95%;
   height: 680px;
-  margin-top: -100px;
   padding-top: 30px;
   justify-content: space-around;
   -webkit-box-align: center;

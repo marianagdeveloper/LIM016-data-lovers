@@ -1,7 +1,7 @@
 // estas funciones son de ejemplo
 import data from './data/lol/lol.js';
 
-export const example = () => {
+export const dataChampions = () => {
   const dataGet = JSON.stringify(data);
   const aux = JSON.parse(dataGet);
   const arrayData = (aux.data);
