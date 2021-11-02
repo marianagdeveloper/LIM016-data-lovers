@@ -5,11 +5,12 @@ let arraychampion = dataChampions();
 window.onload = function () {
     printNav();
     recorrerData();
+    printButton();
 }
 //probando foreach listoo o
 function recorrerData() {
 
-    arraychampion.forEach(element =>  printChampions(element));
+    arraychampion.forEach(element => printChampions(element));
 }
 /* ---Create array Nav dinamic------ */
 let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
@@ -36,6 +37,25 @@ function printNav() {
         }
         list.appendChild(enlace);
         item.appendChild(list);
+    }
+}
+///---------End of function Nav -------
+/* ---Create array button rol------ */
+let arrayButton = ["Fighters", "Shooters", "Magicians", "Assassins", "Tanks", "Supports"];
+/* ----Create function Button rol dinamic --- */
+function printButton() {
+
+    let rolChampion, button, i;
+
+    rolChampion = document.getElementById("rolChampion");
+
+    for (i = 0; i < arrayButton.length; i++) {
+        button = document.createElement("button");
+        let textButton = document.createTextNode(arrayButton[i])
+        button.appendChild(textButton);
+        button.setAttribute("class", "btn third");
+       button.setAttribute("id","idRol"+arrayButton[i])
+        rolChampion.appendChild(button);
     }
 }
 ///---------End of function Nav -------
