@@ -244,7 +244,7 @@ color: white;
   position: absolute;
   width: 100%;
   height: 100%;
-  bottom: -100%;
+  bottom: -65%;
   padding: 10px;
   padding-top:40px;
   -webkit-box-sizing: border-box;
@@ -259,23 +259,21 @@ color: white;
   bottom: 0;
   
 }
-
 .champions .card:nth-child(n) .content {
-  background: -webkit-gradient(linear, left bottom, left top, from(#006fe6), to(transparent));
-  background: -webkit-linear-gradient(bottom, #006fe6, transparent);
-  background: -o-linear-gradient(bottom, #006fe6, transparent);
-  background: linear-gradient(0deg, #006fe6, transparent);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(109, 42, 42)), to(transparent));
+  background: -webkit-linear-gradient(bottom, black, transparent);
+  background: -o-linear-gradient(bottom, black );
+  background: linear-gradient(0deg, black, transparent);
 }
-
 .champions .card .content h2 {
-  margin: 0 0 10px;
-  padding: 0;
-  color: #fff;
+  margin: 0 0 10px; 
+  padding: 0;  
   font-size: 20px;
   text-transform: uppercase;
+  text-shadow: 2px 2px 2px blue;
+  color: #fff;
+
 }
-
-
 .champions .card .content p {
   margin: 10px;
   padding: 0;
@@ -290,6 +288,7 @@ color: white;
 
 .btn {
   width: 180px;
+  height: 60px;
   box-sizing: border-box;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -297,17 +296,18 @@ color: white;
   background-color: transparent;
   border-radius: 0.6em;
   cursor: pointer;
+  /* 
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
-          align-self: center;
+          align-self: center; */
   font-size: 18px;
   line-height: 1;
-  margin: 20px;
-  padding: 1.2em 2.8em;
+  margin: auto;
+  padding: 20px;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -320,7 +320,11 @@ color: white;
 }
 .third {
   border-color: #3498db;
+  letter-spacing: 0.5px;
+  text-align: center !important;
+  font-weight: bold;
   color: #fff;
+  text-shadow: 2px 2px 2px blue;
   box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #006fe6;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;

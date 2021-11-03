@@ -3,7 +3,7 @@ import { dataChampions } from './data.js';
 // listo funcion en data hecha
 let arraychampion = dataChampions();
 let divChampion = document.getElementById("divShowChampions");
-let arrayButton = ["Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
+let arrayButton = ["All","Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let button, btnRol = [], textButton, cards, rolChampion;
 
 window.onload = function () {
@@ -112,7 +112,11 @@ function printButton() {
 function filter(btnRol) {
     
     divChampion.innerHTML = "";
+    if(btnRol.id=="All"){
+        recorrerData();
+    }else
     arraychampion.forEach(element => filterRol(element,btnRol));
+  
 
 
 }
@@ -127,6 +131,7 @@ function filterRol(arraychampion,btnRol) {
                 printChampions(arraychampion);
     
             } 
+
             
         }
     }
