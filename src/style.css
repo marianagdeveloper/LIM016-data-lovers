@@ -5,6 +5,7 @@
   font-family: 'Flamenco', cursive;
  
   }
+
 /* ----- style scrollbar div champions----- */
   .champions::-webkit-scrollbar-track
   {
@@ -38,6 +39,7 @@ header{
   height: 70px;
   background: black;
 }
+
 
   nav ul {
     display: flex;
