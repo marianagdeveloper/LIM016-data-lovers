@@ -30,23 +30,20 @@ function printNav() {
     for (i = 0; i < arrayNav.length; i++) {
         //create elemnts li
 
-        a = document.createElement("li");
-    
-       if(arrayNav[i] == arrayNav[2]){
-          
-       b=document.createElement("img");
-       b.src= "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png";
-       console.log(b);
-       a = b;
-       
-    }else  
-     {
-        a.textContent += arrayNav[i];
-    }
-        //append the new node wherever you like:
-        //document.temp2.appendChild(a);
-        item.appendChild(a);
-   
+        list = document.createElement("li");
+        enlace = document.createElement("a");
+        enlace.href = "#";
+        if (arrayNav[i] == arrayNav[2]) {
+            b = document.createElement("img");
+            enlace.appendChild(b);
+            b.src = arrayNav[2].toString();
+            enlace.href = "#";
+            // console.log(b);
+        } else {
+            enlace.textContent += arrayNav[i].toString();
+        }
+        list.appendChild(enlace);
+        item.appendChild(list);
 
     }
 }
@@ -87,6 +84,7 @@ function printChampions(arraychampion) {
 /* ----Create function Button rol dinamic --- */
 function printButton() {
     let i;
+
 
     rolChampion = document.getElementById("rolChampion");
 
