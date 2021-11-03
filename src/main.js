@@ -1,6 +1,9 @@
 import { dataChampions } from './data.js';
 // listo funcion en data hecha
 let arraychampion = dataChampions();
+let divChampion = document.getElementById("divShowChampions");
+let arrayButton = ["Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
+let button, btnRol = [], textButton, cards, rolChampion;
 
 window.onload = function () {
     printNav();
@@ -9,7 +12,6 @@ window.onload = function () {
 }
 //probando foreach listoo o
 function recorrerData() {
-
     arraychampion.forEach(element => printChampions(element));
 }
 /* ---Create array Nav dinamic------ */
@@ -40,32 +42,14 @@ function printNav() {
     }
 }
 ///---------End of function Nav -------
-/* ---Create array button rol------ */
-let arrayButton = ["Fighters", "Shooters", "Magicians", "Assassins", "Tanks", "Supports"];
-/* ----Create function Button rol dinamic --- */
-function printButton() {
 
-    let rolChampion, button, i;
 
-    rolChampion = document.getElementById("rolChampion");
-
-    for (i = 0; i < arrayButton.length; i++) {
-        button = document.createElement("button");
-        let textButton = document.createTextNode(arrayButton[i])
-        button.appendChild(textButton);
-        button.setAttribute("class", "btn third");
-       button.setAttribute("id","idRol"+arrayButton[i])
-        rolChampion.appendChild(button);
-    }
-}
-///---------End of function Nav -------
-/* ------------ Get Id div Cards ----- */
-let divChampion = document.getElementById("divShowChampions");
 /* --Create function PrintChampions in cards-- */
 function printChampions(arraychampion) {
+    console.log(arraychampion);
     let imagen;
     imagen = arraychampion.splash;
-    let cards = document.createElement("div");
+    cards = document.createElement("div");
     divChampion.appendChild(cards);
     cards.setAttribute("class", "card");
     let imgbox = document.createElement("div");
@@ -87,6 +71,56 @@ function printChampions(arraychampion) {
     let texto = document.createTextNode(arraychampion.blurb);
     p.appendChild(texto);
 }
+
 //// acaaa estoy empezando de nuevooo
-/// esto es para regresarrr hasta donde estaba bien jujuju
-// areglare estilos de roles
+
+/* ----Create function Button rol dinamic --- */
+function printButton() {
+    let i;
+
+    rolChampion = document.getElementById("rolChampion");
+
+    for (i = 0; i < arrayButton.length; i++) {
+        button = document.createElement("button");
+        textButton = document.createTextNode(arrayButton[i])
+        button.appendChild(textButton);
+        rolChampion.appendChild(button);
+        button.setAttribute("class", "btn third");
+        button.setAttribute('id', (arrayButton[i]));
+
+        btnRol[i] = document.getElementById(arrayButton[i]);
+    
+     
+}
+    for(let i=0;i<btnRol.length;i++){
+        btnRol[i].addEventListener('click',function() {
+            filter(btnRol[i]);
+            
+        });
+    }
+ 
+}
+/* ----Create function filter eventlistener --- */
+function filter(btnRol) {
+    
+    divChampion.innerHTML = "";
+    arraychampion.forEach(element => filterRol(element,btnRol));
+
+}
+/* ----Create function filterRol call filter --- */
+function filterRol(arraychampion,btnRol) {
+ 
+            for (let i = 0; i < (arraychampion.tags).length; i++) {
+      
+            if(arraychampion.tags[i] == btnRol.id) {
+
+                printChampions(arraychampion);
+    
+            } 
+            
+        }
+    }
+   ///khbefhiweb kjnfnwekjnfwe  kmnkmn
+///---------End of function Print Button -------<<
+
+
