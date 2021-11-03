@@ -1,42 +1,431 @@
-header {
-    background: black;
-    width: 100%;
-    position: sticky;
-    z-index: 100;
-    height: 80px;
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: 'Flamenco', cursive;
+ 
+  }
+
+/* ----- style scrollbar div champions----- */
+  .champions::-webkit-scrollbar-track
+  {
+    box-shadow: inset 0 0 6px rgba(133, 163, 209, 0.8);
+    border-radius: 10px;
+  }  
+  .champions::-webkit-scrollbar
+  {
     
- 
+    width: 18px;
+    background-color: rgba(0,0,0,0.3);
+  }  
+  .champions::-webkit-scrollbar-thumb
+  {
+  
+    border-radius: 10px;
+    height: 120px;
+    background-image: -webkit-gradient(linear,
+                       left bottom,
+                       left top,
+                       color-stop(0.44, rgb(122,153,217)),
+                       color-stop(0.72, rgb(73,125,189)),
+                       color-stop(0.86, rgb(28,58,148)));
   }
+  
+/* ----- End scrollbar div champions----- */
 
-  img{
-    padding-top: 5px;
-    width: 10%;
-  }
+/*------ TagName HEADER and NAV (ul - li - a) -------*/
+header{
+  width: 100%;
+  height: 70px;
+  background: black;
+}
 
- 
+
   nav ul {
-    list-style: none;
-    overflow: hidden;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
   
   }
   nav ul li {
     font-family: sans-serif;
-    font-size: 14px;
+   
     display: inline-block;
-  /*   justify-content: space-between; */
+   justify-content: space-between;
     color: #fff;
-    padding: 30px;
-  
-
   }
+
   nav ul li a {
     display: inline-block; 
     color: #fff;
+    font-size: 12px;
     text-decoration: none;
     justify-content: space-between;
-    padding-left: 230px;
-    padding-top: 30px;
+    text-transform: uppercase;
+    padding: 20px 10px;
+  
+  } 
+  nav ul li a:hover {
+    color: rgb(165, 218, 230);
+ 
+  }
+
+ li a > img{
+  /*   display: inline-block; */
+    display: none;
+    margin: auto;
+    width: 120px;
+    margin-top: -10px;
+  }
+
+ 
+  
+/*     @media all and (min-width:300px){
+      li a > img{
+     
+       display: none;
+      }
+      nav ul li a {
+      
+        font-size: 12px;    
+      
+      } 
+  } */
+
+/*   ----------------- end nav ----------------------- */
+/* ------------- class section champions -------------- */
+
+.sectionChampions{
+ 
+  width: 100%;
+  height: 1500px;
+  background-image:url(https://fondosmil.com/fondo/5089.jpg) ;
+  background-position: center;
+  background-size: cover;
+  padding: 60px;
+
+}
+.sectionChampions2{
+  background: url(  http://www.plusgamingmagazine.com/wp-content/uploads/2020/07/LOL_PROMOART_4.jpg
+  );
+  width: 100%;
+  height: 1000px;
+  background-position: center;
+  background-size: cover;
+  
+}
+article{
+  background-color: rgba(0,0 ,0, 0.9);
+  width: 100%;
+  height: 100px;
+}
+
+.search{
+  background-color: rgba(0,0 ,0, 0.9);
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  margin-top: -20px;
+  display: flex;
+  justify-content: right;
+  padding: 20px;
+
+}
+#inputSearch{
+width: 150px;
+
+height: 40px; 
+font-family: sans-serif;
+padding: 5px;
+margin-left: 10px;
+margin-right: 10px;
+margin-bottom: 10px;
+background: #a2c7ee;
+font-size: 16px;
 
   }
+  #selectDificult{
+    font-family: sans-serif;
+
+    display:none;
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+    padding: 5px;
+    margin-left: 10px;
+margin-bottom: 10px;
+background: #3386df;
+margin-right: 10px;
+color: white;
+  }
+ #rolChampion{
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width:100%;
+  background-color: rgba(0,0 ,0, 0.9);
+ }
+ .containerChampionsRol{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width:100%;
+  margin: auto;
+  
+ }
+.champions {
+  background-color: #000000b3;
+  display: flex;
+  width: 100%;
+  max-width:100%;
+  height: 770px;
+  padding-top: 30px;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+ 
+  background-color: rgba(0,0 ,0, 0.9);
+
+}
+/* ----------------------- */
+/* ------Cards Champions----------- */
+
+
+.champions .card {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  margin-bottom: 30px;
+  margin: 20px 15px;
+  height: 200px;
+ 
+}
+
+.champions .card:hover {
+  -webkit-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
+  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.champions .card .img-box {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.champions .card:hover .img-box {
+  opacity: 0.5;
+}
+
+.champions .card .img-box img {
+  width: 100%;
+  margin-bottom: 0px;
+
+  height: 200px;
+}
+
+.champions .card .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  padding: 10px;
+  padding-top:40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.champions .card:hover .content {
+  bottom: 0;
+  
+}
+
+.champions .card:nth-child(n) .content {
+  background: -webkit-gradient(linear, left bottom, left top, from(#006fe6), to(transparent));
+  background: -webkit-linear-gradient(bottom, #006fe6, transparent);
+  background: -o-linear-gradient(bottom, #006fe6, transparent);
+  background: linear-gradient(0deg, #006fe6, transparent);
+}
+
+.champions .card .content h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+
+.champions .card .content p {
+  margin: 10px;
+  padding: 0;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* ---- End card---- */
+/* ---- Efect bnt rol---- */
+
+.btn {
+  width: 180px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border-radius: 0.6em;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 18px;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Flamenco', cursive;
+
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+.third {
+  border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #006fe6;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.third:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
+}
+
+/* ------ aplicate medias queries----- */
+
+@media all and (min-width:200px){
+  .h2Champions{
+    display: none;
+  }
+  #rolChampion{
+    display: none;
+  }
+}
+
+@media all and (min-width:600px){
+ 
+  #rolChampion{   
+    
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width:100%;
+  background-color: rgba(0,0 ,0, 0.9);
+  }
+  li a > img{
+     display: inline-block; 
+    width: 120px;
+    margin-top: -10px;
+  }
+  nav ul li a {
+  
+    font-size: 14px;    
+    } 
+    #inputSearch{
+
+      width: 300px;
+   }
+   #selectDificult{
+    font-size: 16px;
+    width: 200px;
+  }
+  #selectDificult{
+    display:block;
+  }
+  .sectionChampions{
+    height: 1200px;
+  }
+  .h2Champions{
+    display: none;
+    margin-top: 10px;
+  }
+
+ 
+}
+
+@media all and (min-width:1200px){
+  #rolChampion{
+    width: 20%;
+    padding-left: 10px;
+  }
+  .champions{
+    width: 80%;
+  }
+  li a > img{
+  
+    width: 150px;
+  
+  }
+  nav ul li a {
+  
+    font-size:20px;    
+  
+  } 
+  .sectionChampions{
+    height: 1000px;
+  }
+.h2Champions{
+  display: block;
+  color: #a2c7ee;
+ margin-right: 500px; 
+}
+}
+/* ultima modificacin solucionar la linea webkit 11 */
+h4{
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 30px;
+  letter-spacing: 1.5px;
+}
