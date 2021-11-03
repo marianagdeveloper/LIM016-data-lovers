@@ -44,7 +44,7 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1000px;
+    max-width: 1300px;
     margin: auto;
   
   }
@@ -79,27 +79,13 @@ header{
     margin-top: -10px;
   }
 
- 
-  
-/*     @media all and (min-width:300px){
-      li a > img{
-     
-       display: none;
-      }
-      nav ul li a {
-      
-        font-size: 12px;    
-      
-      } 
-  } */
-
 /*   ----------------- end nav ----------------------- */
 /* ------------- class section champions -------------- */
 
 .sectionChampions{
  
   width: 100%;
-  height: 1500px;
+  height: 1000px;
   background-image:url(https://fondosmil.com/fondo/5089.jpg) ;
   background-position: center;
   background-size: cover;
@@ -115,11 +101,7 @@ header{
   background-size: cover;
   
 }
-article{
-  background-color: rgba(0,0 ,0, 0.9);
-  width: 100%;
-  height: 100px;
-}
+
 
 .search{
   background-color: rgba(0,0 ,0, 0.9);
@@ -145,7 +127,7 @@ background: #a2c7ee;
 font-size: 16px;
 
   }
-  #selectDificult{
+#selectDificult{
     font-family: sans-serif;
 
     display:none;
@@ -337,6 +319,58 @@ color: white;
 .third:hover {
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
 }
+/* ------ styles two part----- */
+.banner{
+  background-color: rgba(0,0 ,0, 0.9);
+  width: 100%;
+  height: 150px;
+}
+h4{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 50px;
+  letter-spacing: 1.5px;
+}
+article{
+
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  margin-top: 80px; 
+  margin: auto;
+}
+.textArticle{
+  width: 100%;
+  padding: 100px;
+  color: white;
+  font-size: 24px;
+  font-family: flamenco;
+  letter-spacing: 1.2px;
+  line-height: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+  background-color: rgba(0,0 ,0, 0.9);
+}
+article > img{
+  display: block;
+  margin: auto;
+  width: 500px;
+}
+
+footer{
+  width: 100%;
+  height: 90px;
+  background: black;
+}
+.textFooter{
+  text-align: center;
+  color: white;
+  padding: 30px;
+  font-family: sans-serif;
+  letter-spacing: 1.2px;
+}
+
 
 /* ------ aplicate medias queries----- */
 
@@ -350,7 +384,7 @@ color: white;
 }
 
 @media all and (min-width:600px){
- 
+
   #rolChampion{   
     
   display: flex;
@@ -360,6 +394,7 @@ color: white;
   width: 100%;
   max-width:100%;
   background-color: rgba(0,0 ,0, 0.9);
+ 
   }
   li a > img{
      display: inline-block; 
@@ -388,7 +423,18 @@ color: white;
     display: none;
     margin-top: 10px;
   }
+  article{
+   
+  
+    max-width: 500px;
+    height: 500px;
+    margin: 150px;
+  }
+  .sectionChampions{
 
+    height: 1300px;  
+  
+  }
  
 }
 
@@ -396,6 +442,8 @@ color: white;
   #rolChampion{
     width: 20%;
     padding-left: 10px;
+    border-radius: 0 0 0 50px;
+
   }
   .champions{
     width: 80%;
@@ -407,23 +455,58 @@ color: white;
   }
   nav ul li a {
   
-    font-size:20px;    
+    font-size:22px;    
   
   } 
   .sectionChampions{
     height: 1000px;
+ 
   }
 .h2Champions{
   display: block;
   color: #a2c7ee;
  margin-right: 500px; 
 }
+article{
+ 
+  max-width: 1200px;
+  margin: 200px;
+  height: 550px;
+  margin: auto;
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+figure > img{
+  margin-top: 100px;
+  display: block;
+  margin: auto;
+  width: 500px;
+}
+.textArticle{
+  max-width: 500px;
+  padding: 100px;
+  color: white;
+  font-size: 24px;
+  font-family: flamenco;
+  letter-spacing: 1.2px;
+  line-height: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+  background-color: rgba(0,0 ,0, 0.9);
+  border-radius: 100px;
+  height: 550px;
+}
+figure{
+  border-radius: 400px;
+  background-color: rgba(0,0 ,0, 0.9);
+  padding-top: 50px;
+}
+
+.search{
+  border-radius: 50px 0 0 0;
+
+}
 }
 /* ultima modificacin solucionar la linea webkit 11 */
-h4{
-  color: white;
-  font-size: 25px;
-  text-align: center;
-  padding-top: 30px;
-  letter-spacing: 1.5px;
-}
