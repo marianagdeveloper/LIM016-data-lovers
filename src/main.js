@@ -1,3 +1,4 @@
+
 import { dataChampions } from './data.js';
 // listo funcion en data hecha
 let arraychampion = dataChampions();
@@ -9,6 +10,7 @@ window.onload = function () {
     printNav();
     recorrerData();
     printButton();
+
 }
 //probando foreach listoo o
 function recorrerData() {
@@ -18,13 +20,16 @@ function recorrerData() {
 let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
 /* ----Create function Nav dinamic --- */
 function printNav() {
+
     let temp, item, list, b, i, enlace;
     temp = document.getElementById("navDinamic");
+
     //get the div element from the template:
     item = temp.querySelector("ul");
     //for each item in the array: 
     for (i = 0; i < arrayNav.length; i++) {
         //create elemnts li
+
         list = document.createElement("li");
         enlace = document.createElement("a");
         enlace.href = "#";
@@ -39,6 +44,7 @@ function printNav() {
         }
         list.appendChild(enlace);
         item.appendChild(list);
+
     }
 }
 ///---------End of function Nav -------
@@ -74,9 +80,11 @@ function printChampions(arraychampion) {
 
 //// acaaa estoy empezando de nuevooo
 
+
 /* ----Create function Button rol dinamic --- */
 function printButton() {
     let i;
+
 
     rolChampion = document.getElementById("rolChampion");
 
@@ -106,7 +114,9 @@ function filter(btnRol) {
     divChampion.innerHTML = "";
     arraychampion.forEach(element => filterRol(element,btnRol));
 
+
 }
+
 /* ----Create function filterRol call filter --- */
 function filterRol(arraychampion,btnRol) {
  
@@ -122,5 +132,6 @@ function filterRol(arraychampion,btnRol) {
     }
    ///khbefhiweb kjnfnwekjnfwe  kmnkmn
 ///---------End of function Print Button -------<<
+
 
 

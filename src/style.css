@@ -5,6 +5,7 @@
   font-family: 'Flamenco', cursive;
  
   }
+
 /* ----- style scrollbar div champions----- */
   .champions::-webkit-scrollbar-track
   {
@@ -39,11 +40,13 @@ header{
   background: black;
 }
 
+
   nav ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
     max-width: 1300px;
     margin: auto;
   
@@ -79,13 +82,16 @@ header{
     margin-top: -10px;
   }
 
+
 /*   ----------------- end nav ----------------------- */
 /* ------------- class section champions -------------- */
 
 .sectionChampions{
  
   width: 100%;
+
   height: 1000px;
+
   background-image:url(https://fondosmil.com/fondo/5089.jpg) ;
   background-position: center;
   background-size: cover;
@@ -127,7 +133,9 @@ background: #a2c7ee;
 font-size: 16px;
 
   }
+
 #selectDificult{
+
     font-family: sans-serif;
 
     display:none;
@@ -195,6 +203,7 @@ color: white;
   height: 200px;
  
 }
+
 
 .champions .card:hover {
   -webkit-transform: translateY(-20px);
