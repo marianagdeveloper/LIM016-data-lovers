@@ -5,19 +5,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
   <title>League of Legends</title>
-  <link rel="icon"
-    href="https://cdn.streamloots.com/uploads/6012e82a3ad53200344d53d1/56203b76-da52-4dd9-ad3b-9826a6ebdead.png" />
+  <link rel="icon"  href="https://cdn.streamloots.com/uploads/6012e82a3ad53200344d53d1/56203b76-da52-4dd9-ad3b-9826a6ebdead.png" />
   <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header>
+    
+    <input type="checkbox" id="btn-menu">
+    <label for="btn-menu"><img src="http://assets.stickpng.com/thumbs/588a64cdd06f6719692a2d0d.png" alt="">
+    </label>
     <div class="container">
+      
       <nav id="navDinamic">
         <ul>
           
         </ul>
+       
       </nav>
     </div>
 
@@ -27,6 +32,7 @@
     <div class="search">
       <h2 class="h2Champions">CHAMPIONS</h2>
       <input id="inputSearch" type="text" placeholder="Search">
+      <button class="btnSearch third">Search</button>
       <select name="" id="selectDificult">
         <option style="display: none;" selected>Dificult </option>
         <option value="facil">Low! </option>

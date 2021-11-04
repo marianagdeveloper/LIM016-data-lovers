@@ -95,7 +95,7 @@ header{
   background-image:url(https://fondosmil.com/fondo/5089.jpg) ;
   background-position: center;
   background-size: cover;
-  padding: 60px;
+  padding: 40px;
 
 }
 .sectionChampions2{
@@ -121,7 +121,7 @@ header{
 
 }
 #inputSearch{
-width: 150px;
+width: 100px;
 
 height: 40px; 
 font-family: sans-serif;
@@ -308,6 +308,9 @@ color: white;
   line-height: 1;
   margin: auto;
   padding: 20px;
+  margin-top: 20px;
+
+
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -331,6 +334,24 @@ color: white;
 }
 .third:hover {
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
+}
+.btnSearch{
+  width: 100px;
+  height: 40px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border-radius: 0.6em;
+  cursor: pointer;
+  font-size: 18px;
+  margin: auto;
+/*   padding: 20px; */
+}
+.btnSearch:hover, .btnSearch:focus {
+  color: #fff;
+  outline: 0;
 }
 /* ------ styles two part----- */
 .banner{
@@ -383,21 +404,197 @@ footer{
   font-family: sans-serif;
   letter-spacing: 1.2px;
 }
+.hide{
+  position: relative;
+  padding: 10px;
+  width: 40px;
+  background: black;
+  color: white;
+  cursor: pointer;
+display: none;
+}
 
+.hide > i > img{
+  display: block;
+  width: 30px;
+}
 
 /* ------ aplicate medias queries----- */
 
 @media all and (min-width:200px){
+  #btn-menu{
+    display: none;
+  }
+header{
+  height: 100px;
+  padding: 30px;
+  
+
+  /* z-index: 100; */
+}
+header label {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+ 
+
+}
+header label img {
+  display: block;
+  width: 40px;
+  
+ 
+ 
+}
+header label:hover{
+  cursor: pointer;
+  background: rgba(0,0,0,0.3);
+}
+nav ul{
+  flex-direction: column;
+}
+#navDinamic{
+  margin-left: -100%;
+  position: absolute;
+}
+
+  nav ul li  {
+  
+    width: 100%;
+    display: block;
+  } 
+  nav ul li:hover  {
+  
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
+  } 
+ 
+  #btn-menu:checked ~ .container > #navDinamic{
+    margin-left:-10%;
+    width: 580px;   
+    position: relative;
+    z-index: 100;
+    padding: 20px;
+    padding-left: 20px;
+    background: black;
+    border-radius: 20px;
+    
+    
+  }
+
+  #inputSearch{
+    width:150px;
+  }
   .h2Champions{
     display: none;
   }
   #rolChampion{
     display: none;
   }
+  h4{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
+    letter-spacing: 1.5px;
+  }
+  article{
+  
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+   /*  margin-top: 50px;  */
+    padding-top: 50px;
+    margin: auto;
+  }
+  .textArticle{
+    width: 100%;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: flamenco;
+  /*   letter-spacing: 1.2px; */
+   /*  line-height: 50px; */
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: rgba(0,0 ,0, 0.9);
+  }
+  figure > img{
+    display: block;
+    margin: auto;
+    width: 400px;
+    margin-bottom: 40px;
+  }
+
 }
 
 @media all and (min-width:600px){
+  #btn-menu:checked ~ .container > #navDinamic{
+    margin-left:0;
+    width: 100%;   
+    position: relative;
+    padding: 0px;
+   
+    border-radius: 0;  
+    height: 70px; 
+    
+  }
 
+  #navDinamic{
+    margin-left: 0;
+    margin: 0;
+    position: relative;
+  }
+  #btn-menu{
+    display: none;
+  }
+  
+  header{
+    height: 100px;
+    padding: 20px;
+    position: relative;
+  }
+  
+    nav ul li  {
+    
+      width: auto;
+      display: block;
+    } 
+    .hide{
+     display: none;
+    } 
+ 
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: auto;
+  
+  }
+  nav ul li {
+    font-family: sans-serif;
+   
+    display: inline-block;
+   justify-content: space-between;
+    color: #fff;
+  }
+
+  nav ul li a {
+    display: inline-block; 
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 20px 10px;
+  
+  } 
+  nav ul li:hover  {
+  
+    box-shadow: 0 0 0;
+  } 
   #rolChampion{   
     
   display: flex;
@@ -407,6 +604,7 @@ footer{
   width: 100%;
   max-width:100%;
   background-color: rgba(0,0 ,0, 0.9);
+  padding: 10px;
  
   }
   li a > img{
@@ -429,26 +627,28 @@ footer{
   #selectDificult{
     display:block;
   }
-  .sectionChampions{
-    height: 1200px;
-  }
+ 
   .h2Champions{
     display: none;
     margin-top: 10px;
   }
-  article{
-   
+  article{   
   
     max-width: 500px;
     height: 500px;
-    margin: 150px;
+    margin: 120px;
+
   }
   .sectionChampions{
 
-    height: 1300px;  
+    height: 1200px;  
   
   }
- 
+  header label {
+    display: none;
+    
+  
+  }
 }
 
 @media all and (min-width:1200px){
@@ -461,9 +661,11 @@ footer{
   .champions{
     width: 80%;
   }
+  
   li a > img{
   
     width: 150px;
+    margin-top: -20px;
   
   }
   nav ul li a {
