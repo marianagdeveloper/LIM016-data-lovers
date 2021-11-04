@@ -3,6 +3,9 @@ import { dataChampions } from './data.js';
 // listo funcion en data hecha
 let arraychampion = dataChampions();
 let divChampion = document.getElementById("divShowChampions");
+let inputSearch = document.getElementById("inputSearch");
+let btnSearch=document.getElementById("btnSearch");
+
 let arrayButton = ["All","Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let button, btnRol = [], textButton, cards, rolChampion;
 
@@ -137,6 +140,45 @@ function filterRol(arraychampion,btnRol) {
     }
    ///khbefhiweb kjnfnwekjnfwe  kmnkmn
 ///---------End of function Print Button -------<<
+//haciendo travesuras
+// uuhh uhuh 
+
+function recorrerData2() {
+  
+}
+
+let s;
+function filtrar(element,s) {
+    console.log("mili ",element);
+    divChampion.innerHTML="";
+
+    let texto=s;
+    let nombre=(element.name).toLowerCase();
+
+    console.log("mili ",nombre);
+
+    if(nombre.indexOf(texto) !== -1){
+        printChampions(element);
+        console.log("ff",element);        
+
+    }
+  
+   
+   if( divChampion.innerHTML==""){
+       divChampion.innerHTML="Campeon no encontrado"
+   }
+
+}
+
+inputSearch.addEventListener("keyup",function(){
+    let s =inputSearch.value.toLowerCase();
+    
+    arraychampion.forEach(element => filtrar(element,s));
+    console.log("ewfee ",arraychampion);
+   
+}
+);
+
 
 
 
