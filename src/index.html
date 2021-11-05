@@ -1,68 +1,90 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1.0"
+    />
+    <title>League of Legends</title>
+    <link
+      rel="icon"
+      href="https://cdn.streamloots.com/uploads/6012e82a3ad53200344d53d1/56203b76-da52-4dd9-ad3b-9826a6ebdead.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
-  <title>League of Legends</title>
-  <link rel="icon"  href="https://cdn.streamloots.com/uploads/6012e82a3ad53200344d53d1/56203b76-da52-4dd9-ad3b-9826a6ebdead.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <header>
-    
-    <input type="checkbox" id="btn-menu">
-    <label for="btn-menu"><img src="https://image.flaticon.com/icons/png/128/1215/1215141.png" alt="">
-    </label>
-    <div class="container">
-      
-      <nav id="navDinamic">
-        <ul>
-          
-        </ul>
-       
-      </nav>
-    </div>
-
-  </header>
-  <section class="sectionChampions">
-
-    <div class="search">
-      <h2 class="h2Champions">CHAMPIONS</h2>
-      <input id="inputSearch" type="text" placeholder="Search">
-      <button id="btnSearch" class="btnSearch third">Search</button>
-      <select name="" id="selectDificult">
-        <option style="display: none;" selected>Dificult </option>
-        <option value="facil">Low! </option>
-        <option value="media">Moderate! </option>
-        <option value="media">High! </option>
-      </select>
-    </div>
-    <div class="containerChampionsRol">
-      <div id="rolChampion">
+  <body>
+    <header>
+      <input type="checkbox" id="btn-menu" />
+      <label for="btn-menu"
+        ><img
+          src="https://image.flaticon.com/icons/png/128/1215/1215141.png"
+          alt=""
+        />
+      </label>
+      <div class="container">
+        <nav id="navDinamic">
+          <ul></ul>
+        </nav>
       </div>
-      <div class="champions" id="divShowChampions">
+    </header>
+    <section class="sectionChampions">
+      <div class="search">
+        <h2 class="h2Champions">CHAMPIONS</h2>
+        <input id="inputSearch" type="text" placeholder="Search" />
+        <button id="btnSearch" class="btnSearch third">Search</button>
+        <select name="" id="selectDificult">
+          <option style="display: none" selected>Dificult</option>
+          <option value="facil">Low!</option>
+          <option value="media">Moderate!</option>
+          <option value="media">High!</option>
+        </select>
+      </div>
+      <div class="containerChampionsRol">
+        <div id="rolChampion"></div>
+        <div class="champions" id="divShowChampions"></div>
+      </div>
+    </section>
+    <section class="sectionChampions2">
+      <div class="banner">
+        <h4>
+          . . . Customize your experience with skins for your favorite champions
+          . . .
+        </h4>
+      </div>
+      <article>
+        <p class="textArticle">
+          Lucha sobre un puente helado con tu equipo de campeones aleatorios y
+          carga hacia el nexo enemigo en este caótico pero divertidísimo modo
+          cinco contra cinco.
+        </p>
+        <figure>
+          <img
+            src="http://fc00.deviantart.net/fs70/f/2012/362/6/9/muay_thai_lee_sin_by_fazie69-d5phnzn.png"
+            alt=""
+          />
+        </figure>
+      </article>
+    </section>
+    <div class="modal-container" id="modal-container">
+      <div class="modal" id="modal">
+        <p class="close" id="close">X</p>
+        <img src="http://fc00.deviantart.net/fs70/f/2012/362/6/9/muay_thai_lee_sin_by_fazie69-d5phnzn.png" alt="">
+        <div class="modal-textos">
+        </div>
       </div>
     </div>
-  </section>
-  <section class="sectionChampions2">
-
-    <div class="banner"><h4>. . . Customize your experience with skins for your favorite champions . . .</h4></div>
-    <article>
-      <p class="textArticle"> Lucha sobre un puente helado con tu equipo de campeones aleatorios y carga hacia el nexo enemigo en este caótico pero divertidísimo modo cinco contra cinco. </p>
-      <figure><img src="http://fc00.deviantart.net/fs70/f/2012/362/6/9/muay_thai_lee_sin_by_fazie69-d5phnzn.png" alt=""> </figure>
-    </article>
-    
-   
-  </section>
-  <footer >
-    <p class="textFooter">Todos los derechos reservados ayayay © Copyrights 2021 Diseñado por M&M </p>
-  </footer>
-
-  <script src="main.js" type="module"></script>
-</body>
-<!-- por aca todo bien jujuj jujuj nujuju  -->
-
+    <footer>
+      <p class="textFooter">
+        Todos los derechos reservados ayayay © Copyrights 2021 Diseñado por M&M
+      </p>
+    </footer>
+    <script src="main.js" type="module"></script>
+  </body>
+  <!-- por aca todo bien jujuj jujuj nujuju  -->
 </html>
