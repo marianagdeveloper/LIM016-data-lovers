@@ -1,5 +1,6 @@
 
 import { dataChampions } from './data.js';
+
 // listo funcion en data hecha
 let arraychampion = dataChampions();
 console.log(arraychampion);
@@ -23,66 +24,139 @@ window.onload = function () {
 }
 //modal
 function printModal(champions) {
-   
+
     const containerModal = document.createElement("div");
-    containerModal.setAttribute("class","containerModal")
+    containerModal.setAttribute("class", "containerModal")
     modal.appendChild(containerModal);
 
-    const divNameRole= document.createElement("div");
-    divNameRole.setAttribute("class","divNameRole");
+    const divNameRole = document.createElement("div");
+    divNameRole.setAttribute("class", "divNameRole");
     containerModal.appendChild(divNameRole);
     const nameModal = document.createElement("h2");
     const textName = document.createTextNode(champions.name.toUpperCase());
-    nameModal.setAttribute("class","nameModal")
+    nameModal.setAttribute("class", "nameModal")
     nameModal.appendChild(textName);
     divNameRole.appendChild(nameModal);
     const containerRole = document.createElement("div");
-    containerRole.setAttribute("class","containerRole");
-    const textTittleRole= document.createTextNode("Rol:");
+    containerRole.setAttribute("class", "containerRole");
+    const textTittleRole = document.createTextNode("Rol:");
     containerRole.appendChild(textTittleRole);
     divNameRole.appendChild(containerRole);
-    const role = document.createElement("p");
-    role.setAttribute("class","role");
+    const roles = document.createElement("p");
+    roles.setAttribute("class", "role");
     const textRole = document.createTextNode(champions.tags);
-    console.log(role);
-    role.appendChild(textRole);
-    containerRole.appendChild(role);
+    console.log(roles);
+    roles.appendChild(textRole);
+    containerRole.appendChild(roles);
     const containerImageDescrip = document.createElement("div");
-    containerImageDescrip.setAttribute("class","containerImageDescrip");
+    containerImageDescrip.setAttribute("class", "containerImageDescrip");
     containerModal.appendChild(containerImageDescrip);
     const containerImage = document.createElement("div");
-    containerImage.setAttribute("class","containerImage");
+    containerImage.setAttribute("class", "containerImage");
     containerImageDescrip.appendChild(containerImage);
     const imageModal = document.createElement("img");
-    imageModal.setAttribute("class","imageModal")
+    imageModal.setAttribute("class", "imageModal");
     imageModal.src = champions.splash;
     containerImage.appendChild(imageModal);
     const descriptionModal = document.createElement("p");
     const textDescription = document.createTextNode(champions.blurb);
-    descriptionModal.setAttribute("class","descriptionModal")
+    descriptionModal.setAttribute("class", "descriptionModal")
     descriptionModal.appendChild(textDescription);
     containerImageDescrip.appendChild(descriptionModal);
-   const containerAbilities=document.createElement("div");
-   containerAbilities.setAttribute("class","containerAbilities")
-   containerModal.appendChild(containerAbilities);
-   const divAttack = document.createElement("div");
-   divAttack.setAttribute("class","divAttack")
-   containerAbilities.appendChild(divAttack);
-   const divDefense = document.createElement("div");
-   divDefense.setAttribute("class","divDefense")
-   containerAbilities.appendChild(divDefense);
-   const divMagic = document.createElement("div");
-   divMagic.setAttribute("class","divMagic")
-   containerAbilities.appendChild(divMagic);
-   const divDifficulty = document.createElement("div");
-   divDifficulty.setAttribute("class","divDifficulty")
-   containerAbilities.appendChild(divDifficulty);
+    const containerAbilities = document.createElement("div");
+    containerAbilities.setAttribute("class", "containerAbilities");
+    containerAbilities.setAttribute("id", "containerAbilities")
+    containerModal.appendChild(containerAbilities);
 
- /*   attack: 8,
-   defense: 4,
-   magic: 3,
-   difficulty: 4 */
-   
+    //ahora empezar el grafico de nbarra para habilidades!!!
+    //utilizando google chart
+    //Add function grafic
+    google.charts.setOnLoadCallback(drawChart);
+    /* drawChart() ; */
+    function drawChart() {
+        // Define the chart to be drawn.
+        var data = google.visualization.arrayToDataTable([
+            ['Element', 'Values', { role: 'style' }],
+            ['Attack', champions.info.attack, 'red'],
+            ['Defense', champions.info.defense, '#84d629'],
+            ['Magic', champions.info.magic, 'blue'],
+            ['Difficulty', champions.info.difficulty, 'yellow']
+
+        ]);
+
+
+        let view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+            {
+                calc: "stringify",
+                sourceColumn: 1,
+                type: "string",
+                role: "annotation"
+            },
+            2]);
+        let options = {
+            title: "INFO:",
+            width: 300,
+            height: 210,
+            fontSize: 14,
+            backgroundColor: "black",
+            color: 'white',
+            bar: { groupWidth: "95%", color: "white" },
+            legend: { position: "none" },
+
+            titleTextStyle: {
+
+                color: 'white',
+                fontSize: 18
+            },
+           
+            hAxis: {
+                
+                textStyle: {
+                    color: "white",
+                    fontSize: 16
+                },
+                minorGridlines: {
+                    color: "black",
+                    count:0
+                },
+                gridlines:{
+                    
+                    color: "black",
+                    count:0
+                },
+                baselineColor: {
+                    color: "black"
+                },
+             
+            },
+            
+           
+
+            vAxis: {
+                textStyle: {
+                    color: "black",
+                    fontSize: 16
+                },
+                baselineColor: {
+                    color: "black"
+                },
+                minorGridlines: {
+                    color: "black"
+                },
+                gridlines:{
+                    
+                    color: "black",
+                    count:0
+                },
+            },
+
+          
+        };
+
+        let chart = new google.visualization.ColumnChart(document.getElementById('containerAbilities'));
+        chart.draw(view, options);
+    }
 
     //properties modal
     modalC.style.opacity = "1";
