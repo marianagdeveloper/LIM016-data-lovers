@@ -8,6 +8,7 @@
   <link rel="icon"
     href="https://cdn.streamloots.com/uploads/6012e82a3ad53200344d53d1/56203b76-da52-4dd9-ad3b-9826a6ebdead.png" />
   <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -33,7 +34,7 @@
     <div class="search">
       <h2 class="h2Champions">CHAMPIONS</h2>
       <input id="inputSearch" type="text" placeholder="Search">
-      <button id="btnSearch" class="btnSearch third">Search</button>
+      <!-- <button id="btnSearch" class="btnSearch third">Search</button> -->
       <select name="" id="selectDificult">
         <option style="display: none;" selected>Dificult </option>
         <option value="facil">Low! </option>
@@ -45,16 +46,7 @@
       <div id="rolChampion">
       </div>
       <div class="champions" id="divShowChampions">
-        <!--    modal -->
-
-         <div id="tvesModal" class="modalContainer">
-          <div class="modal-content">
-            <span class="close">×</span>
-          </div>
         </div>
-        <!-- end Modal</h2>-->
-
-      </div>
     </div>
   </section>
   <section class="sectionChampions2">
@@ -68,9 +60,15 @@
       <figure><img src="http://fc00.deviantart.net/fs70/f/2012/362/6/9/muay_thai_lee_sin_by_fazie69-d5phnzn.png" alt="">
       </figure>
     </article>
-
-
-  </section>
+  </section>  
+  <div class="modal-container" id="modal-container">
+    <div class="modal" id="modal">
+      <p class="close" id="close">X</p>
+     <!--  <img src="http://fc00.deviantart.net/fs70/f/2012/362/6/9/muay_thai_lee_sin_by_fazie69-d5phnzn.png" alt="">
+      <div class="modal-textos">
+      </div> -->
+    </div>
+  </div>
   <footer>
     <p class="textFooter">Todos los derechos reservados © Copyrights 2021 Diseñado por M&M </p>
   </footer>
