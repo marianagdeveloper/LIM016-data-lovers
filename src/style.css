@@ -647,6 +647,7 @@ nav ul{
   }
 }
 
+
 @media all and (min-width:1200px){
   #rolChampion{
     width: 20%;
@@ -755,9 +756,9 @@ figure{
 
 .modal {
   width: 70%;
-  height: 90%;
+  height: 75%;
   
-padding-top: 150px;
+padding-top: 100px;
 padding-left: 50px;
 padding-right: 50px;
 padding-bottom: 100px;
@@ -775,7 +776,7 @@ padding-bottom: 100px;
   border-radius: 20px;
  /*  padding-top: 50px; */
   border-color: #3498db;
- /*  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #006fe6;
+/*   box-shadow: 0 0 10px 10px #3498db inset, 0 0 0 0 #006fe6;
   -webkit-transition: all 150ms ease-in-out; */
   transition: all 150ms ease-in-out;
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
@@ -784,29 +785,37 @@ padding-bottom: 100px;
 
 
 /* -------------Styles container modal---------- */
+/* kue kjwnfejnjwe fwe fkejfnewkjfnew */
 .containerModal{
 width: 100%;
 
 }
 .divNameRole{
-  margin-top: 10px;
+/*   margin-top: 10px; */
   width: 100%;
   height: 80px;
   display: flex;
-  justify-content: center;
-background: black;
+ /*  justify-content: center; */
+/* background: black; */
+justify-content: space-between;
 border-radius: 20px;
 padding: 10px;
 }
 .nameModal{
-width: 70%;
+
+  border-radius: 20px;
+  background: black;
+width: 69.5%;
 text-align: center;
 font-size: 30px;
 font-family: 'Rokkitt', serif;
-padding: 10px;
+padding: 15px;
 }
 .containerRole{
-  width: 30%;
+ 
+  border-radius: 20px;
+  background: black;
+  width: 29.5%;
   font-size: 20px;
   font-family: arial;
   text-transform: uppercase;
@@ -826,6 +835,10 @@ padding: 10px;
 }
 .containerImage{
 width: 70%;
+/* border-color: black;
+border-style: solid;
+border-width: 10px;
+border-radius: 20px; */
 }
 .imageModal{
   display: block;
@@ -834,8 +847,9 @@ width: 70%;
   }
 .descriptionModal{
 padding: 30px;
-width: 30%;
-margin: 5px 0 5px 20px;
+width: 100%;
+margin-left: 10px;
+margin-bottom: 10px;
 text-align: justify;
 background-color: rgba(0,0 ,0, 0.9);
 border-radius: 20px;
@@ -843,14 +857,22 @@ font-family: 'Rokkitt', serif;
 font-weight: 200;
 font-size: 18px;
 }
-.containerAbilities{
-  font-family: serif;
-  font-size: 18px;
-  width: 50%;
-  height: 280px;
-  margin-left: 50px;
- padding-top: 10px;
+.containerDesAbil{
+  display: flex;
+  flex-wrap: wrap;
+  width:30%;
+justify-content: center;
  
+}
+.containerAbilities{
+ 
+background: black;
+
+  width: 100%;
+
+margin-left: 10px;
+border-radius: 20px;
+
 }
 
 

@@ -2,6 +2,8 @@
 import { dataChampions } from './data.js';
 
 // listo funcion en data hecha
+const arrayNavEnlaces=["champions.html","ranking.html","index.html","download","news"]
+let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
 let arraychampion = dataChampions();
 console.log(arraychampion);
 let divChampion = document.getElementById("divShowChampions");
@@ -58,15 +60,20 @@ function printModal(champions) {
     imageModal.setAttribute("class", "imageModal");
     imageModal.src = champions.splash;
     containerImage.appendChild(imageModal);
+
+    const containerDesAbil = document.createElement("div");
+    containerDesAbil.setAttribute("class", "containerDesAbil");
+    containerImageDescrip.appendChild(containerDesAbil);
+
     const descriptionModal = document.createElement("p");
     const textDescription = document.createTextNode(champions.blurb);
     descriptionModal.setAttribute("class", "descriptionModal")
     descriptionModal.appendChild(textDescription);
-    containerImageDescrip.appendChild(descriptionModal);
+    containerDesAbil.appendChild(descriptionModal);
     const containerAbilities = document.createElement("div");
     containerAbilities.setAttribute("class", "containerAbilities");
     containerAbilities.setAttribute("id", "containerAbilities")
-    containerModal.appendChild(containerAbilities);
+    containerDesAbil.appendChild(containerAbilities);
 
     //ahora empezar el grafico de nbarra para habilidades!!!
     //utilizando google chart
@@ -78,8 +85,8 @@ function printModal(champions) {
         var data = google.visualization.arrayToDataTable([
             ['Element', 'Values', { role: 'style' }],
             ['Attack', champions.info.attack, 'red'],
-            ['Defense', champions.info.defense, '#84d629'],
-            ['Magic', champions.info.magic, 'blue'],
+            ['Defense', champions.info.defense, ' #7CB342'],
+            ['Magic', champions.info.magic, 'linear-gradient(70deg, black, white)'],
             ['Difficulty', champions.info.difficulty, 'yellow']
 
         ]);
@@ -96,7 +103,7 @@ function printModal(champions) {
             2]);
         let options = {
             title: "INFO:",
-            width: 300,
+            width: 310,
             height: 210,
             fontSize: 14,
             backgroundColor: "black",
@@ -169,8 +176,7 @@ function printModal(champions) {
         containerModal.innerHTML = "";
     });
 }
-/* ---Create array Nav dinamic------ */
-let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
+
 /* ----Create function Nav dinamic --- */
 function printNav() {
 
@@ -185,12 +191,12 @@ function printNav() {
 
         list = document.createElement("li");
         enlace = document.createElement("a");
-        enlace.href = "#";
+        enlace.href = arrayNavEnlaces[i];
         if (arrayNav[i] == arrayNav[2]) {
             b = document.createElement("img");
             enlace.appendChild(b);
             b.src = arrayNav[2].toString();
-            enlace.href = "#";
+            enlace.href = arrayNavEnlaces[i];;
             // console.log(b);
         } else {
             enlace.textContent += arrayNav[i].toString();
@@ -288,6 +294,7 @@ function filterByRole(btnRol) {
         recorrerData();
     } else
         arraychampion.filter(e => e.tags.includes(btnRol.id)).map(e => printChampions(e));
+       
 
 }
 
@@ -298,7 +305,7 @@ inputSearch.addEventListener("keyup", function () {
     const searchHero = arraychampion.filter(e => e.name.toLowerCase().indexOf(texto) > -1).map(e => printChampions(e));
 
     if (searchHero.length == 0) {
-        divChampion.innerHTML = '<p>Champion no found</p>';
+        divChampion.innerHTML = '<p style="font-size:30px">Champion no found</p>';
     }
 
 });

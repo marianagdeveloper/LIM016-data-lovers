@@ -1,0 +1,94 @@
+
+
+
+
+
+#sectionHome{
+background: url(https://cdn1.dotesports.com/wp-content/uploads/2020/02/18153120/League.jpg);
+width: 100%;
+
+height: 600px;
+background-position: center;
+background-size: cover;
+padding: 20px;
+padding-top: 50px;
+}
+#divHome{
+background:rgba(0,0,0,0.8) ;
+width: 80%;
+margin: auto !important;
+padding: 20px;
+border-radius: 20px;
+
+}
+#h1Home{
+text-align: center;
+color:white;
+margin: 25px;
+
+}
+#pHome{
+text-align: center;
+color:white;
+padding: 30px;
+padding-left: 100px;
+margin-bottom: 50px;
+
+}
+#seeMore{
+margin: auto !important;
+font-size: 14px;
+width: 130px;
+height: 40px;
+padding: 0;
+
+
+
+}
+#divButton{
+ display: flex;
+ justify-content: center;
+ margin-bottom: 30px;
+}
+#imageHome{
+  
+  display: block;
+  width: 50%;
+}
+#divimageHome{
+ margin-top: -260px;
+ margin-left: -80px;
+}
+@media all and (min-width:1200px){
+  #divHome{
+
+    width: 50%;
+    
+    }
+    #imageHome{
+  
+      display: block;
+      width: 50%;
+    }
+    #divimageHome{
+      margin-top: -250px;
+      margin-left: -100px;
+     }
+}
+@media all and (min-width:1400px){
+  #divHome{
+
+    width: 50%;
+    
+    }
+    #imageHome{
+  
+      display: block;
+      width: 40%;
+    }
+    #divimageHome{
+      margin-top: -290px;
+      margin-left: 50px;
+     }
+}
+
