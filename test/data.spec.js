@@ -16,7 +16,7 @@ describe('isFilterRol', () => {
   });
 
   it('debería retornar true para "Tank"', () => {
-    expect(isFilterRol(dataChampions(), 'Tank'.ta)[0]gs.includes('Tank')).toBe(true);
+    expect(isFilterRol(dataChampions(), 'Tank')[0].tags.includes('Tank')).toBe(true);
   });
   it('debería retornar true para "Mage"', () => {
     expect(isFilterRol(dataChampions(), 'Mage')[0].tags.includes('Mage')).toBe(true);

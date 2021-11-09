@@ -9,9 +9,7 @@ export const dataChampions = async () => {
 
    const result= await fetch('./data/lol/lol.json')
       .then((response)=>response.json())
-      .catch(showError); 
-     
-      console.log("result  ",result)
+      .catch(showError);      
       const arraychampion = Object.values(result.data)
       return arraychampion;
 }
