@@ -182,6 +182,8 @@ color: white;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   overflow-y: scroll;
+  color: white;
+  
  
   background-color: rgba(0,0 ,0, 0.9);
 
@@ -404,19 +406,13 @@ footer{
   font-family: sans-serif;
   letter-spacing: 1.2px;
 }
-.hide{
-  position: relative;
-  padding: 10px;
-  width: 40px;
-  background: black;
-  color: white;
-  cursor: pointer;
-display: none;
-}
 
-.hide > i > img{
-  display: block;
-  width: 30px;
+
+h6{
+color: white;
+text-align: center;
+font-size: 20px;
+
 }
 
 /* ------ aplicate medias queries----- */
@@ -651,6 +647,7 @@ nav ul{
   }
 }
 
+
 @media all and (min-width:1200px){
   #rolChampion{
     width: 20%;
@@ -725,3 +722,173 @@ figure{
 }
 }
 /* ultima modificacin solucionar la linea webkit 11 */
+/* ultima modificacin solucionar la linea webkit 11 */
+
+/* modal */
+
+.modal-container {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(56, 56, 56, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: #3386df;
+  line-height: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.modal {
+  width: 70%;
+  height: 75%;
+  
+padding-top: 100px;
+padding-left: 50px;
+padding-right: 50px;
+padding-bottom: 100px;
+  
+  overflow:hidden;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  transition: transform 0;
+  transform: translateX(0%);
+  border-radius: 20px;
+ /*  padding-top: 50px; */
+  border-color: #3498db;
+/*   box-shadow: 0 0 10px 10px #3498db inset, 0 0 0 0 #006fe6;
+  -webkit-transition: all 150ms ease-in-out; */
+  transition: all 150ms ease-in-out;
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
+ 
+}
+
+
+/* -------------Styles container modal---------- */
+/* kue kjwnfejnjwe fwe fkejfnewkjfnew */
+.containerModal{
+width: 100%;
+
+}
+.divNameRole{
+/*   margin-top: 10px; */
+  width: 100%;
+  height: 80px;
+  display: flex;
+ /*  justify-content: center; */
+/* background: black; */
+justify-content: space-between;
+border-radius: 20px;
+padding: 10px;
+}
+.nameModal{
+
+  border-radius: 20px;
+  background: black;
+width: 69.5%;
+text-align: center;
+font-size: 30px;
+font-family: 'Rokkitt', serif;
+padding: 15px;
+}
+.containerRole{
+ 
+  border-radius: 20px;
+  background: black;
+  width: 29.5%;
+  font-size: 20px;
+  font-family: arial;
+  text-transform: uppercase;
+  line-height: 30px;
+  font-family: 'Rokkitt', serif;
+
+  }
+  .role{    
+    font-size: 18px;
+    font-family: 'Rokkitt', serif;
+  }
+.containerImageDescrip {
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 100%;
+ padding: 10px; 
+}
+.containerImage{
+width: 70%;
+/* border-color: black;
+border-style: solid;
+border-width: 10px;
+border-radius: 20px; */
+}
+.imageModal{
+  display: block;
+  width: 100%;  
+  border-radius: 20px;
+  }
+.descriptionModal{
+padding: 30px;
+width: 100%;
+margin-left: 10px;
+margin-bottom: 10px;
+text-align: justify;
+background-color: rgba(0,0 ,0, 0.9);
+border-radius: 20px;
+font-family: 'Rokkitt', serif;
+font-weight: 200;
+font-size: 18px;
+}
+.containerDesAbil{
+  display: flex;
+  flex-wrap: wrap;
+  width:30%;
+justify-content: center;
+ 
+}
+.containerAbilities{
+ 
+background: black;
+
+  width: 100%;
+
+margin-left: 10px;
+border-radius: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
