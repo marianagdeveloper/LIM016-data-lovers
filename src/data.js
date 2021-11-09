@@ -1,40 +1,34 @@
 // estas funciones son de ejemplo
-import data from './data/lol/lol.js';
+/* import data from './data/lol/lol.js'; */
 
 
-export const dataChampions = () => {
-  const dataGet = JSON.stringify(data);
-  const aux = JSON.parse(dataGet);
-  const arrayData = (aux.data);
-  const arraychampion = Object.values(arrayData)
-  return arraychampion;
-};
+export const dataChampions = async () => {
 
-export const anotherExample = () => {
-/*   document.addEventListener('DOMContentLoaded', configureAjaxCalls);
-  function configureAjaxCalls() {
-    document.getElementById('btn').addEventListener('click', function() {
-      fetch('lol.json')
-        .then(ajaxPositive)
-        .catch(showError);
-    });
+/* document.addEventListener('DOMContentLoaded', configureAjaxCalls); */
 
-    function ajaxPositive(response) {
-      console.log('response.ok: ', response.ok);
-      if(response.ok) {
-        response.text().then(showResult);
-      } else {
-        showError('status code: ' + response.status);
-      }
-    }
 
-    function showResult(txt) {
-      console.log('muestro respuesta: ', txt);
-    }
+   const result= await fetch('./data/lol/lol.json')
+      .then((response)=>response.json())
+      .catch(showError); 
+     
+      console.log("result  ",result)
+      const arraychampion = Object.values(result.data)
+      return arraychampion;
+}
 
-    function showError(err) { 
-      console.log('muestor error', err);
-    }
-  } */
-  return 'OMG';
+
+function showError(err) { 
+  console.log('muestor error', err);
+}
+
+
+
+
+export const isFilterRol = (arraychampion,btnRol) => {
+  
+  let arrayFilter=[];
+  arrayFilter=arraychampion.filter(e => e.tags.includes(btnRol));
+  return arrayFilter;
+
+
 };

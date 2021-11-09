@@ -1,29 +1,29 @@
 
-import { dataChampions } from './data.js';
-
+import { dataChampions, isFilterRol } from './data.js';
 // listo funcion en data hecha
-const arrayNavEnlaces=["champions.html","ranking.html","index.html","download","news"]
-let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
-let arraychampion = dataChampions();
-console.log(arraychampion);
+let arraychampion = [];
 let divChampion = document.getElementById("divShowChampions");
 let inputSearch = document.getElementById("inputSearch");
-let btnSearch = document.getElementById("btnSearch");
+/* let btnSearch = document.getElementById("btnSearch"); */
 
 let arrayButton = ["All", "Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let button, btnRol = [], textButton, cards = [], rolChampion;
-let modalChampion;
+/* let modalChampion; */
 //modal
 let cerrar = document.getElementById("close");
 let modal = document.getElementById("modal");
 let modalC = document.getElementById("modal-container");
+const arrayNavEnlaces = ["champions.html", "ranking.html", "index.html", "download", "news"]
+let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
 
-window.onload = function () {
-    printNav();
-    recorrerData();
-    printButton();
+await dataChampions().then((data) => {
+       arraychampion = data;
+}); 
 
-}
+printNav();
+recorrerData();
+printButton();
+
 //modal
 function printModal(champions) {
 
@@ -75,102 +75,100 @@ function printModal(champions) {
     containerAbilities.setAttribute("id", "containerAbilities")
     containerDesAbil.appendChild(containerAbilities);
 
-    //ahora empezar el grafico de nbarra para habilidades!!!
-    //utilizando google chart
+
     //Add function grafic
-    google.charts.setOnLoadCallback(drawChart);
-    /* drawChart() ; */
-    function drawChart() {
-        // Define the chart to be drawn.
-        var data = google.visualization.arrayToDataTable([
-            ['Element', 'Values', { role: 'style' }],
-            ['Attack', champions.info.attack, 'red'],
-            ['Defense', champions.info.defense, ' #7CB342'],
-            ['Magic', champions.info.magic, 'linear-gradient(70deg, black, white)'],
-            ['Difficulty', champions.info.difficulty, 'yellow']
-
-        ]);
-
-
-        let view = new google.visualization.DataView(data);
-        view.setColumns([0, 1,
-            {
-                calc: "stringify",
-                sourceColumn: 1,
-                type: "string",
-                role: "annotation"
-            },
-            2]);
-        let options = {
-            title: "INFO:",
-            width: 310,
-            height: 210,
-            fontSize: 14,
-            backgroundColor: "black",
-            color: 'white',
-            bar: { groupWidth: "95%", color: "white" },
-            legend: { position: "none" },
-
-            titleTextStyle: {
-
-                color: 'white',
-                fontSize: 18
-            },
-           
-            hAxis: {
-                
-                textStyle: {
-                    color: "white",
-                    fontSize: 16
-                },
-                minorGridlines: {
-                    color: "black",
-                    count:0
-                },
-                gridlines:{
-                    
-                    color: "black",
-                    count:0
-                },
-                baselineColor: {
-                    color: "black"
-                },
+      google.charts.setOnLoadCallback(drawChart);
+         function drawChart() {
+         
+          let data = google.visualization.arrayToDataTable([
+              ['Element', 'Values', { role: 'style' }],
+              ['Attack', champions.info.attack, 'red'],
+              ['Defense', champions.info.defense, ' #7CB342'],
+              ['Magic', champions.info.magic, 'linear-gradient(70deg, black, white)'],
+              ['Difficulty', champions.info.difficulty, 'yellow']
+  
+          ]);
+  
+  
+          let view = new google.visualization.DataView(data);
+          view.setColumns([0, 1,
+              {
+                  calc: "stringify",
+                  sourceColumn: 1,
+                  type: "string",
+                  role: "annotation"
+              },
+              2]);
+          let options = {
+              title: "INFO:",
+              width: 310,
+              height: 210,
+              fontSize: 14,
+              backgroundColor: "black",
+              color: 'white',
+              bar: { groupWidth: "95%", color: "white" },
+              legend: { position: "none" },
+  
+              titleTextStyle: {
+  
+                  color: 'white',
+                  fontSize: 18
+              },
              
-            },
+              hAxis: {
+                  
+                  textStyle: {
+                      color: "white",
+                      fontSize: 16
+                  },
+                  minorGridlines: {
+                      color: "black",
+                      count:0
+                  },
+                  gridlines:{
+                      
+                      color: "black",
+                      count:0
+                  },
+                  baselineColor: {
+                      color: "black"
+                  },
+               
+              },
+              
+             
+  
+              vAxis: {
+                  textStyle: {
+                      color: "black",
+                      fontSize: 16
+                  },
+                  baselineColor: {
+                      color: "black"
+                  },
+                  minorGridlines: {
+                      color: "black"
+                  },
+                  gridlines:{
+                      
+                      color: "black",
+                      count:0
+                  },
+              },
+  
             
-           
-
-            vAxis: {
-                textStyle: {
-                    color: "black",
-                    fontSize: 16
-                },
-                baselineColor: {
-                    color: "black"
-                },
-                minorGridlines: {
-                    color: "black"
-                },
-                gridlines:{
-                    
-                    color: "black",
-                    count:0
-                },
-            },
-
-          
-        };
-
-        let chart = new google.visualization.ColumnChart(document.getElementById('containerAbilities'));
-        chart.draw(view, options);
-    }
-
+          };
+  
+          let chart = new google.visualization.ColumnChart(document.getElementById('containerAbilities'));
+          chart.draw(view, options);
+      }
+  
     //properties modal
     modalC.style.opacity = "1";
     modalC.style.visibility = "visible";
 
 
-    cerrar.addEventListener("click", function (e) {
+    cerrar.addEventListener("click", function () {
         modalC.style.opacity = "0";
         modalC.style.visibility = "hidden";
         containerModal.innerHTML = "";
@@ -196,7 +194,7 @@ function printNav() {
             b = document.createElement("img");
             enlace.appendChild(b);
             b.src = arrayNav[2].toString();
-            enlace.href = arrayNavEnlaces[i];;
+            enlace.href = arrayNavEnlaces[i];
             // console.log(b);
         } else {
             enlace.textContent += arrayNav[i].toString();
@@ -210,7 +208,9 @@ function printNav() {
 
 /* --Create function PrintChampions in cards-- */
 function recorrerData() {
+    console.log("arreglo array ",arraychampion);
     arraychampion.forEach(element => printChampions(element));
+    
 
 }
 function printChampions(arraychampion) {
@@ -243,7 +243,7 @@ function printChampions(arraychampion) {
 
     let idcard = document.getElementById(arraychampion.key);
 
-    idcard.addEventListener("click", function (e) {
+    idcard.addEventListener("click", function () {
         console.log("arraychampion.key:", arraychampion.key);
         // console.log("evento:", e.path[2].attributes[1]);
         printModal(arraychampion);
@@ -289,12 +289,14 @@ function printButton() {
 /* ----Create function filter eventlistener --- */
 
 function filterByRole(btnRol) {
+    let rolId = btnRol.id;
     divChampion.innerHTML = "";
-    if (btnRol.id == "All") {
+    if (rolId == "All") {
         recorrerData();
     } else
-        arraychampion.filter(e => e.tags.includes(btnRol.id)).map(e => printChampions(e));
-       
+
+
+        isFilterRol(arraychampion, rolId).map(e => printChampions(e));
 
 }
 
