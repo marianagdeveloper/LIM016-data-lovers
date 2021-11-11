@@ -1,0 +1,100 @@
+
+
+
+
+
+#sectionHome{
+/* background: url(https://cdn1.dotesports.com/wp-content/uploads/2020/02/18153120/League.jpg); */
+/* background: url(./homeb.jpg); */
+background: url(./public/thumb-1920-607280.png);
+width: 100%;
+height: 800px;
+background-position: center;
+background-size: cover;
+padding: 20px;
+padding-top: 100px;
+}
+#divHome{
+background:rgba(0,0,0,0.7) ;
+width: 80%;
+margin: auto !important;
+padding: 20px;
+border-radius: 60%;
+
+}
+#h1Home{
+text-align: center;
+color:white;
+font-size: 30px;
+margin: 25px;
+line-height: 2; 
+font-family: 'MedievalSharp', cursive;
+
+}
+#pHome{
+text-align: center;
+color:white;
+padding: 40px;
+margin-bottom: 50px;
+margin: auto;
+font-size: 35px;
+line-height: 1.5; 
+
+}
+#seeMore{
+margin: auto !important;
+font-size: 14px;
+width: 130px;
+height: 40px;
+padding: 0;
+
+
+
+}
+#divButton{
+ display: flex;
+ justify-content: center;
+ margin-bottom: 30px;
+}
+#imageHome{
+  
+  display: block;
+  width: 50%;
+}
+#divimageHome{
+ margin-top: -260px;
+ margin-left: -80px;
+}
+@media all and (min-width:1200px){
+  #divHome{
+
+    width: 50%;
+    
+    }
+    #imageHome{
+  
+      display: block;
+      width: 50%;
+    }
+    #divimageHome{
+      margin-top: -500px;
+      margin-left: -100px;
+     }
+}
+@media all and (min-width:1400px){
+  #divHome{
+
+    width: 50%;
+    
+    }
+    #imageHome{
+  
+      display: block;
+      width: 40%;
+    }
+    #divimageHome{
+      margin-top: -290px;
+      margin-left: 50px;
+     }
+}
+
