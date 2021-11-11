@@ -1,11 +1,5 @@
-// estas funciones son de ejemplo
-/* import data from './data/lol/lol.js'; */
-
 
 export const dataChampions = async () => {
-
-/* document.addEventListener('DOMContentLoaded', configureAjaxCalls); */
-
 
    const result= await fetch('./data/lol/lol.json')
       .then((response)=>response.json())
@@ -18,9 +12,6 @@ export const dataChampions = async () => {
 function showError(err) { 
   console.log('muestor error', err);
 }
-
-
-
 
 export const isFilterRol = (arraychampion,btnRol) => {
   

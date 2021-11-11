@@ -1,14 +1,12 @@
 
 import { dataChampions, isFilterRol } from './data.js';
-// listo funcion en data hecha
+
 let arraychampion = [];
 let divChampion = document.getElementById("divShowChampions");
 let inputSearch = document.getElementById("inputSearch");
-/* let btnSearch = document.getElementById("btnSearch"); */
-
 let arrayButton = ["All", "Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let button, btnRol = [], textButton, cards = [], rolChampion;
-/* let modalChampion; */
+
 //modal
 let cerrar = document.getElementById("close");
 let modal = document.getElementById("modal");
@@ -16,36 +14,39 @@ let modalC = document.getElementById("modal-container");
 const arrayNavEnlaces = ["champions.html", "ranking.html", "index.html", "download", "news"]
 let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
 
-await dataChampions().then((data) => {
-       arraychampion = data;
-}); 
-var URLactual = window.location;
-// console.log(URLactual);
+async function carga() {
+    await dataChampions().then((data) => {
+        arraychampion = data;
 
-if (URLactual.pathname == "/src/index.html") {
-    printNav();
-} 
+        const URLactual = window.location;
+        console.log(URLactual);
 
-if (URLactual.pathname == "/src/champions.html") {
-    printNav();
-    recorrerData();
-    printButton();
+        if (URLactual.pathname == "/") {
+            printNav();
+        }
 
-///---------Search -------<<
-searchChampion();
-} 
+        if (URLactual.pathname == "/champions") {
 
-//search
+            printNav();
+            recorrerData();
+            printButton();
+            searchChampion();
+        }
+    });
+}
+
+carga();
+
 function searchChampion() {
     inputSearch.addEventListener("keyup", function () {
         divChampion.innerHTML = '';
         let texto = inputSearch.value.toLowerCase();
         const searchHero = arraychampion.filter(e => e.name.toLowerCase().indexOf(texto) > -1).map(e => printChampions(e));
-    
+
         if (searchHero.length == 0) {
             divChampion.innerHTML = '<p style="font-size:30px">Champion no found</p>';
         }
-    
+
     });
 }
 
@@ -110,91 +111,92 @@ function printModal(champions) {
 
 
     //Add function grafic
-      google.charts.setOnLoadCallback(drawChart);
-         function drawChart() {
-         
-          let data = google.visualization.arrayToDataTable([
-              ['Element', 'Values', { role: 'style' }],
-              ['Attack', champions.info.attack, '#BB8FCE'],
-              ['Defense', champions.info.defense, ' #5DADE2'],
-              ['Magic', champions.info.magic, '#82E0AA'],
-              ['Difficulty', champions.info.difficulty, '#F0B27A']
-  
-          ]);
-  
-  
-          let view = new google.visualization.DataView(data);
-          view.setColumns([0, 1,
-              {
-                  calc: "stringify",
-                  sourceColumn: 1,
-                  type: "string",
-                  role: "annotation"
-              },
-              2]);
-          let options = {
+    //Add line ignore jest
+    /* eslint-disable */
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+
+        let data = google.visualization.arrayToDataTable([
+            ['Element', 'Values', { role: 'style' }],
+            ['Attack', champions.info.attack, '#BB8FCE'],
+            ['Defense', champions.info.defense, ' #5DADE2'],
+            ['Magic', champions.info.magic, '#82E0AA'],
+            ['Difficulty', champions.info.difficulty, '#F0B27A']
+
+        ]);
+
+        let view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+            {
+                calc: "stringify",
+                sourceColumn: 1,
+                type: "string",
+                role: "annotation"
+            },
+            2]);
+        let options = {
             //   title: "INFO:",
-              width: 500,
-              height: 140,
-              fontSize: 18,
-              backgroundColor: "none",
-              color: 'white',
-              bar: { groupWidth: "80%", color: "white" },
-              legend: { position: "none" },
-  
-              titleTextStyle: {
-                  color: 'white',
-                  fontSize: 20,
-              },
-             
-              hAxis: {
-                  
-                  textStyle: {
-                      color: "white",
-                      fontSize: 20
-                  },
-                  minorGridlines: {
-                      color: "black",
-                      count:0
-                  },
-                  gridlines:{
-                      
-                      color: "black",
-                      count:0
-                  },
-                  baselineColor: {
-                      color: "black"
-                  },
-               
-              },
-              
-             
-  
-              vAxis: {
-                  textStyle: {
-                      color: "white",
-                      fontSize: 20
-                  },
-                  baselineColor: {
-                      color: "white"
-                  },
-                  minorGridlines: {
-                      color: "white"
-                  },
-                  gridlines:{
-                      
-                      color: "white",
-                      count:0
-                  },
-              },
-  
-            
-          };
-  
-          let chart = new google.visualization.ColumnChart(document.getElementById('containerAbilities'));
-          chart.draw(view, options);
-      }
-  
+            width: 500,
+            height: 140,
+            fontSize: 18,
+            backgroundColor: "none",
+            color: 'white',
+            bar: { groupWidth: "80%", color: "white" },
+            legend: { position: "none" },
+
+            titleTextStyle: {
+                color: 'white',
+                fontSize: 20,
+            },
+
+            hAxis: {
+
+                textStyle: {
+                    color: "white",
+                    fontSize: 20
+                },
+                minorGridlines: {
+                    color: "black",
+                    count: 0
+                },
+                gridlines: {
+
+                    color: "black",
+                    count: 0
+                },
+                baselineColor: {
+                    color: "black"
+                },
+
+            },
+
+
+
+            vAxis: {
+                textStyle: {
+                    color: "white",
+                    fontSize: 20
+                },
+                baselineColor: {
+                    color: "white"
+                },
+                minorGridlines: {
+                    color: "white"
+                },
+                gridlines: {
+
+                    color: "white",
+                    count: 0
+                },
+            },
+
+
+        };
+
+        let chart = new google.visualization.ColumnChart(document.getElementById('containerAbilities'));
+        chart.draw(view, options);
+    }
+
     //properties modal
     modalC.style.opacity = "1";
     modalC.style.visibility = "visible";
@@ -218,7 +220,6 @@ function printNav() {
     //for each item in the array: 
     for (i = 0; i < arrayNav.length; i++) {
         //create elemnts li
-
         list = document.createElement("li");
         enlace = document.createElement("a");
         enlace.href = arrayNavEnlaces[i];
@@ -240,9 +241,8 @@ function printNav() {
 
 /* --Create function PrintChampions in cards-- */
 function recorrerData() {
-    console.log("arreglo array ",arraychampion);
-    arraychampion.forEach(element => printChampions(element));
-    
+    console.log("arreglo array ", arraychampion);
+    arraychampion.map(element => printChampions(element));
 
 }
 function printChampions(arraychampion) {
@@ -278,24 +278,14 @@ function printChampions(arraychampion) {
 
     idcard.addEventListener("click", function () {
         console.log("arraychampion.key:", arraychampion.key);
-        // console.log("evento:", e.path[2].attributes[1]);
         printModal(arraychampion);
     });
 
 }
-// let abrir = document.querySelectorAll(".card");
-
-
-//// acaaa estoy empezando de nuevooo
-
-
-////// hol ahooa knk knkn nknkc dsmm
-///Egg krmfkwemf
 
 /* ----Create function Button rol dinamic --- */
 function printButton() {
     let i;
-
 
     rolChampion = document.getElementById("rolChampion");
 
@@ -334,7 +324,7 @@ function filterByRole(btnRol) {
 }
 
 
-//aki ki njnd jjdnd jnun jnu aaaa aa
+
 
 
 
