@@ -19,10 +19,35 @@ let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/up
 await dataChampions().then((data) => {
        arraychampion = data;
 }); 
+var URLactual = window.location;
+// console.log(URLactual);
 
-printNav();
-recorrerData();
-printButton();
+if (URLactual.pathname == "/src/index.html") {
+    printNav();
+} 
+
+if (URLactual.pathname == "/src/champions.html") {
+    printNav();
+    recorrerData();
+    printButton();
+
+///---------Search -------<<
+searchChampion();
+} 
+
+//search
+function searchChampion() {
+    inputSearch.addEventListener("keyup", function () {
+        divChampion.innerHTML = '';
+        let texto = inputSearch.value.toLowerCase();
+        const searchHero = arraychampion.filter(e => e.name.toLowerCase().indexOf(texto) > -1).map(e => printChampions(e));
+    
+        if (searchHero.length == 0) {
+            divChampion.innerHTML = '<p style="font-size:30px">Champion no found</p>';
+        }
+    
+    });
+}
 
 //modal
 function printModal(champions) {
@@ -35,27 +60,31 @@ function printModal(champions) {
     divNameRole.setAttribute("class", "divNameRole");
     containerModal.appendChild(divNameRole);
     const nameModal = document.createElement("h2");
-    const textName = document.createTextNode(champions.name.toUpperCase());
+    const textName = document.createTextNode(champions.id.toUpperCase());
     nameModal.setAttribute("class", "nameModal")
     nameModal.appendChild(textName);
     divNameRole.appendChild(nameModal);
+
     const containerRole = document.createElement("div");
     containerRole.setAttribute("class", "containerRole");
-    const textTittleRole = document.createTextNode("Rol:");
-    containerRole.appendChild(textTittleRole);
+    // const textTittleRole = document.createTextNode("Rol:");
+    // containerRole.appendChild(textTittleRole);
     divNameRole.appendChild(containerRole);
     const roles = document.createElement("p");
     roles.setAttribute("class", "role");
-    const textRole = document.createTextNode(champions.tags);
-    console.log(roles);
-    roles.appendChild(textRole);
+    // const textRole = document.createTextNode(champions.tags);
+    // console.log(roles);
+    // roles.appendChild(textRole);
     containerRole.appendChild(roles);
+
     const containerImageDescrip = document.createElement("div");
     containerImageDescrip.setAttribute("class", "containerImageDescrip");
     containerModal.appendChild(containerImageDescrip);
+
     const containerImage = document.createElement("div");
     containerImage.setAttribute("class", "containerImage");
     containerImageDescrip.appendChild(containerImage);
+
     const imageModal = document.createElement("img");
     imageModal.setAttribute("class", "imageModal");
     imageModal.src = champions.splash;
@@ -66,10 +95,14 @@ function printModal(champions) {
     containerImageDescrip.appendChild(containerDesAbil);
 
     const descriptionModal = document.createElement("p");
-    const textDescription = document.createTextNode(champions.blurb);
+    // const textDescription = document.createTextNode(champions.blurb);
+    // const textDescription = document.createTextNode(champions.title);
+    let textHabilidades = "HABILIDADES: " + champions.tags;
+    const textDescription = document.createTextNode(textHabilidades);
     descriptionModal.setAttribute("class", "descriptionModal")
     descriptionModal.appendChild(textDescription);
     containerDesAbil.appendChild(descriptionModal);
+
     const containerAbilities = document.createElement("div");
     containerAbilities.setAttribute("class", "containerAbilities");
     containerAbilities.setAttribute("id", "containerAbilities")
@@ -82,10 +115,10 @@ function printModal(champions) {
          
           let data = google.visualization.arrayToDataTable([
               ['Element', 'Values', { role: 'style' }],
-              ['Attack', champions.info.attack, 'red'],
-              ['Defense', champions.info.defense, ' #7CB342'],
-              ['Magic', champions.info.magic, 'linear-gradient(70deg, black, white)'],
-              ['Difficulty', champions.info.difficulty, 'yellow']
+              ['Attack', champions.info.attack, '#BB8FCE'],
+              ['Defense', champions.info.defense, ' #5DADE2'],
+              ['Magic', champions.info.magic, '#82E0AA'],
+              ['Difficulty', champions.info.difficulty, '#F0B27A']
   
           ]);
   
@@ -100,26 +133,25 @@ function printModal(champions) {
               },
               2]);
           let options = {
-              title: "INFO:",
-              width: 310,
-              height: 210,
-              fontSize: 14,
-              backgroundColor: "black",
+            //   title: "INFO:",
+              width: 500,
+              height: 140,
+              fontSize: 18,
+              backgroundColor: "none",
               color: 'white',
-              bar: { groupWidth: "95%", color: "white" },
+              bar: { groupWidth: "80%", color: "white" },
               legend: { position: "none" },
   
               titleTextStyle: {
-  
                   color: 'white',
-                  fontSize: 18
+                  fontSize: 20,
               },
              
               hAxis: {
                   
                   textStyle: {
                       color: "white",
-                      fontSize: 16
+                      fontSize: 20
                   },
                   minorGridlines: {
                       color: "black",
@@ -140,18 +172,18 @@ function printModal(champions) {
   
               vAxis: {
                   textStyle: {
-                      color: "black",
-                      fontSize: 16
+                      color: "white",
+                      fontSize: 20
                   },
                   baselineColor: {
-                      color: "black"
+                      color: "white"
                   },
                   minorGridlines: {
-                      color: "black"
+                      color: "white"
                   },
                   gridlines:{
                       
-                      color: "black",
+                      color: "white",
                       count:0
                   },
               },
@@ -237,7 +269,8 @@ function printChampions(arraychampion) {
     y.appendChild(text);
     let p = document.createElement("p");
     conten.appendChild(p);
-    let texto = document.createTextNode(arraychampion.blurb);
+    let textoUper = arraychampion.title;
+    let texto = document.createTextNode(textoUper.toUpperCase());
     p.appendChild(texto);
 
 
@@ -300,17 +333,7 @@ function filterByRole(btnRol) {
 
 }
 
-///---------Search -------<<
-inputSearch.addEventListener("keyup", function () {
-    divChampion.innerHTML = '';
-    let texto = inputSearch.value.toLowerCase();
-    const searchHero = arraychampion.filter(e => e.name.toLowerCase().indexOf(texto) > -1).map(e => printChampions(e));
 
-    if (searchHero.length == 0) {
-        divChampion.innerHTML = '<p style="font-size:30px">Champion no found</p>';
-    }
-
-});
 //aki ki njnd jjdnd jnun jnu aaaa aa
 
 
