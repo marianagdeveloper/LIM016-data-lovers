@@ -1,157 +1,199 @@
 
 import { dataChampions } from './data.js';
-let arraychampion = [];
+let arraychampion = [], newArray = [];
 let sectionGrafic = document.getElementById("graficRanking");
-
-
+let grafic = document.getElementById("grafic");
+let aux = ["attack", "defense", "magic", "difficulty"];
 async function carga() {
     await dataChampions().then((data) => {
         arraychampion = data;
-        let newArray = [];
-        let arrayTop = arraychampion.filter(e => (e.info.attack + e.info.defense + e.info.magic + e.info.difficulty) > 24);
-        console.log("arreglo ordenado primero", arrayTop);
+        rankingTop();
+        google.charts.setOnLoadCallback(drawChartTop);
 
-        let arrayOrderM = arrayTop.sort(function (a, b) { return (a.info.attack + a.info.defense + a.info.magic + a.info.difficulty) - (b.info.attack + b.info.defense + b.info.magic + b.info.difficulty) });
-
-        let arrayOrder = arrayOrderM.reverse();
-        if (arrayOrder.length > 10) {
-            for (let i = 0; i < arrayOrder.length; i++) {
-                newArray[i] = arrayOrder[i];
-                if (newArray.length == 10) {
-                    i = arrayOrder.length;
-                }
-            }
-        }
-
-        const elements = newArray.reduce((acc,champion) =>acc+ topTemplate(champion),"");
-       
-
-        sectionGrafic.innerHTML = elements;
-
-
-        function topTemplate(champion) {
-            const { attack, defense, magic, difficulty } = champion.info;
-
-            return `
-              <div class="divTop">
-              <img class="imgTop" src=${champion.img} alt="">
-                <p class="nameTop">
-                  <b>${champion.name}</b>
-                </p>
-                <p class="rayita"></p>
-                <p class="puntajeTop">${attack + defense + magic + difficulty}</p>
-              </div>
-            `
-        }
-
+        document.getElementsByName("menuRanking")[0].addEventListener('change', function () { graficAbility(aux[0]); });
+        document.getElementsByName("menuRanking")[1].addEventListener('change', function () { graficAbility(aux[1]); });
+        document.getElementsByName("menuRanking")[2].addEventListener('change', function () { graficAbility(aux[2]); });
+        document.getElementsByName("menuRanking")[3].addEventListener('change', function () { graficAbility(aux[3]); });
 
     });
 }
 
-
 carga();
 
+function rankingTop() {
+    let arrayTop = arraychampion.filter(e => (e.info.attack + e.info.defense + e.info.magic + e.info.difficulty) > 24);
+    let arrayOrderM = arrayTop.sort(function (a, b) { return (a.info.attack + a.info.defense + a.info.magic + a.info.difficulty) - (b.info.attack + b.info.defense + b.info.magic + b.info.difficulty) });
+
+    let arrayOrder = arrayOrderM.reverse();
+    if (arrayOrder.length > 10) {
+        for (let i = 0; i < arrayOrder.length; i++) {
+            newArray[i] = arrayOrder[i];
+            if (newArray.length == 10) {
+                i = arrayOrder.length;
+            }
+        }
+    }
+
+    const elements = newArray.reduce((acc, champion) => acc + topTemplate(champion), "");
+
+    sectionGrafic.innerHTML = elements;
+}
+
+function topTemplate(champion) {
+
+    const { attack, defense, magic, difficulty } = champion.info;
+    return `
+      <div class="divTop">
+      <img class="imgTop" src=${champion.img} alt="">
+        <p class="nameTop">
+          <b>${champion.name}</b>
+        </p>
+        <p class="rayita"></p>
+        <p class="puntajeTop">${attack + defense + magic + difficulty}</p>
+      </div>
+    `
+}
+function drawChartTop() {
+    let arrayColors = ["blue", "yellow", "green", "black", "red", "grey", "silver", "gold", "platinum", "copper"];
+    console.log("arraycolor", arrayColors);
+
+    let datas = google.visualization.arrayToDataTable([
+
+        ['Element', 'Values', { role: 'style' }],
+        [newArray[0].name, newArray[0].info.attack + newArray[0].info.defense + newArray[0].info.magic + newArray[0].info.difficulty, arrayColors[0]],
+        [newArray[1].name, newArray[1].info.attack + newArray[1].info.defense + newArray[1].info.magic + newArray[1].info.difficulty, arrayColors[1]],
+        [newArray[2].name, newArray[2].info.attack + newArray[2].info.defense + newArray[2].info.magic + newArray[2].info.difficulty, arrayColors[2]],
+        [newArray[3].name, newArray[3].info.attack + newArray[3].info.defense + newArray[3].info.magic + newArray[3].info.difficulty, arrayColors[3]],
+        [newArray[4].name, newArray[4].info.attack + newArray[4].info.defense + newArray[4].info.magic + newArray[4].info.difficulty, arrayColors[4]],
+        [newArray[5].name, newArray[5].info.attack + newArray[5].info.defense + newArray[5].info.magic + newArray[5].info.difficulty, arrayColors[5]],
+        [newArray[6].name, newArray[6].info.attack + newArray[6].info.defense + newArray[6].info.magic + newArray[6].info.difficulty, arrayColors[6]],
+        [newArray[7].name, newArray[7].info.attack + newArray[7].info.defense + newArray[7].info.magic + newArray[7].info.difficulty, arrayColors[7]],
+        [newArray[8].name, newArray[8].info.attack + newArray[8].info.defense + newArray[8].info.magic + newArray[8].info.difficulty, arrayColors[8]],
+        [newArray[9].name, newArray[9].info.attack + newArray[9].info.defense + newArray[9].info.magic + newArray[9].info.difficulty, arrayColors[9]]
+
+    ]);
+
+    let view = new google.visualization.DataView(datas);
+    view.setColumns([0, 1,
+        {
+            calc: "stringify",
+            sourceColumn: 1,
+            type: "string",
+            role: "annotation"
+        },
+        2]);
+
+    let options = {
+        title: "The most populares Champions",
+
+        width: 500,
+        height: 280,
+        bar: { groupWidth: "95%" },
+        legend: { position: "none" },
+    };
+    let chart = new google.visualization.BarChart(grafic);
+    chart.draw(view, options);
 
 
+}
 
 
+function graficAbility(ability) {
+    let arrayAbilityOrder = [];
+    let arrayAbility = [];
+    let arrayFilter = [];
+    arrayFilter = arraychampion.filter(e => (e.info[ability]) >= 8);
 
+    arrayAbilityOrder = arrayFilter.sort(function (a, b) { return (a.info[ability]) - (b.info[ability]) });
 
+    let arrayOrder = arrayAbilityOrder.reverse();
+    if (arrayOrder.length > 10) {
+        for (let i = 0; i < arrayOrder.length; i++) {
+            arrayAbility[i] = arrayOrder[i];
+            if (arrayAbility.length == 10) {
+                i = arrayOrder.length;
+            }
+        }
+    }
+  
+    viewRanking(ability, arrayAbility);
+    google.charts.setOnLoadCallback(drawChartAbility);
 
-/*  google.charts.setOnLoadCallback(drawChartTop);
+    function drawChartAbility() {
 
- function drawChartTop() {
-     let arrayColors = ["blue", "yellow", "green", "black", "red", "grey", "silver", "gold", "platinum", "copper"];
-     console.log("arraycolor", arrayColors);
+        let arrayColors = ["blue", "yellow", "green", "black", "red", "grey", "silver", "gold", "platinum", "copper"];
+        let datas = google.visualization.arrayToDataTable([
 
-     let datas = google.visualization.arrayToDataTable([
+            ['Element', 'Values', { role: 'style' }],
+            [arrayAbility[0].name, arrayAbility[0].info[ability], arrayColors[0]],
+            [arrayAbility[1].name, arrayAbility[1].info[ability], arrayColors[1]],
+            [arrayAbility[2].name, arrayAbility[2].info[ability], arrayColors[2]],
+            [arrayAbility[3].name, arrayAbility[3].info[ability], arrayColors[3]],
+            [arrayAbility[4].name, arrayAbility[4].info[ability], arrayColors[4]],
+            [arrayAbility[5].name, arrayAbility[5].info[ability], arrayColors[5]],
+            [arrayAbility[6].name, arrayAbility[6].info[ability], arrayColors[6]],
+            [arrayAbility[7].name, arrayAbility[7].info[ability], arrayColors[7]],
+            [arrayAbility[8].name, arrayAbility[8].info[ability], arrayColors[8]],
+            [arrayAbility[9].name, arrayAbility[9].info[ability], arrayColors[9]]
 
-         ['Element', 'Values', { role: 'style' }],
-         [newArray[0].name, newArray[0].info.attack + newArray[0].info.defense + newArray[0].info.magic + newArray[0].info.difficulty, arrayColors[0]],
-         [newArray[1].name, newArray[1].info.attack + newArray[1].info.defense + newArray[1].info.magic + newArray[1].info.difficulty, arrayColors[1]],
-         [newArray[2].name, newArray[2].info.attack + newArray[2].info.defense + newArray[2].info.magic + newArray[2].info.difficulty, arrayColors[2]],
-         [newArray[3].name, newArray[3].info.attack + newArray[3].info.defense + newArray[3].info.magic + newArray[3].info.difficulty, arrayColors[3]],
-         [newArray[4].name, newArray[4].info.attack + newArray[4].info.defense + newArray[4].info.magic + newArray[4].info.difficulty, arrayColors[4]],
-         [newArray[5].name, newArray[5].info.attack + newArray[5].info.defense + newArray[5].info.magic + newArray[5].info.difficulty, arrayColors[5]],
-         [newArray[6].name, newArray[6].info.attack + newArray[6].info.defense + newArray[6].info.magic + newArray[6].info.difficulty, arrayColors[6]],
-         [newArray[7].name, newArray[7].info.attack + newArray[7].info.defense + newArray[7].info.magic + newArray[7].info.difficulty, arrayColors[7]],
-         [newArray[8].name, newArray[8].info.attack + newArray[8].info.defense + newArray[8].info.magic + newArray[8].info.difficulty, arrayColors[8]],
-         [newArray[9].name, newArray[9].info.attack + newArray[9].info.defense + newArray[9].info.magic + newArray[9].info.difficulty, arrayColors[9]]
+        ]);
 
-     ]);
+        let view = new google.visualization.DataView(datas);
+        view.setColumns([0, 1,
+            {
+                calc: "stringify",
+                sourceColumn: 1,
+                type: "string",
+                role: "annotation"
+            },
+            2]);
 
-     let view = new google.visualization.DataView(datas);
-     view.setColumns([0, 1,
-         {
-             calc: "stringify",
-             sourceColumn: 1,
-             type: "string",
-             role: "annotation"
-         },
-         2]);
+        let options = {
+            title: "The most populares Champions",
+            width: 600,
+            height: 350,
+            bar: { groupWidth: "95%" },
+            legend: { position: "none" },
+        };
+        let chart = new google.visualization.BarChart(grafic);
+        chart.draw(view, options);
 
-     let options = {
-         title: "The most populares Champions",
+    }
 
-         width: 600,
-         height: 350,
-         bar: { groupWidth: "95%" },
-         legend: { position: "none" },
-     };
-     let chart = new google.visualization.BarChart(document.getElementById("graficRanking"));
-     chart.draw(view, options);
+}
 
+function viewRanking(ability, arrayAbility) {
 
- }
- let radioAtacck = document.getElementById("menuAttack");
- radioAtacck.addEventListener("click", attack);
+    if (ability == "attack") {
+        const elements = arrayAbility.reduce((acc, champion) => acc + topTemplateAbility(champion, ability), "");
+        sectionGrafic.innerHTML = elements;
 
- function attack() {
+    }
+    if (ability == "defense") {
+        const elements = arrayAbility.reduce((acc, champion) => acc + topTemplateAbility(champion, ability), "");
+        sectionGrafic.innerHTML = elements;
 
-     let arrayAttack = [];
-     arrayAttack = arraychampion.filter(e => (e.info.attack) == 10);
-     console.log("array attack ", arrayAttack); n
-     google.charts.setOnLoadCallback(drawChartAttack);
+    }
+    if (ability == "magic") {
+        const elements = arrayAbility.reduce((acc, champion) => acc + topTemplateAbility(champion, ability), "");
+        sectionGrafic.innerHTML = elements;
 
-     function drawChartAttack() {
-         let arrayColors = ["blue", "yellow", "green", "black", "red", "grey", "silver", "gold", "platinum", "copper"];
-         console.log("arraycolor", arrayColors);
+    }
+    if (ability == "difficulty") {
+        const elements = arrayAbility.reduce((acc, champion) => acc + topTemplateAbility(champion, ability), "");
+        sectionGrafic.innerHTML = elements;
+    }
+}
 
-         let datas = google.visualization.arrayToDataTable([
-
-             ['Element', 'Values', { role: 'style' }],
-             [arrayAttack[0].name, arrayAttack[0].info.attack, arrayColors[0]],
-             [arrayAttack[1].name, arrayAttack[1].info.attack, arrayColors[1]],
-             [arrayAttack[2].name, arrayAttack[2].info.attack, arrayColors[2]],
-             [arrayAttack[3].name, arrayAttack[3].info.attack, arrayColors[3]],
-             [arrayAttack[4].name, arrayAttack[4].info.attack, arrayColors[4]]
-
-
-         ]);
-
-         let view = new google.visualization.DataView(datas);
-         view.setColumns([0, 1,
-             {
-                 calc: "stringify",
-                 sourceColumn: 1,
-                 type: "string",
-                 role: "annotation"
-             },
-             2]);
-
-         let options = {
-             title: "The most populares Champions",
-
-             width: 600,
-             height: 350,
-             bar: { groupWidth: "95%" },
-             legend: { position: "none" },
-         };
-         let chart = new google.visualization.BarChart(sectionGrafic);
-         chart.draw(view, options);
-
-     }
-
- } */
-
-
+function topTemplateAbility(champion, ability) {
+    return `
+      <div class="divTop">
+      <img class="imgTop" src=${champion.img} alt="">
+        <p class="nameTop">
+          <b>${champion.name}</b>
+        </p>
+      
+        <p class="puntajeTop">${champion.info[ability]}</p>
+      </div>
+    `
+}

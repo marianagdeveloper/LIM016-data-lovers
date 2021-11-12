@@ -19,12 +19,7 @@ async function carga() {
         arraychampion = data;
 
         const URLactual = window.location;
-        console.log(URLactual);
-
-      /*   if (URLactual.pathname == "/") {
-         
-        }
- */
+    
         if (URLactual.pathname == "/champions") {
 
             printNav();

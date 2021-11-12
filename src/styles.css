@@ -13,8 +13,7 @@
     background: url(  https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);
  /*    background: url(   https://pbs.twimg.com/media/COdcRZ9UcAA3CRQ.jpg); */
   
-  width: 100%;
-  
+  width: 100%;  
   height: 1100px;
   background-position: center;
   background-size: cover;
@@ -67,7 +66,6 @@ h3{
   font-size: 24px;
 }
 
-
 /* --------------------------END VERSUS ------ versus.html------------------------------------------ */
 /* --------------------------RANKING ------ ranking.html------------------------------------------ */
 .sectionRanking{
@@ -81,7 +79,7 @@ h3{
   background-position: center;
   background-size: cover;
   padding: 20px;
-  padding-top: 50px;
+  padding-top: 30px;
   }
   .topRankig{
     background:rgba(0,0,0,0.7) ;
@@ -113,7 +111,7 @@ h3{
   }
   .optionRanking{
     width: 70%;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: space-around;
   }
@@ -124,17 +122,19 @@ h3{
     border-radius: 20px;
   }
   .graficRanking{
+    width: 100%;
     padding: 20px;
     border-radius: 20px;
-    background: rgba(252, 167, 217, 0.6) ;
+    background: rgba(218, 118, 140, 0.6) ;
     height: 600px;
     margin-top: 20px;
+  
   }
   .divTop{
     margin: auto;
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 15px;
   }
   .nameTop{
@@ -143,12 +143,22 @@ h3{
   .puntajeTop{
     padding-top: 10px;
   }
-  .rayita{
-    width: 60%;
-
-    height: 5px;
-    color: white;
-  }
+ .sectionGrafic{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+ }
+ .grafic{
+  padding:0 20px 20px;
+ } 
+.rayita{
+  width: 100px;
+}
+ .imgTopR>img{
+  padding: 20px;
+  display: block;
+  width: 100%;
+ }
  /*  .imgTop{
     padding-top: 10px;
   } */
