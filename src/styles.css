@@ -1,9 +1,157 @@
 /* --------------------------VERSUS ------ versus.html------------------------------------------ */
 
+#btnvs{
+  margin: auto !important;
+  font-size: 14px;
+  width: 50px;
+  height: 40px;
+  padding: 0; 
+  
+  }
+.sectionVersus{
+
+    background: url(  https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);
+ /*    background: url(   https://pbs.twimg.com/media/COdcRZ9UcAA3CRQ.jpg); */
+  
+  width: 100%;
+  
+  height: 1100px;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  padding-top: 50px;
+  }
+.versus{
+  background:rgba(0,0,0,0.7) ;
+  width: 80%;
+  height: 990px;
+  margin: auto !important;
+  padding: 20px;
+  border-radius: 20px;
+}
+.graficVersus{
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(225, 247, 130, 0.6) ;
+  height: 300px;
+  margin-top: 20px;
+}
+.carousel{
+  width: 100%;
+  height: 150px;
+  background: crimson;
+  margin-top: 20px;
+}
+.chooseChampion{
+  margin: 50px;
+  width: 200px;
+  height: 200px;
+  background: white;
+  padding: 20px;
+}
+.chooseChampion > h2{
+ text-align: center;
+}
+.choose{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+h4{
+  margin-top: 100px;
+}
+h3{
+  color: white;
+  text-align: center;
+  margin: 20px;
+  font-size: 24px;
+}
+
 
 /* --------------------------END VERSUS ------ versus.html------------------------------------------ */
 /* --------------------------RANKING ------ ranking.html------------------------------------------ */
+.sectionRanking{
 
+  /*   background: url(  https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg); */
+    background: url(   https://pbs.twimg.com/media/COdcRZ9UcAA3CRQ.jpg);
+  
+  width: 100%;
+  
+  height: 950px;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  padding-top: 50px;
+  }
+  .topRankig{
+    background:rgba(0,0,0,0.7) ;
+    width: 80%;
+    height: 880px;
+    margin: auto !important;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .menuRanking{
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .menuRanking > h2{
+    font-size: 25px;
+    color: white;
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+  }
+  label{
+  font-size: 20px;
+  color: white;
+  
+  }
+  .optionRanking{
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .infoRanking{
+    background: rgba(0,0,0,0.6) ;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .graficRanking{
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(252, 167, 217, 0.6) ;
+    height: 600px;
+    margin-top: 20px;
+  }
+  .divTop{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+  }
+  .nameTop{
+    padding-top: 10px;
+  }
+  .puntajeTop{
+    padding-top: 10px;
+  }
+  .rayita{
+    width: 60%;
+
+    height: 5px;
+    color: white;
+  }
+ /*  .imgTop{
+    padding-top: 10px;
+  } */
 
 /* --------------------------END RANKING ------ ranking.html------------------------------------------ */
 

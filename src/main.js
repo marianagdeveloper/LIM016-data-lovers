@@ -11,8 +11,8 @@ let button, btnRol = [], textButton, cards = [], rolChampion;
 let cerrar = document.getElementById("close");
 let modal = document.getElementById("modal");
 let modalC = document.getElementById("modal-container");
-const arrayNavEnlaces = ["champions.html", "ranking.html", "index.html", "download", "news"]
-let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
+const arrayNavEnlaces = ["champions.html", "ranking.html", "index.html", "download.html", "versus.html"]
+let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "Versus"];
 
 async function carga() {
     await dataChampions().then((data) => {
@@ -21,10 +21,10 @@ async function carga() {
         const URLactual = window.location;
         console.log(URLactual);
 
-        if (URLactual.pathname == "/") {
-            printNav();
+      /*   if (URLactual.pathname == "/") {
+         
         }
-
+ */
         if (URLactual.pathname == "/champions") {
 
             printNav();
@@ -32,6 +32,10 @@ async function carga() {
             printButton();
             searchChampion();
         }
+        else{
+            printNav();
+        }
+
     });
 }
 

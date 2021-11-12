@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -10,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
   <!--  agregando grafico de barras -->
   <script src="https://www.gstatic.com/charts/loader.js"></script>
   <script>
@@ -33,12 +35,29 @@
     </div>
 
   </header>
-  <section class="sectionChampions">
+  <section class="sectionRanking">
+<div class="topRankig">
+<div class="menuRanking">
+  <h2>TOP  10</h2>
+  <div class="optionRanking"> 
+    
+  <input type="radio" id="menuAttack" name="menuRanking" value="Attack"><label for="menuAttack">Attack</label>
+  <input type="radio" id="menuDefense" name="menuRanking" value="Defense"><label for="menuDefense">Defense</label>
+  <input type="radio" id="menuMagic" name="menuRanking" value="Magic"><label for="menuMagic">Magic</label>
+  <input type="radio" id="menuDifficulty" name="menuRanking" value="Difficulty"><label for="menuDifficulty">Difficulty</label>
+ </div>
 
-    <div class="search">
-      <h2 class="h2Champions">RANKING</h2>
-     
-    </div>
+
+</div>
+<div class="infoRanking">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum blanditiis soluta mollitia dignissimos sequi fuga dolore ipsum nobis, sunt cum illo! Error fugiat deleniti, expedita quasi natus libero eos nam eveniet quaerat vel a numquam animi veritatis quis explicabo provident. Sequi ullam unde nemo, laborum tempora labore asperiores? Reiciendis, odio?</p>
+
+</div>
+<div class="graficRanking" id="graficRanking">
+
+</div>
+
+</div>
    
   </section>
 
@@ -46,8 +65,10 @@
     <p class="textFooter">Todos los derechos reservados © Copyrights 2021 Diseñado por M&M </p>
   </footer>
 
-  <script src="main.js" type="module"></script>
+ <!--  <script src="main.js" type="module"></script> -->
+  <script src="ranking.js" type="module"></script>
 </body>
 <!-- por aca todo bien jujuj jujuj nujuju  -->
 
 </html>
+

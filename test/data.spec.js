@@ -1,5 +1,5 @@
 import { dataChampions, isFilterRol } from '../src/data.js';
-
+let x=[];
 
 describe('dataChampions', () => {
   it('is a function', () => {
@@ -15,8 +15,12 @@ describe('isFilterRol', () => {
     expect(typeof isFilterRol).toBe('function');
   });
 
-  it('debería retornar true para "Tank"', () => {
-    expect(isFilterRol(dataChampions(), 'Tank')[0].tags.includes('Tank')).toBe(true);
+  it('debería retornar true para "Tank"', async () => {
+    await dataChampions().then((data) => {
+      x=data;     
+    });
+    expect(isFilterRol(x, 'Tank')[0].tags.includes('Tank')).toEqual(true);
+   
   });
   it('debería retornar true para "Mage"', () => {
     expect(isFilterRol(dataChampions(), 'Mage')[0].tags.includes('Mage')).toBe(true);
