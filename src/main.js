@@ -1,9 +1,10 @@
-
 import { dataChampions, isFilterRol } from './data.js';
 
 let arraychampion = [];
+/* let newArray=[]; */
 let divChampion = document.getElementById("divShowChampions");
 let inputSearch = document.getElementById("inputSearch");
+/* let containerSlider = document.getElementById("slide-track"); */
 let arrayButton = ["All", "Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let button, btnRol = [], textButton, cards = [], rolChampion;
 
@@ -26,9 +27,11 @@ async function carga() {
             recorrerData();
             printButton();
             searchChampion();
+           
         }
         else{
             printNav();
+           /*  slide(); */
         }
 
     });
@@ -322,9 +325,38 @@ function filterByRole(btnRol) {
 
 }
 
+/* ----creando template para slideeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee --- */
 
 
 
 
+/* function slide() {
+    let arraySlide = arraychampion.filter(e => (e.info.attack + e.info.defense + e.info.magic + e.info.difficulty) > 20);
+    let arrayOrderM = arraySlide.sort(function (a, b) { return (a.info.attack + a.info.defense + a.info.magic + a.info.difficulty) - (b.info.attack + b.info.defense + b.info.magic + b.info.difficulty) });
+
+    let arrayOrder = arrayOrderM.reverse();
+    if (arrayOrder.length > 10) {
+        for (let i = 0; i < arrayOrder.length; i++) {
+            newArray[i] = arrayOrder[i];
+            if (newArray.length == 10) {
+                i = arrayOrder.length;
+            }
+        }
+    }
+
+    const elements = newArray.reduce((acc, champion) => acc + slideTemplate(champion), "");
+    containerSlider.innerHTML = elements;
+}
 
 
+function slideTemplate(champion) {
+
+   
+    return `
+      <div class="slide">
+      <img class="imgSlide" src=${champion.splash} alt="">       
+      </div>
+    `
+}
+
+ */
