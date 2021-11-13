@@ -17,23 +17,23 @@ const arrayNavEnlaces = ["champions.html", "ranking.html", "index.html", "downlo
 let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "News"];
 
 await dataChampions().then((data) => {
-       arraychampion = data;
-}); 
+    arraychampion = data;
+});
 var URLactual = window.location;
 // console.log(URLactual);
 
 if (URLactual.pathname == "/src/index.html") {
     printNav();
-} 
+}
 
 if (URLactual.pathname == "/src/champions.html") {
     printNav();
     recorrerData();
     printButton();
 
-///---------Search -------<<
-searchChampion();
-} 
+    ///---------Search -------<<
+    searchChampion();
+}
 
 //search
 function searchChampion() {
@@ -41,13 +41,14 @@ function searchChampion() {
         divChampion.innerHTML = '';
         let texto = inputSearch.value.toLowerCase();
         const searchHero = arraychampion.filter(e => e.name.toLowerCase().indexOf(texto) > -1).map(e => printChampions(e));
-    
+
         if (searchHero.length == 0) {
             divChampion.innerHTML = '<p style="font-size:30px">Champion no found</p>';
         }
-    
     });
 }
+
+
 
 //modal
 function printModal(champions) {
@@ -77,128 +78,287 @@ function printModal(champions) {
     // roles.appendChild(textRole);
     containerRole.appendChild(roles);
 
+    //contenido del modal: img, nav, chart
     const containerImageDescrip = document.createElement("div");
     containerImageDescrip.setAttribute("class", "containerImageDescrip");
     containerModal.appendChild(containerImageDescrip);
-
+    //div img
     const containerImage = document.createElement("div");
     containerImage.setAttribute("class", "containerImage");
     containerImageDescrip.appendChild(containerImage);
-
+    //img
     const imageModal = document.createElement("img");
     imageModal.setAttribute("class", "imageModal");
     imageModal.src = champions.splash;
     containerImage.appendChild(imageModal);
-
+    //div nav abilities
     const containerDesAbil = document.createElement("div");
     containerDesAbil.setAttribute("class", "containerDesAbil");
     containerImageDescrip.appendChild(containerDesAbil);
-
-    const descriptionModal = document.createElement("p");
-    // const textDescription = document.createTextNode(champions.blurb);
-    // const textDescription = document.createTextNode(champions.title);
-    let textHabilidades = "HABILIDADES: " + champions.tags;
-    const textDescription = document.createTextNode(textHabilidades);
-    descriptionModal.setAttribute("class", "descriptionModal")
-    descriptionModal.appendChild(textDescription);
-    containerDesAbil.appendChild(descriptionModal);
+    // nav abilities
+    let arrayNavModal = ["Info", "Roles", "Abilities"];
+    let arrayLinkModal = ["#info", "#rol", "#ability"];
+    let enlace;
+    let descriptionModal = document.createElement("div");
 
     const containerAbilities = document.createElement("div");
+    const containerRoles = document.createElement("div");
+    let textRole, textInfo, imageRoles, divTextInfo;
+    const containerInfo = document.createElement("div");
+
+    //clean content modal
+    function cleanModalContent(tags) {
+        if (containerAbilities.childNodes[0]) {
+            console.log("remove ability");
+            containerAbilities.remove();
+        }
+        if (containerRoles.childNodes[0]) {
+            for (let index = 0; index < tags.length; index++) {
+                divTextInfo.remove();
+                console.log(tags[index]);
+            }
+        }
+        if (containerInfo.childNodes[0]) {
+            console.log("remove info");
+            containerInfo.remove();
+            textInfo.remove();
+        }
+    }
+
+    //printRol
+    function printRol(tags) {
+        divTextInfo = document.createElement("div");
+        divTextInfo.setAttribute("class", "divTextInfo");
+
+        for (let index = 0; index < tags.length; index++) {
+            textRole = document.createTextNode(tags[index]);
+            divTextInfo.appendChild(textRole);
+
+            //img
+            imageRoles = document.createElement("img");
+            imageRoles.setAttribute("class", "imageRoles");
+            imageRoles.src = "/src/gif/blue.gif";
+            divTextInfo.appendChild(imageRoles);
+            containerRoles.appendChild(divTextInfo);
+        }
+
+        containerDesAbil.appendChild(containerRoles);
+    }
+
+    //for each item in the array: 
+    for (let i = 0; i < arrayLinkModal.length; i++) {
+        descriptionModal.setAttribute("class", "descriptionModal");
+        //create elemnts a modal
+        enlace = document.createElement("a");
+        enlace.href = arrayLinkModal[i];
+        enlace.textContent += arrayNavModal[i].toString();
+        descriptionModal.appendChild(enlace);
+        //switch nav modal
+        enlace.addEventListener('click', function () {
+            let ability = arrayLinkModal[i];
+            let abilitySelect = ability.split("#")[1];
+            console.log(abilitySelect);
+            let tagsValue;
+            tagsValue = champions.tags;
+            console.log("tags:", tagsValue);
+            
+            switch (abilitySelect) {
+                case 'info':
+                    cleanModalContent(tagsValue);
+                    containerInfo.setAttribute("class", "containerInfo");
+                    containerInfo.setAttribute("id", "containerInfo");
+                    textInfo = document.createTextNode(champions.blurb);
+                    containerInfo.appendChild(textInfo);
+                    containerDesAbil.appendChild(containerInfo);
+                    break;
+
+                case 'rol':
+                    cleanModalContent(tagsValue);
+                    printRol(tagsValue);
+                    break;
+
+                case 'ability':
+                    if (containerRoles.childNodes[0]) {
+                        for (let index = 0; index < tagsValue.length; index++) {
+                            divTextInfo.remove();
+                            console.log(tagsValue[index]);
+                        }
+                    }
+                    if (containerInfo.childNodes[0]) {
+                        containerInfo.remove();
+                        textInfo.remove();
+                    }
+                    containerAbilities.setAttribute("class", "containerAbilities");
+                    containerAbilities.setAttribute("id", "containerAbilities")
+                    containerDesAbil.appendChild(containerAbilities);
+                    google.charts.setOnLoadCallback(drawChart);
+                    break;
+                default:
+                    break;
+            }
+        });
+    }
+    containerDesAbil.appendChild(descriptionModal);
     containerAbilities.setAttribute("class", "containerAbilities");
     containerAbilities.setAttribute("id", "containerAbilities")
     containerDesAbil.appendChild(containerAbilities);
 
+    // Add function grafic
+    google.charts.setOnLoadCallback(drawChart);
 
-    //Add function grafic
-      google.charts.setOnLoadCallback(drawChart);
-         function drawChart() {
-         
-          let data = google.visualization.arrayToDataTable([
-              ['Element', 'Values', { role: 'style' }],
-              ['Attack', champions.info.attack, '#BB8FCE'],
-              ['Defense', champions.info.defense, ' #5DADE2'],
-              ['Magic', champions.info.magic, '#82E0AA'],
-              ['Difficulty', champions.info.difficulty, '#F0B27A']
-  
-          ]);
-  
-  
-          let view = new google.visualization.DataView(data);
-          view.setColumns([0, 1,
-              {
-                  calc: "stringify",
-                  sourceColumn: 1,
-                  type: "string",
-                  role: "annotation"
-              },
-              2]);
-          let options = {
+    //draw Abilities
+    function drawChart() {
+        let data = google.visualization.arrayToDataTable([
+            ['Element', 'Values', { role: 'style' }],
+            ['Attack', champions.info.attack, '#BB8FCE'],
+            ['Defense', champions.info.defense, ' #5DADE2'],
+            ['Magic', champions.info.magic, '#82E0AA'],
+            ['Difficulty', champions.info.difficulty, '#F0B27A']
+        ]);
+        let view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+            {
+                calc: "stringify",
+                sourceColumn: 1,
+                type: "string",
+                role: "annotation"
+            },
+            2]);
+        let options = {
             //   title: "INFO:",
-              width: 500,
-              height: 140,
-              fontSize: 18,
-              backgroundColor: "none",
-              color: 'white',
-              bar: { groupWidth: "80%", color: "white" },
-              legend: { position: "none" },
-  
-              titleTextStyle: {
-                  color: 'white',
-                  fontSize: 20,
-              },
-             
-              hAxis: {
-                  
-                  textStyle: {
-                      color: "white",
-                      fontSize: 20
-                  },
-                  minorGridlines: {
-                      color: "black",
-                      count:0
-                  },
-                  gridlines:{
-                      
-                      color: "black",
-                      count:0
-                  },
-                  baselineColor: {
-                      color: "black"
-                  },
-               
-              },
-              
-             
-  
-              vAxis: {
-                  textStyle: {
-                      color: "white",
-                      fontSize: 20
-                  },
-                  baselineColor: {
-                      color: "white"
-                  },
-                  minorGridlines: {
-                      color: "white"
-                  },
-                  gridlines:{
-                      
-                      color: "white",
-                      count:0
-                  },
-              },
-  
-            
-          };
-  
-          let chart = new google.visualization.ColumnChart(document.getElementById('containerAbilities'));
-          chart.draw(view, options);
-      }
-  
+            width: 500,
+            height: 170,
+            fontSize: 18,
+            backgroundColor: "none",
+            color: 'white',
+            bar: { groupWidth: "80%", color: "white" },
+            legend: { position: "none" },
+
+            titleTextStyle: {
+                color: 'white',
+                fontSize: 20,
+            },
+
+            hAxis: {
+
+                textStyle: {
+                    color: "white",
+                    fontSize: 20
+                },
+                minorGridlines: {
+                    color: "black",
+                    count: 0
+                },
+                gridlines: {
+
+                    color: "black",
+                    count: 0
+                },
+                baselineColor: {
+                    color: "black"
+                },
+
+            },
+
+            vAxis: {
+                textStyle: {
+                    color: "white",
+                    fontSize: 20
+                },
+                baselineColor: {
+                    color: "white"
+                },
+                minorGridlines: {
+                    color: "white"
+                },
+                gridlines: {
+
+                    color: "white",
+                    count: 0
+                },
+            },
+        };
+        let chart = new google.visualization.ColumnChart(document.getElementById('containerAbilities'));
+        chart.draw(view, options);
+    }
+
+    //draw Roles
+    function drawRoles() {
+        let data = google.visualization.arrayToDataTable([
+            ['Element', 'Values', { role: 'style' }],
+            ['Attack', champions.info.attack, '#BB8FCE'],
+            ['Difficulty', champions.info.difficulty, '#F0B27A']
+        ]);
+        let view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+            {
+                calc: "stringify",
+                sourceColumn: 1,
+                type: "string",
+                role: "annotation"
+            },
+            2]);
+        let options = {
+            //   title: "INFO:",
+            width: 500,
+            height: 170,
+            fontSize: 18,
+            backgroundColor: "none",
+            color: 'white',
+            bar: { groupWidth: "80%", color: "white" },
+            legend: { position: "none" },
+
+            titleTextStyle: {
+                color: 'white',
+                fontSize: 20,
+            },
+
+            hAxis: {
+
+                textStyle: {
+                    color: "white",
+                    fontSize: 20
+                },
+                minorGridlines: {
+                    color: "black",
+                    count: 0
+                },
+                gridlines: {
+
+                    color: "black",
+                    count: 0
+                },
+                baselineColor: {
+                    color: "black"
+                },
+
+            },
+
+            vAxis: {
+                textStyle: {
+                    color: "white",
+                    fontSize: 20
+                },
+                baselineColor: {
+                    color: "white"
+                },
+                minorGridlines: {
+                    color: "white"
+                },
+                gridlines: {
+
+                    color: "white",
+                    count: 0
+                },
+            },
+        };
+        let chart = new google.visualization.ColumnChart(document.getElementById('containerAbilities'));
+        chart.draw(view, options);
+    }
+
     //properties modal
     modalC.style.opacity = "1";
     modalC.style.visibility = "visible";
-
 
     cerrar.addEventListener("click", function () {
         modalC.style.opacity = "0";
@@ -213,39 +373,11 @@ function printNav() {
     let temp, item, list, b, i, enlace;
     temp = document.getElementById("navDinamic");
 
->>>>>>> main
     //get the div element from the template:
     item = temp.querySelector("ul");
     //for each item in the array: 
     for (i = 0; i < arrayNav.length; i++) {
         //create elemnts li
-<<<<<<< HEAD
-        a = document.createElement("li");
-    
-       if(arrayNav[i] == arrayNav[2]){
-          
-       b=document.createElement("img");
-       b.src= "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png";
-       console.log(b);
-       a = b;
-       
-    }else  
-     {
-        a.textContent += arrayNav[i];
-    }
-        //append the new node wherever you like:
-        //document.temp2.appendChild(a);
-        item.appendChild(a);
-   
-    }
-}
-
-function printChampions(){
-  alert(data)
-}
-
-=======
-
         list = document.createElement("li");
         enlace = document.createElement("a");
         enlace.href = arrayNavEnlaces[i];
@@ -260,17 +392,14 @@ function printChampions(){
         }
         list.appendChild(enlace);
         item.appendChild(list);
-
     }
 }
 ///---------End of function Nav -------
 
 /* --Create function PrintChampions in cards-- */
 function recorrerData() {
-    console.log("arreglo array ",arraychampion);
+    // console.log("arreglo array ", arraychampion);
     arraychampion.forEach(element => printChampions(element));
-    
-
 }
 function printChampions(arraychampion) {
 
@@ -310,14 +439,6 @@ function printChampions(arraychampion) {
     });
 
 }
-// let abrir = document.querySelectorAll(".card");
-
-
-//// acaaa estoy empezando de nuevooo
-
-
-////// hol ahooa knk knkn nknkc dsmm
-///Egg krmfkwemf
 
 /* ----Create function Button rol dinamic --- */
 function printButton() {
@@ -361,9 +482,7 @@ function filterByRole(btnRol) {
 }
 
 
-//aki ki njnd jjdnd jnun jnu aaaa aa
 
 
 
 
->>>>>>> main
