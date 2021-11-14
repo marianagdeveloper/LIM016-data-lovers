@@ -9,7 +9,6 @@ export const dataChampions = async () => {
     
 }
 
-
 function showError(err) { 
   console.log('muestor error', err);
 }
@@ -19,6 +18,5 @@ export const isFilterRol = (arraychampion,btnRol) => {
   let arrayFilter=[];
   arrayFilter=arraychampion.filter(e => e.tags.includes(btnRol));
   return arrayFilter;
-
 
 };
