@@ -1,9 +1,10 @@
 
 import { dataChampions } from './data.js';
-let imgId = 0;
-let arraychampion = [];
+ let image = [];
+let arraychampion = [], cerrar = [];
 let arrayRole = ["Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let arrayIdPanel = ["uno", "dos", "tres", "cuatro", "cinco", "seis"];
+let containerImage=document.getElementById("img1");
 
 async function carga() {
   await dataChampions().then((data) => {
@@ -12,34 +13,55 @@ async function carga() {
     for (let i = 0; i < 5; i++) {
       arrayIdPanel[i] = document.getElementById(arrayIdPanel[i]);
     }
-    uno.addEventListener("click", championIcon(arrayRole[0], arrayIdPanel[0]));
+  /*   championIcon("Fighter", uno); */
+    uno.addEventListener("click", championIcon(arrayRole[0], uno));
     dos.addEventListener("click", championIcon(arrayRole[1], arrayIdPanel[1]));
     tres.addEventListener("click", championIcon(arrayRole[2], arrayIdPanel[2]));
     cuatro.addEventListener("click", championIcon(arrayRole[3], arrayIdPanel[3]));
     cinco.addEventListener("click", championIcon(arrayRole[4], arrayIdPanel[4]));
     seis.addEventListener("click", championIcon(arrayRole[5], seis));
 
-   /*   document.getElementById("1").addEventListener("click",hola()); */
+    /*     document.getElementById("1").addEventListener("click",hola()); */
+
+   
+    
+
+
   });
 }
-
 carga();
+ 
+window.onload = ()=>{
+ 
+  carga2(arraychampion);
+} 
+
+function carga2(arraychampion) {
+
+  let ivi = [];
+  for (let i = 0; i < arraychampion.length; i++) {
+
+   image[i]=arraychampion[i].splash;
+    ivi[i] = document.getElementById(arraychampion[i].id);
+  
+    ivi[i].addEventListener("click", function () {
+      console.log("aaaa",ivi[i])
+console.log("imagen ruta "+image[i]);
+      containerImage.src = image[i];
 
 
+    });
 
+  }
 
-
-function hola() {
-  console.log("holaaa")
-
-}
-
-
+} 
 
 function championIcon(btnRol, m) {
   let array = arraychampion.filter(e => e.tags.includes(btnRol));
 
   const elements = array.reduce((acc, champion) => acc + iconTemplate(champion), "");
+
+
 
   m.innerHTML = elements;
 
@@ -47,14 +69,15 @@ function championIcon(btnRol, m) {
 }
 
 function iconTemplate(champion) {
-  imgId = imgId + 1;
-  return `
 
+  return `
     <div class="containerIcono" >
     <img  width="50px"  src=${champion.img} alt="">
-      <button id=${imgId} > ${champion.name} </button>   
+      <button id=${champion.id} > ${champion.name} </button>   
     </div>
   `
+
+  
 }
 
 const tabLinks = document.querySelectorAll(".tabs a");
