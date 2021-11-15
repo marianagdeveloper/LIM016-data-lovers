@@ -1,7 +1,7 @@
-
+/* 
 import { dataChampions } from './data.js';
  let image = [];
-let arraychampion = [], cerrar = [];
+let arraychampion = [], newArray=[] ;
 let arrayRole = ["Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let arrayIdPanel = ["uno", "dos", "tres", "cuatro", "cinco", "seis"];
 let containerImage=document.getElementById("img1");
@@ -13,15 +13,15 @@ async function carga() {
     for (let i = 0; i < 5; i++) {
       arrayIdPanel[i] = document.getElementById(arrayIdPanel[i]);
     }
-  /*   championIcon("Fighter", uno); */
-    uno.addEventListener("click", championIcon(arrayRole[0], uno));
+
+    uno.addEventListener("click", championIcon(arrayRole[0], arrayIdPanel[0]));
     dos.addEventListener("click", championIcon(arrayRole[1], arrayIdPanel[1]));
     tres.addEventListener("click", championIcon(arrayRole[2], arrayIdPanel[2]));
     cuatro.addEventListener("click", championIcon(arrayRole[3], arrayIdPanel[3]));
     cinco.addEventListener("click", championIcon(arrayRole[4], arrayIdPanel[4]));
     seis.addEventListener("click", championIcon(arrayRole[5], seis));
 
-    /*     document.getElementById("1").addEventListener("click",hola()); */
+    
 
    
     
@@ -99,4 +99,4 @@ for (let el of tabLinks) {
     panel[0].classList.add("active");
 
   });
-}
+} */

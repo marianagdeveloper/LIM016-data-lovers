@@ -8,6 +8,7 @@ async function carga() {
     await dataChampions().then((data) => {
         arraychampion = data;
         rankingTop();
+        /* eslint-disable */
         google.charts.setOnLoadCallback(drawChartTop);
 
         document.getElementsByName("menuRanking")[0].addEventListener('change', function () { graficAbility(aux[0]); });
@@ -117,6 +118,7 @@ function graficAbility(ability) {
     }
   
     viewRanking(ability, arrayAbility);
+    /* eslint-disable */
     google.charts.setOnLoadCallback(drawChartAbility);
 
     function drawChartAbility() {
