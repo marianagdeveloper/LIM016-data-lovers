@@ -1,14 +1,11 @@
-
 export const dataChampions = async () => {
-  
+
    const result= await fetch('./data/lol/lol.json')
       .then((response)=>response.json())
       .catch(showError);      
       const arraychampion = Object.values(result.data)
-      return arraychampion;
-    
+      return arraychampion;    
 }
-
 function showError(err) { 
   console.log('muestor error', err);
 }
@@ -20,3 +17,14 @@ export const isFilterRol = (arraychampion,btnRol) => {
   return arrayFilter;
 
 };
+
+
+
+
+
+
+
+
+
+
+

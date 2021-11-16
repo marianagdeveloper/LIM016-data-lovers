@@ -1,10 +1,13 @@
-/* 
+
 import { dataChampions } from './data.js';
  let image = [];
-let arraychampion = [], newArray=[] ;
+let arraychampion = [];
 let arrayRole = ["Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let arrayIdPanel = ["uno", "dos", "tres", "cuatro", "cinco", "seis"];
 let containerImage=document.getElementById("img1");
+let containerImage2=document.getElementById("img2");
+let pName1=document.getElementById("pName1");
+let pName2=document.getElementById("pName2");
 
 async function carga() {
   await dataChampions().then((data) => {
@@ -14,7 +17,7 @@ async function carga() {
       arrayIdPanel[i] = document.getElementById(arrayIdPanel[i]);
     }
 
-    uno.addEventListener("click", championIcon(arrayRole[0], arrayIdPanel[0]));
+    uno.addEventListener("click", championIcon(arrayRole[0], uno));
     dos.addEventListener("click", championIcon(arrayRole[1], arrayIdPanel[1]));
     tres.addEventListener("click", championIcon(arrayRole[2], arrayIdPanel[2]));
     cuatro.addEventListener("click", championIcon(arrayRole[3], arrayIdPanel[3]));
@@ -39,16 +42,29 @@ window.onload = ()=>{
 function carga2(arraychampion) {
 
   let ivi = [];
+  let name=[];
   for (let i = 0; i < arraychampion.length; i++) {
 
    image[i]=arraychampion[i].splash;
+
     ivi[i] = document.getElementById(arraychampion[i].id);
-  
+ name[i]=arraychampion[i].name;
     ivi[i].addEventListener("click", function () {
       console.log("aaaa",ivi[i])
 console.log("imagen ruta "+image[i]);
-      containerImage.src = image[i];
+     
+if( containerImage.src==""){
 
+  console.log("acaaaaaa");
+  containerImage.src = image[i];
+  let texto=document.createTextNode( name[i]);
+  pName1.appendChild(texto);
+}else{  
+  containerImage2.src=image[i];
+  let texto2=document.createTextNode( name[i]);
+  pName2.appendChild(texto2);
+  
+}
 
     });
 
@@ -99,4 +115,4 @@ for (let el of tabLinks) {
     panel[0].classList.add("active");
 
   });
-} */
+}

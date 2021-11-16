@@ -1,5 +1,14 @@
 
-
+#pName1{
+text-align: center;
+font-size: 18px;
+margin-top: 10px;
+}
+#pName2{
+  text-align: center;
+font-size: 18px;
+margin-top: 10px;
+}
 
 ul {
   list-style: none;
@@ -10,13 +19,13 @@ a {
   color: black;
 }
 
-body {
+/* body {
   font: normal 16px/1.5 Helvetica, sans-serif;
   background: linear-gradient(to right, #6814cd 0%, #3163f3 100%);
-}
+} */
 
 .tabs-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 50px auto;
   padding: 25px;
 }
@@ -51,7 +60,8 @@ body {
   z-index: 2;
   padding: 25px;
   border-radius: 0 4px 4px 4px;
-  background: white;
+  background:rgba(0,0,0,0.7) ;
+  border-radius: 20px;
 }
 
 .tabs-panel {
@@ -63,8 +73,9 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 350px;
+  height: 320px;
   overflow-y: scroll;
+
 }
 
 .tabs-panel p + div {
@@ -123,107 +134,6 @@ body {
 
 
 
-/* 
-#main{
- 
-  background-color: #fff;
-  width: 100%;
-  margin: 10px auto;
-  box-sizing: border-box;
-  padding: 20px 20px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-  
-}
-.containerIcono{
-background: black;
-width: 70px;
-height: 100px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-border-radius: 10px;
-margin: 5px;
-
-}
-.containerIconoPanel{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 350px;
-  overflow-y: scroll;
-  
-
-}
-
-.containerIcono > p{
-  margin-top: 10px;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-#tabs{
-  position: relative;
-}
-
-span.diana {
-  position: fixed;
-  display: none;
-  }
-
-.diana + a {
-  display: block;
-  float: left;
-  height: 32px;
-  line-height: 32px;
-  padding: 0 10px;
-  border: 1px solid #ddd;
-  background-color: #eee;
-  margin-bottom: -1px;
-  border-radius: 8px 8px 0 0;
-  margin-right: 10px;
-  text-decoration:none;
-}
-
-.diana:target + a {
-  background-color: #fff;
-  border-bottom-color: #fff; 
-}
-
-#pnl_1, #pnl_2, #pnl_3, #pnl_4, #pnl_5, #pnl_6{
-  position: absolute;
-  top: 31px;
-  left: 0;
-  border: none;
-  clear: both;
-  overflow: hidden;
-}
-
-  #pnl_1 > div, #pnl_2 > div, #pnl_3 > div, #pnl_4 > div, #pnl_5 > div, #pnl_6 > div{
-    opacity: 0;
-    transition: all 0.1s ease;
-    padding: 30px;
-  }
-
-#uno:target ~ #pnl_1, #dos:target ~ #pnl_2, #tres:target ~ #pnl_3, #cuatro:target ~ #pnl_4, #cinco:target ~ #pnl_5, #seis:target ~ #pnl_6{
-  position: static;
-  border: 1px solid #ddd;
-  color: #ddd;
-}
-
-  #uno:target ~ #pnl_1 > div, #dos:target ~ #pnl_2 > div, #tres:target ~ #pnl_3 > div, #cuatro:target ~ #pnl_4 > div, #cinco:target ~ #pnl_5 > div, #seis:target ~ #pnl_6 > div{
-    opacity: 1;
-    transition: all 1s ease;
-  }
-
-
- */
-
-
-
-
-
-
 /* --------------------------VERSUS ------ versus.html------------------------------------------ */
 
 #btnvs{
@@ -240,7 +150,7 @@ span.diana {
  /*    background: url(   https://pbs.twimg.com/media/COdcRZ9UcAA3CRQ.jpg); */
   
   width: 100%;  
-  height: 1100px;
+  height: 1600px;
   background-position: center;
   background-size: cover;
   padding: 20px;
@@ -249,7 +159,7 @@ span.diana {
 .versus{
   background:rgba(0,0,0,0.7) ;
   width: 80%;
-  height: 990px;
+  height: 1450px;
   margin: auto !important;
   padding: 20px;
   border-radius: 20px;
@@ -269,10 +179,11 @@ span.diana {
 } */
 .chooseChampion{
   margin: 50px;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 250px;
   background: white;
   padding: 20px;
+  border-radius: 20px;
 }
 .chooseChampion > h2{
  text-align: center;
@@ -288,6 +199,14 @@ h3{
   text-align: center;
   margin: 20px;
   font-size: 24px;
+}
+#img1{
+  display: block;
+  margin: auto;
+}
+#img2{
+  display: block;
+  margin: auto;
 }
 
 
@@ -615,7 +534,7 @@ width: 100%;
 .header-content{
   margin: auto;
   z-index: 2; 
-  padding: 500px 200px 150px 200px;
+  padding: 500px 200px 150px 100px;
   overflow: hidden;
 }
 .header-content h1{

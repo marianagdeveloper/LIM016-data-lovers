@@ -1,5 +1,6 @@
 import { dataChampions, isFilterRol } from '../src/data.js';
-let x=[];
+import { datos } from '../src/__mocks__.js';
+/* let x=[]; */
 
 describe('dataChampions', () => {
   it('is a function', () => {
@@ -15,30 +16,37 @@ describe('isFilterRol', () => {
     expect(typeof isFilterRol).toBe('function');
   });
 
-  it('debería retornar true para "Tank"', async () => {
+/*   it('debería retornar true para "Tank"', async () => {
     await dataChampions().then((data) => {
       x=data;     
+      expect(isFilterRol(x, 'Tank')[0].tags.includes('Tank')).toBe(true);
     });
-    expect(isFilterRol(x, 'Tank')[0].tags.includes('Tank')).toEqual(true);
    
+   
+  }); */
+
+
+  it('debería retornar true para "Tank"', () => {
+    expect(isFilterRol(datos(), 'Tank')[0].tags.includes('Tank')).toBe(true);
   });
+  
   it('debería retornar true para "Mage"', () => {
-    expect(isFilterRol(dataChampions(), 'Mage')[0].tags.includes('Mage')).toBe(true);
+    expect(isFilterRol(datos(), 'Mage')[0].tags.includes('Mage')).toBe(true);
   });
   it('debería retornar true para "Fighter"', () => {
-    expect(isFilterRol(dataChampions(), 'Fighter')[0].tags.includes('Fighter')).toBe(true);
+    expect(isFilterRol(datos(), 'Fighter')[0].tags.includes('Fighter')).toBe(true);
   });
   it('debería retornar true para "Marksman"', () => {
-    expect(isFilterRol(dataChampions(), 'Marksman')[0].tags.includes('Marksman')).toBe(true);
+    expect(isFilterRol(datos(), 'Marksman')[0].tags.includes('Marksman')).toBe(true);
   });
   it('debería retornar true para "Assassin"', () => {
-    expect(isFilterRol(dataChampions(), 'Assassin')[0].tags.includes('Assassin')).toBe(true);
+    expect(isFilterRol(datos(), 'Assassin')[0].tags.includes('Assassin')).toBe(true);
   });
   it('debería retornar true para "Support"', () => {
-    expect(isFilterRol(dataChampions(), 'Support')[0].tags.includes('Support')).toBe(true);
+    expect(isFilterRol(datos(), 'Support')[0].tags.includes('Support')).toBe(true);
   });
   it('debería retornar 0 para "Help"', () => {
-    expect(isFilterRol(dataChampions(), 'Help').length).toBe(0);
+    expect(isFilterRol(datos(), 'Help').length).toBe(0);
   });
 
   describe('isFilterRol', () => {
