@@ -122,10 +122,22 @@ header{
   height: 1000px;
   background-position: center;
   background-size: cover;
-  
+ 
 }
 
-
+.sectionChampions3{
+  /* background: url(  http://www.plusgamingmagazine.com/wp-content/uploads/2020/07/LOL_PROMOART_4.jpg
+  ); */
+  /* background: url(  https://p4.wallpaperbetter.com/wallpaper/647/27/594/neeko-league-of-legends-league-of-legends-video-games-video-game-characters-video-game-girls-hd-wallpaper-preview.jpg
+  ); */
+  /* background: url(./nekko.jpg); */
+  background: url(https://lh6.googleusercontent.com/proxy/XhXzbsiJCJRJxnFzpf2NCtQMUCiR7QQZJB9ifpAki1FSYPkzTiSSb8ohiyKCWP62Obeffh2NX5fab6Ekzi3XS_QJ=s0-d);
+  width: 100%;
+  height: 1000px;
+  background-position: center;
+  background-size: cover;
+  
+}
 .search{
   background-color: rgba(0,0 ,0, 0.9);
   width: 100%;
@@ -378,6 +390,11 @@ color: white;
   width: 100%;
   height: 150px;
 }
+.banner2{
+  background-color: rgba(0,0 ,0, 0.9);
+  width: 100%;
+  height: 100px;
+}
 h4{
   color: white;
   font-size: 30px;
@@ -388,10 +405,22 @@ h4{
 article{
 
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   height: 200px;
-  margin-top: 80px; 
+  margin-top: 150px; 
   margin: auto;
+/*  float: right; */
+ 
+}
+.articleChampions{
+  
+  width: 100%;
+ /*  max-width: 500px; */
+  height: 200px;
+  margin-top: 100px; 
+ margin-left: -180px;
+ /*  margin: auto; */
+
 }
 .textArticle{
   width: 100%;
@@ -715,9 +744,10 @@ article{
   margin: 200px;
   height: 550px;
   margin: auto;
-  margin-top: 120px;
+  margin-top: 270px;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
+
   
 }
 figure > img{
@@ -730,10 +760,8 @@ figure > img{
   max-width: 500px;
   padding: 70px;
   color: white;
-  font-size: 24px;
-  font-family: flamenco;
-  letter-spacing: 1.2px;
-  line-height: 50px;
+  font-size: 20px;
+  font-family: 'Open Sans';  
   margin-bottom: 100px;
   text-align: center;
   background: linear-gradient(70deg, rgba(46, 42, 42, 0.514), rgba(64, 11, 133, 0.698));
@@ -742,18 +770,18 @@ figure > img{
 }
 .textArticle1{
   max-width: 500px;
-  padding: 70px;
+  padding: 80px;
   color: white;
-  font-size: 25px;
-  font-family: flamenco;
-  letter-spacing: 1.2px;
-  line-height: 50px;
-  margin-bottom: 100px;
+  font-size: 20px;
+  font-family: 'Open Sans';
   text-align: center;
   background-color: rgba(10, 38, 39, 0.7);
   border-radius: 60%;
-  height: 550px;
+ /*  height: 550px; */
   
+}
+b{
+  font-size: 30px;
 }
 figure{
   border-radius: 300px;
@@ -922,15 +950,15 @@ font-weight: 200;
 font-size: 22px;
 background: #222
 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
-    -webkit-background-size: 125px;
+    background-size: 125px;
     color: rgba(255, 255, 255, 0.1);
-    -webkit-background-clip: text;
-    -webkit-animation-name: shine;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count:infinite;
+    background-clip: text;
+    animation-name: shine;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
 }
 
-@-webkit-keyframes shine
+@keyframes shine
 {
     0%
     {
@@ -968,17 +996,7 @@ border-radius: 0 0 10px 10px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
+/* ------------------------------------------------------ */
 
 
 
