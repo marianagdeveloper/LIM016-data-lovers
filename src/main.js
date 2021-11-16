@@ -7,6 +7,8 @@ let inputSearch = document.getElementById("inputSearch");
 /* let containerSlider = document.getElementById("slide-track"); */
 let arrayButton = ["All", "Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let button, btnRol = [], textButton, cards = [], rolChampion;
+//difficulty
+const select = document.getElementById('selectDificult');
 
 //modal
 let cerrar = document.getElementById("close");
@@ -22,18 +24,19 @@ async function carga() {
         const URLactual = window.location;
         // const urlM = "/champions"; //URL Milagros
         const urlM = "/src/champions.html"; //URL Mariana
-    
+
         if (URLactual.pathname == urlM) {
 
             printNav();
             recorrerData();
             printButton();
             searchChampion();
-           
+            difficulty();
+
         }
-        else{
+        else {
             printNav();
-           /*  slide(); */
+            /*  slide(); */
         }
 
     });
@@ -50,8 +53,46 @@ function searchChampion() {
         if (searchHero.length == 0) {
             divChampion.innerHTML = '<p style="font-size:30px">Champion no found</p>';
         }
-
     });
+}
+
+//difficulty
+// const selectedOption = this.options[select.selectedIndex];
+// console.log(selectedOption.value + ': ' + selectedOption.text);
+let searchDificult;
+function difficulty() {
+
+    select.addEventListener("change",
+        function () {
+            divChampion.innerHTML = '';
+            const selectedOption = this.options[select.selectedIndex];
+        
+            switch (selectedOption.value) {
+                case 'baja':
+                    searchDificult = arraychampion.filter(e => e.info.difficulty < 5);
+                    break;
+                case 'media':
+                    searchDificult = arraychampion.filter(e => e.info.difficulty > 4 && e.info.difficulty < 8);
+                    break;
+                case 'alta':
+                    searchDificult = arraychampion.filter(e => e.info.difficulty > 7);
+                    break;
+                case 'all':
+                    searchDificult = arraychampion;
+                    break;
+                default:
+                    console.log('default');
+                    break;
+            }
+            console.log("filter:", searchDificult);
+            for (let index = 0; index < searchDificult.length; index++) {
+                const element = searchDificult[index];
+                printChampions(element);
+            }
+            if (searchDificult.length == 0) {
+                divChampion.innerHTML = '<p style="font-size:30px">Champion no found</p>';
+            }
+        });
 }
 
 //modal
@@ -356,7 +397,7 @@ function recorrerData() {
 
 }
 function printChampions(arraychampion) {
-
+    // console.log('arraychampion',arraychampion);
     let imagen;
     imagen = arraychampion.splash;
     cards = document.createElement("div");
@@ -459,10 +500,10 @@ function filterByRole(btnRol) {
 
 function slideTemplate(champion) {
 
-   
+
     return `
       <div class="slide">
-      <img class="imgSlide" src=${champion.splash} alt="">       
+      <img class="imgSlide" src=${champion.splash} alt="">
       </div>
     `
 }

@@ -164,19 +164,17 @@ font-size: 16px;
   }
 
 #selectDificult{
-
-    font-family: sans-serif;
-
+    font-family: sans-serif;  
     display:none;
     font-size: 16px;
     width: 120px;
     height: 40px;
     padding: 5px;
     margin-left: 10px;
-margin-bottom: 10px;
-background: #3386df;
-margin-right: 10px;
-color: white;
+    margin-bottom: 10px;
+    background: #3386df;
+    margin-right: 10px;
+    color: white;
   }
  #rolChampion{
   
