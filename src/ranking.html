@@ -1,77 +1,118 @@
-
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1.0"
+    />
+    <title>League of Legends</title>
+    <link
+      rel="icon"
+      href="https://cdn.streamloots.com/uploads/6012e82a3ad53200344d53d1/56203b76-da52-4dd9-ad3b-9826a6ebdead.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
-  <title>League of Legends</title>
-  <link rel="icon"
-    href="https://cdn.streamloots.com/uploads/6012e82a3ad53200344d53d1/56203b76-da52-4dd9-ad3b-9826a6ebdead.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <!--  agregando grafico de barras -->
-  <script src="https://www.gstatic.com/charts/loader.js"></script>
-  <script>
-    google.charts.load('current', { packages: ['corechart'] });
-/*     google.charts.setOnLoadCallback(drawChart); */
-  </script>
-  <!--  agregando grafico de barras -->
-</head>
+    <!--  agregando grafico de barras -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+      google.charts.load("current", { packages: ["corechart"] });
+      /*     google.charts.setOnLoadCallback(drawChart); */
+    </script>
+    <!--  agregando grafico de barras -->
+  </head>
 
-<body>
-  <header>
-    <input type="checkbox" id="btn-menu">
-    <label for="btn-menu"><img src="https://image.flaticon.com/icons/png/128/1215/1215141.png" alt="">
-    </label>
-    <div class="container">
+  <body>
+    <header>
+      <input type="checkbox" id="btn-menu" />
+      <label for="btn-menu"
+        ><img
+          src="https://image.flaticon.com/icons/png/128/1215/1215141.png"
+          alt=""
+        />
+      </label>
+      <div class="container">
+        <nav id="navDinamic">
+          <ul></ul>
+        </nav>
+      </div>
+    </header>
+    <section class="sectionRanking">
+      <div class="topRankig">
+        <div class="menuRanking">
+          <h2>TOP 10<img class="imgTop10" src="./gif/gold.gif" alt="" /></h2>
+          <div class="optionRanking">
+            <input
+              type="radio"
+              id="menuAttack"
+              name="menuRanking"
+              value="Attack"
+            /><label for="menuAttack">Attack</label>
+            <input
+              type="radio"
+              id="menuDefense"
+              name="menuRanking"
+              value="Defense"
+            /><label for="menuDefense">Defense</label>
+            <input
+              type="radio"
+              id="menuMagic"
+              name="menuRanking"
+              value="Magic"
+            /><label for="menuMagic">Magic</label>
+            <input
+              type="radio"
+              id="menuDifficulty"
+              name="menuRanking"
+              value="Difficulty"
+            /><label for="menuDifficulty">Difficulty</label>
+          </div>
+        </div>
+       
 
-      <nav id="navDinamic">
-        <ul>
-        </ul>
-      </nav>
-    </div>
-
-  </header>
-  <section class="sectionRanking">
-<div class="topRankig">
-<div class="menuRanking">
-  <h2>TOP  10</h2>
-  <div class="optionRanking"> 
-    
-  <input type="radio" id="menuAttack" name="menuRanking" value="Attack"><label for="menuAttack">Attack</label>
-  <input type="radio" id="menuDefense" name="menuRanking" value="Defense"><label for="menuDefense">Defense</label>
-  <input type="radio" id="menuMagic" name="menuRanking" value="Magic"><label for="menuMagic">Magic</label>
-  <input type="radio" id="menuDifficulty" name="menuRanking" value="Difficulty"><label for="menuDifficulty">Difficulty</label>
- </div>
-</div>
-<div class="infoRanking">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum blanditiis soluta mollitia dignissimos sequi fuga dolore ipsum nobis, sunt cum illo! Error fugiat deleniti, expedita quasi natus libero eos nam eveniet quaerat vel a numquam animi veritatis quis explicabo provident. Sequi ullam unde nemo, laborum tempora labore asperiores? Reiciendis, odio?</p>
-</div>
-
-<div class="sectionGrafic">
-<div class="graficRanking" id="graficRanking">
-  
-</div>
-<div class="ImgGrafic">
-  <div class="imgTopR"><img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shaco_0.jpg" alt=""></div>
-<div class="grafic" id="grafic">
-  
-</div>
-
-</div>
-</div>
-</div>
-  </section>
-  <footer>
-    <p class="textFooter">Todos los derechos reservados © Copyrights 2021 Diseñado por M&M </p>
-  </footer>
- <!--  <script src="main.js" type="module"></script> -->
- <script src="main.js" type="module"></script>
-  <script src="ranking.js" type="module"></script>
-</body>
-<!-- por aca todo bien jujuj jujuj nujuju  -->
+        <div class="sectionGrafic">
+          <div class="graficRanking" id="graficRanking"></div>
+          <div class="ImgGrafic">
+            <div class="grafic" id="grafic"></div>
+            <!-- <div class="imgTopR">
+              <img
+                src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shaco_0.jpg"
+                alt=""
+              />
+            </div> -->
+           
+          </div>
+        </div>
+        <div class="infoRanking">
+          <p>
+            There are certain champions that stand out above others, and here we
+            tell you what are some good options to win
+          </p>
+        </div>
+      </div>
+      
+    </section>
+    <footer>
+      <p class="textFooter">
+        Todos los derechos reservados © Copyrights 2021 Diseñado por M&M
+      </p>
+    </footer>
+    <!--  <script src="main.js" type="module"></script> -->
+    <script src="main.js" type="module"></script>
+    <script src="ranking.js" type="module"></script>
+  </body>
+  <!-- por aca todo bien jujuj jujuj nujuju  -->
 </html>
-

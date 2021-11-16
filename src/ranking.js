@@ -85,12 +85,18 @@ function drawChartTop() {
         2]);
 
     let options = {
-        title: "The most populares Champions",
-
+        title: "The most popular Champions",
         width: 500,
-        height: 280,
-        bar: { groupWidth: "95%" },
+        height: 580,
+        fontSize: 18,
+        backgroundColor: "none",
+        color: 'black',
+        bar: { groupWidth: "80%" },
         legend: { position: "none" },
+        titleTextStyle: {
+            color: 'black',
+            fontSize: 21,
+        },
     };
     let chart = new google.visualization.BarChart(grafic);
     chart.draw(view, options);
@@ -151,11 +157,18 @@ function graficAbility(ability) {
             2]);
 
         let options = {
-            title: "The most populares Champions",
-            width: 600,
-            height: 350,
-            bar: { groupWidth: "95%" },
+            title: "The most popular Champions",
+            width: 500,
+            height: 580,
+            fontSize: 18,
+            backgroundColor: "none",
+            color: 'black',
+            bar: { groupWidth: "80%" },
             legend: { position: "none" },
+            titleTextStyle: {
+                color: 'black',
+                fontSize: 21,
+            },
         };
         let chart = new google.visualization.BarChart(grafic);
         chart.draw(view, options);

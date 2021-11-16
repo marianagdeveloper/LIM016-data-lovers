@@ -75,7 +75,6 @@ a {
   flex-wrap: wrap;
   height: 320px;
   overflow-y: scroll;
-
 }
 
 .tabs-panel p + div {
@@ -123,7 +122,6 @@ a {
   align-items: center;
   border-radius: 10px;
   margin: 5px;
-  
   }
 
 
@@ -216,10 +214,8 @@ h3{
 .sectionRanking{
 
   /*   background: url(  https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg); */
-    background: url(   https://pbs.twimg.com/media/COdcRZ9UcAA3CRQ.jpg);
-  
+  background: url(   https://pbs.twimg.com/media/COdcRZ9UcAA3CRQ.jpg);
   width: 100%;
-  
   height: 950px;
   background-position: center;
   background-size: cover;
@@ -236,23 +232,24 @@ h3{
   }
   .menuRanking{
     width: 100%;
-    height: 100px;
-    padding: 20px;
+    height: 50px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
   }
   .menuRanking > h2{
     font-size: 25px;
     color: white;
     width: 30%;
     text-align: center;
-    padding: 20px;
+    padding-top: 20px;
+    font-family: "MedievalSharp", cursive;
   }
   label{
   font-size: 20px;
   color: white;
-  
+  font-family: "MedievalSharp", cursive;
   }
   .optionRanking{
     width: 70%;
@@ -261,19 +258,31 @@ h3{
     justify-content: space-around;
   }
   .infoRanking{
+    display: flex;
     background: rgba(0,0,0,0.6) ;
     color: white;
     padding: 20px;
     border-radius: 20px;
+    font-family: "MedievalSharp", cursive;
+  }
+
+  .infoRanking p{
+    display: flex ;
+    color: white;
+    padding: 18px;
+    border-radius: 20px;
+    font-size: 22px;
+    font-family: "MedievalSharp", cursive;
+    text-align: center;
   }
   .graficRanking{
     width: 100%;
     padding: 20px;
     border-radius: 20px;
-    background: rgba(218, 118, 140, 0.6) ;
+    /* background: rgba(218, 118, 140, 0.6) ; */
+    background: #3b1de4a8; ;
     height: 600px;
     margin-top: 20px;
-  
   }
   .divTop{
     margin: auto;
@@ -284,17 +293,32 @@ h3{
   }
   .nameTop{
     padding-top: 10px;
+    color: white;
+  }
+  .nameTop b{
+    padding-top: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: "MedievalSharp", cursive;
   }
   .puntajeTop{
     padding-top: 10px;
+    color: white;
+    font-size: 22px;
+    font-family: "MedievalSharp", cursive;
   }
  .sectionGrafic{
    width: 100%;
    display: flex;
    justify-content: space-between;
+   height: 650px;
  }
  .grafic{
+  margin: 20px 0px 20px 20px;
   padding:0 20px 20px;
+  border-radius: 20px;
+  /* background: rgba(227, 230, 241, 0.753); */
+  background: rgba(223, 203, 154, 0.712);
  } 
 .rayita{
   width: 100px;
@@ -328,16 +352,16 @@ width: 70%;
 margin: auto !important;
 padding: 100px;
 border-radius: 60%;
-
 }
+
 #divHome1{
   /* background:rgba(0,0,0,0.7) ; */
   width: 70%;
   margin: auto !important;
   padding: 70px;
   border-radius: 60%;
-  
-  }
+}
+
 #h1Home{
 text-align: center;
 color:white;
@@ -346,8 +370,8 @@ text-transform: uppercase;
 padding: 40px 0;
 /* line-height: 2;  */
 font-family: 'MedievalSharp', cursive;
-
 }
+
 #pHome{
 text-align: center;
 color:white;
@@ -357,15 +381,13 @@ margin: auto;
 font-size: 18px;
 font-family: Arial, Helvetica, sans-serif;
 }
+
 #seeMore{
 margin: auto !important;
 font-size: 14px;
 width: 130px;
 height: 50px;
 padding: 10px;
-
-
-
 }
 #divButton{
  display: flex;
@@ -525,11 +547,8 @@ width: 100%;
   position:absolute;
   top: 0;
   left: 0;
- 
   z-index: 1;
   opacity: .85;
-
-
 } */
 .header-content{
   margin: auto;
@@ -554,3 +573,11 @@ width: 100%;
  /*  padding: 150px; */
 }
 
+/* ranking */
+
+.imgTop10{
+    display: block;
+    margin: auto;
+    width: 20%;
+    /* border-radius: 50%; */
+}
