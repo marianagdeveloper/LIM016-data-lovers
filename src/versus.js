@@ -18,19 +18,12 @@ async function carga() {
     for (let i = 0; i < 5; i++) {
       arrayIdPanel[i] = document.getElementById(arrayIdPanel[i]);
     }
-
     uno.addEventListener("click", championIcon(arrayRole[0], uno));
     dos.addEventListener("click", championIcon(arrayRole[1], arrayIdPanel[1]));
     tres.addEventListener("click", championIcon(arrayRole[2], arrayIdPanel[2]));
     cuatro.addEventListener("click", championIcon(arrayRole[3], arrayIdPanel[3]));
     cinco.addEventListener("click", championIcon(arrayRole[4], arrayIdPanel[4]));
     seis.addEventListener("click", championIcon(arrayRole[5], seis));
-
-
-
-
-
-
 
   });
 }
@@ -121,12 +114,12 @@ function carga2(arraychampion) {
     
                   let options = {
                     title: "The most populares Champions",
-                    width: 600,
-                    height: 350,
+                    width: 950,
+                    height: 370,
                     bar: { groupWidth: "95%" },
                     legend: { position: "none" },
                   };
-                  let chart = new google.visualization.ColumnChart(divGraficVersus);
+                  let chart = new google.visualization.BarChart(divGraficVersus);
                   chart.draw(view, options);
     
                 }
@@ -152,8 +145,6 @@ function championIcon(btnRol, m) {
 
   const elements = array.reduce((acc, champion) => acc + iconTemplate(champion), "");
 
-
-
   m.innerHTML = elements;
 
 
@@ -167,7 +158,6 @@ function iconTemplate(champion) {
       <button id=${champion.id} > ${champion.name} </button>   
     </div>
   `
-
 
 }
 

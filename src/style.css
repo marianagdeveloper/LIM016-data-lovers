@@ -131,7 +131,7 @@ header{
   /* background: url(  https://p4.wallpaperbetter.com/wallpaper/647/27/594/neeko-league-of-legends-league-of-legends-video-games-video-game-characters-video-game-girls-hd-wallpaper-preview.jpg
   ); */
   /* background: url(./nekko.jpg); */
-  background: url(https://lh6.googleusercontent.com/proxy/XhXzbsiJCJRJxnFzpf2NCtQMUCiR7QQZJB9ifpAki1FSYPkzTiSSb8ohiyKCWP62Obeffh2NX5fab6Ekzi3XS_QJ=s0-d);
+  background: url(./public/section3.gif);
   width: 100%;
   height: 1000px;
   background-position: center;
@@ -798,7 +798,6 @@ figure{
 /* ultima modificacin solucionar la linea webkit 11 */
 
 /* modal */
-
 .modal-container {
   opacity: 0;
   visibility: hidden;
@@ -808,7 +807,7 @@ figure{
   height: 100vh;
   top: 0;
   left: 0;
-  background: rgba(56, 56, 56, 0.9);
+  background: rgba(14, 13, 13, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -829,176 +828,235 @@ figure{
 
 .modal {
   width: 40%;
-  height: 85%;
-  
-/* padding-top: 100px;
-padding-left: 50px;
-padding-right: 50px;
-padding-bottom: 100px; */
-  
-  overflow:hidden;
-  background: rgba(0, 0, 0, 0.7);
+  height: 87%;
+  overflow: hidden;
+  background: #5b43e4;
   text-align: center;
   color: antiquewhite;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   position: relative;
   transition: transform 0;
   transform: translateX(0%);
   border-radius: 20px;
- /*  padding-top: 50px; */
   border-color: #3498db;
-/*   box-shadow: 0 0 10px 10px #3498db inset, 0 0 0 0 #006fe6;
-  -webkit-transition: all 150ms ease-in-out; */
   transition: all 150ms ease-in-out;
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
 }
 
-
 /* -------------Styles container modal---------- */
-/* kue kjwnfejnjwe fwe fkejfnewkjfnew */
-.containerModal{
-width: 100%;
-height: 100%;
-display: flex;
-flex-direction: column;
-}
-.divNameRole{
-  /* margin-top: 45px; */
+
+.divNameRole {
   width: 90%;
-  height: 80px;
+  height: 40px;
   display: flex;
   flex-direction: column;
-  position: fixed;
-/* background: black; */
-/* justify-content: space-between; */
-border-radius: 20px;
-padding: 10px;
-top: -10px;
-margin-left: 20px;
-font-size: 50px;
-letter-spacing: 0.1em;
-}
-.nameModal{
-
-  /* border-radius: 20px; */
-  /* background: rgba(27, 16, 75, 0.822); */
-/* width: 69.5%; */
-width: 100%;
-text-align:center;
-font-size: 20px;
-/* font-family: 'Rokkitt', serif; */
-font-family: 'MedievalSharp', cursive;
-text-shadow: 2px 2px 2px rgb(21, 21, 22);
-padding: 15px;
-}
-/* .containerRole{
- 
+  /* position: fixed; */
+  position: relative;
   border-radius: 20px;
-  background: black;
-  /* width: 29.5%; */
-  /* width: 100%;
-  font-size: 20px;
-  font-family: arial;
-  text-transform: uppercase;
-  line-height: 30px;
-  font-family: 'Rokkitt', serif; */
-
-  /* } */ 
-  /* .role{    
-    font-size: 18px;
-    font-family: 'Rokkitt', serif;
-  } */
-.containerImageDescrip {
-  display: flex !important;
-  justify-content: space-between !important;
+  padding: 10px;
+  top: -20px;
+  margin-left: 20px;
+  font-size: 22px;
+  letter-spacing: 0.1em;
+}
+.nameModal {
   width: 100%;
- padding: 10px; 
- flex-direction: column;
+  text-align: center;
+  font-family: "MedievalSharp", cursive;
+  text-shadow: 2px 2px 2px rgb(21, 21, 22);
+  padding: 15px;
+  background: rgb(241, 235, 235) -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#222),
+      to(#222),
+      color-stop(0.5, #fff)
+    ) 0 0 no-repeat;
+  -webkit-background-size: 125px;
+  color: rgba(255, 255, 255, 0.1);
+  -webkit-background-clip: text;
+  -webkit-animation-name: shine;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
 }
-.containerImage{
-/* width: 70%; */
-width: 100%;
-/* border-color: black;
-border-style: solid;
-border-width: 10px; */
-/* border-radius: 20px; */
+
+/* contenido del modal: img, nav, chart */
+.containerImageDescrip {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+/*   height: 600px; */
 }
-.imageModal{
-  display: block;
-  width: 100%;  
+
+.containerImage {
+  width: 100%;
+}
+
+.imageModal {
+  /* display: block; */
+  display: flex;
+  width: 100%;
   border-radius: 20px 20px 0 0;
   border-image-outset: 1.5;
+}
+
+.descriptionModal {
+  display: flex;
+  justify-content: space-around;
+  background: #000;
+  width: 100%;
+  font-family: "MedievalSharp", cursive;
+  text-shadow: 2px 2px 2px rgb(21, 21, 22);
+  height: 60px;
+  padding-top: 3px;
+}
+
+.descriptionModal a {
+  color: #ffffff;
+  font-family: "MedievalSharp", cursive;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 80%;
+  padding: 15px;
+  margin-bottom: 9px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 0.6em;
+  border-color: #3498db;
+  letter-spacing: 0.7px;
+  text-align: center !important;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 2px blue;
+  box-shadow: 0 0 40px 40px #3498db00 inset, 0 0 0 0 #006fe6;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.descriptionModal a:hover,
+.descriptionModal a:focus {
+  color: #fff;
+  outline: 0;
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
+}
+
+@-webkit-keyframes shine {
+  0% {
+    background-position: top left;
   }
-.descriptionModal{
-/* padding: 30px; */
-padding: 10px;
-width: 100%;
-/* margin-left: 10px; */
-/* margin-bottom: 10px; */
-/* text-align: justify; */
-text-align: center;
-/* background: linear-gradient(to right, rgb(16, 16, 75),rgba(56, 95, 224, 0.945)); */
-/* background: url(./public/bot.jpg); */
-/* background: linear-gradient(70deg, black, rgba(25, 27, 155, 0.945)); */
-border-radius: 10px;
-/* font-family: 'Rokkitt', serif; */
-font-family: 'MedievalSharp', cursive;
-text-shadow: 2px 2px 2px rgb(21, 21, 22);
-font-weight: 200;
-font-size: 22px;
-background: #222
--webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
-    background-size: 125px;
-    color: rgba(255, 255, 255, 0.1);
-    background-clip: text;
-    animation-name: shine;
-    animation-duration: 3s;
-    animation-iteration-count:infinite;
+  100% {
+    background-position: top right;
+  }
 }
 
-@keyframes shine
-{
-    0%
-    {
-        background-position: top left;
-    }
-    100%
-    {
-        background-position: top right;
-    }
-}
-
-
-.containerDesAbil{
+/* div padre de roles en el modal */
+.containerDesAbil {
   display: flex;
   flex-wrap: wrap;
-  /* width:30%; */
-  width:100%;
-justify-content: center;
-border-radius: 0 0 10px 10px;
-background: linear-gradient(70deg, rgba(119, 202, 228, 0.794), rgba(44, 44, 68, 0.87));
- 
+  width: 100%;
+  justify-content: center;
+  border-radius: 0 0 10px 10px;
+  background: black;
+ /*  height: 500px; */
 }
-.containerAbilities{
- 
-background: rgba(0, 0, 0, 0.89);
 
+/* roles */
+.containerRoles {
+  background: black;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0 0 10px 10px;
+}
+
+/* cajita 1 solo tag img + tag */
+.divTextInfo {
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 18px;
+  flex-direction: column;
+  align-items: center;
+  height: 290px;
+  justify-content: center;
+  font-family: "MedievalSharp", cursive;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+/* padre 2 cajitas img roles + tag */
+.containerRoles1 {
+  background:black;
+  width: 100%;
+ 
+  display: flex;
+  justify-content: center;
+  border-radius: 0 0 10px 10px;
+}
+
+/* cajita de 2 tags */
+.div1 {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  width: 180px;
+  font-size: 18px;
+  align-items: center;
+  height: 178px;
+  justify-content: space-between;
+  font-family: "MedievalSharp", cursive;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  height: 210px;
+  padding-top: -20px;
+}
+
+/* gif 1 tag*/
+.imageRoles {
+  display: block;
+  margin: auto;
+  width: 20%;
+  border-radius: 50%;
+}
+/* gif 2 tags*/
+.imageRoles1 {
+  display: block;
+  margin: auto;
+  width: 60%;
+  border-radius: 50%;
+}
+
+/* info */
+.containerInfo {
+  background: black;
+  width: 100%;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: "MedievalSharp", cursive;
+  padding: 10px 40px 10px 40px;
+  border-radius: 0 0 10px 10px;
+  line-height: 22px;
+}
+
+/* chart */
+.containerAbilities {
+  background: black;
   width: 100%;
   display: flex;
   justify-content: center;
-  /* margin-bottom: 10px; */
-padding-bottom: 10px;
-/* margin-left: 10px; */
-border-radius: 0 0 10px 10px;
-
+  margin-bottom: 10px;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 10px;
+  padding-top: -10px;
 }
-
-
-/* ------------------------------------------------------ */
-
-
-
-
-
