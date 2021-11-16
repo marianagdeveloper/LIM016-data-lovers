@@ -20,7 +20,6 @@ async function carga() {
         arraychampion = data;
 
         const URLactual = window.location;
-        console.log(URLactual);
         // const urlM = "/champions"; //URL Milagros
         const urlM = "/src/champions.html"; //URL Mariana
     
@@ -57,11 +56,9 @@ function searchChampion() {
 
 //modal
 function printModal(champions) {
-
     const containerModal = document.createElement("div");
     containerModal.setAttribute("class", "containerModal")
     modal.appendChild(containerModal);
-
     const divNameRole = document.createElement("div");
     divNameRole.setAttribute("class", "divNameRole");
     containerModal.appendChild(divNameRole);
@@ -70,17 +67,11 @@ function printModal(champions) {
     nameModal.setAttribute("class", "nameModal")
     nameModal.appendChild(textName);
     divNameRole.appendChild(nameModal);
-
     const containerRole = document.createElement("div");
     containerRole.setAttribute("class", "containerRole");
-    // const textTittleRole = document.createTextNode("Rol:");
-    // containerRole.appendChild(textTittleRole);
     divNameRole.appendChild(containerRole);
     const roles = document.createElement("p");
     roles.setAttribute("class", "role");
-    // const textRole = document.createTextNode(champions.tags);
-    // console.log(roles);
-    // roles.appendChild(textRole);
     containerRole.appendChild(roles);
 
     //contenido del modal: img, nav, chart
@@ -118,22 +109,18 @@ function printModal(champions) {
     //clean content modal
     function cleanModalContent(tags) {
         if (containerAbilities.childNodes[0]) {
-            console.log("remove ability");
             containerAbilities.remove();
         }
         if (containerRoles.childNodes[0]) {
             divTextInfo.remove();
-            console.log("delete role");
         }
         if (containerRoles1.childNodes[0]) {
             let nodo = document.querySelectorAll(".div1");
             for (let index = 0; index < tags.length; index++) {
-                // console.log("nodo a eliminar:", nodo[index]);
                 containerRoles1.removeChild(nodo[index]);
             }
         }
         if (containerInfo.childNodes[0]) {
-            console.log("remove info");
             containerInfo.remove();
             textInfo.remove();
         }
@@ -162,7 +149,6 @@ function printModal(champions) {
 
             //text
             textRole = document.createTextNode(tags[0]);
-            console.log(tags[0]);
             divTextInfo.appendChild(textRole);
             containerDesAbil.appendChild(containerRoles);
         }
@@ -174,7 +160,6 @@ function printModal(champions) {
                 divRol.classList.add("rol");
                 let tag = tags[index];
                 textRole1 = document.createTextNode(tag);
-
                 imageRoles1 = document.createElement("img");
                 imageRoles1.setAttribute("class", "imageRoles1");
 
@@ -191,9 +176,7 @@ function printModal(champions) {
                 }
 
                 div1.appendChild(imageRoles1);
-
                 div1.appendChild(textRole1);
-
                 containerRoles1.appendChild(div1);
                 containerDesAbil.appendChild(containerRoles1);
             }
@@ -297,10 +280,8 @@ function printModal(champions) {
         enlace.addEventListener('click', function () {
             let ability = arrayLinkModal[i];
             let abilitySelect = ability.split("#")[1];
-            console.log("click ability:", abilitySelect);
             let tagsValue;
             tagsValue = champions.tags;
-            console.log("tags:", tagsValue);
 
             switch (abilitySelect) {
                 case 'info':

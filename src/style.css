@@ -830,16 +830,11 @@ figure{
   width: 40%;
   height: 95%;
   overflow: hidden;
-  /* background: rgba(0, 0, 0, 0.7); */
-  /* background:#2C2458; */
   background: #5b43e4;
-  /* background: black; */
-  /* background:#12cf0b; */
   text-align: center;
   color: antiquewhite;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
   position: relative;
   transition: transform 0;
   transform: translateX(0%);
@@ -850,12 +845,7 @@ figure{
 }
 
 /* -------------Styles container modal---------- */
-/* .containerModal {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-} */
+
 .divNameRole {
   width: 90%;
   height: 40px;
@@ -869,12 +859,10 @@ figure{
   margin-left: 20px;
   font-size: 22px;
   letter-spacing: 0.1em;
-  /* background: chartreuse; */
 }
 .nameModal {
   width: 100%;
   text-align: center;
-  /* font-size: 26px; */
   font-family: "MedievalSharp", cursive;
   text-shadow: 2px 2px 2px rgb(21, 21, 22);
   padding: 15px;
@@ -917,12 +905,10 @@ figure{
 .descriptionModal {
   display: flex;
   justify-content: space-around;
-  /* background: rgb(119, 226, 18); */
   background: #000;
   width: 100%;
   font-family: "MedievalSharp", cursive;
   text-shadow: 2px 2px 2px rgb(21, 21, 22);
-  /* padding: 10px; */
 }
 
 .descriptionModal a {
@@ -958,10 +944,6 @@ figure{
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
 }
 
-/* .descriptionModal a[href^="#"]::before {
-  content: "🔗 ";
-} */
-
 @-webkit-keyframes shine {
   0% {
     background-position: top left;
@@ -978,13 +960,12 @@ figure{
   width: 100%;
   justify-content: center;
   border-radius: 0 0 10px 10px;
-  /* background:rgb(212, 10, 10); */
   background: black;
 }
 
 /* roles */
 .containerRoles {
-  background: rgb(17, 226, 52);
+  background: black;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -1016,7 +997,7 @@ figure{
   border-radius: 0 0 10px 10px;
 }
 
-/* cajita de tags > 1  */
+/* cajita de 2 tags */
 .div1 {
   display: flex;
   flex-direction: column;
@@ -1025,14 +1006,12 @@ figure{
   font-size: 18px;
   align-items: center;
   height: 178px;
-  /* justify-content: center; */
   justify-content: space-between;
   font-family: "MedievalSharp", cursive;
   padding: 20px;
   border-radius: 0 0 10px 10px;
   height: 210px;
   padding-top: -20px;
-  /* margin-bottom: 20px; */
 }
 
 /* gif 1 tag*/
