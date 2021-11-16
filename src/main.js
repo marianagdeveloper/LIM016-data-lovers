@@ -103,8 +103,12 @@ function printModal(champions) {
 
     const containerAbilities = document.createElement("div");
     const containerRoles = document.createElement("div");
-    let textRole, textInfo, imageRoles, divTextInfo;
+    containerRoles.setAttribute("class", "containerRoles");
+    let textRole, textInfo, imageRoles, imageRoles1, divTextInfo, textRole1, div1;
     const containerInfo = document.createElement("div");
+    let containerRoles1 = document.createElement("div");
+    containerRoles1.setAttribute("class", "containerRoles1");
+    containerDesAbil.appendChild(containerRoles1);
 
     //clean content modal
     function cleanModalContent(tags) {
@@ -113,9 +117,14 @@ function printModal(champions) {
             containerAbilities.remove();
         }
         if (containerRoles.childNodes[0]) {
+            divTextInfo.remove();
+            console.log("delete role");
+        }
+        if (containerRoles1.childNodes[0]) {
+            let nodo = document.querySelectorAll(".div1");
             for (let index = 0; index < tags.length; index++) {
-                divTextInfo.remove();
-                console.log(tags[index]);
+                // console.log("nodo a eliminar:", nodo[index]);
+                containerRoles1.removeChild(nodo[index]);
             }
         }
         if (containerInfo.childNodes[0]) {
@@ -125,88 +134,76 @@ function printModal(champions) {
         }
     }
 
+    //printInfo
+    function printInfo(champions) {
+        containerInfo.setAttribute("class", "containerInfo");
+        containerInfo.setAttribute("id", "containerInfo");
+        textInfo = document.createTextNode(champions.blurb);
+        containerInfo.appendChild(textInfo);
+        containerDesAbil.appendChild(containerInfo);
+    }
+
     //printRol
     function printRol(tags) {
         divTextInfo = document.createElement("div");
         divTextInfo.setAttribute("class", "divTextInfo");
-
-        for (let index = 0; index < tags.length; index++) {
-            textRole = document.createTextNode(tags[index]);
-            divTextInfo.appendChild(textRole);
-
+        if (tags.length == 1) {
             //img
             imageRoles = document.createElement("img");
             imageRoles.setAttribute("class", "imageRoles");
             imageRoles.src = "/src/gif/blue.gif";
             divTextInfo.appendChild(imageRoles);
             containerRoles.appendChild(divTextInfo);
+
+            //text
+            textRole = document.createTextNode(tags[0]);
+            console.log(tags[0]);
+            divTextInfo.appendChild(textRole);
+            containerDesAbil.appendChild(containerRoles);
         }
+        if (tags.length > 1) {
+            for (let index = 0; index < tags.length; index++) {
+                div1 = document.createElement("div");
+                div1.setAttribute("class", "div1");
+                let divRol = document.createElement("div");
+                divRol.classList.add("rol");
+                let tag = tags[index];
+                textRole1 = document.createTextNode(tag);
 
-        containerDesAbil.appendChild(containerRoles);
-    }
+                imageRoles1 = document.createElement("img");
+                imageRoles1.setAttribute("class", "imageRoles1");
 
-    //for each item in the array: 
-    for (let i = 0; i < arrayLinkModal.length; i++) {
-        descriptionModal.setAttribute("class", "descriptionModal");
-        //create elemnts a modal
-        enlace = document.createElement("a");
-        enlace.href = arrayLinkModal[i];
-        enlace.textContent += arrayNavModal[i].toString();
-        descriptionModal.appendChild(enlace);
-        //switch nav modal
-        enlace.addEventListener('click', function () {
-            let ability = arrayLinkModal[i];
-            let abilitySelect = ability.split("#")[1];
-            console.log(abilitySelect);
-            let tagsValue;
-            tagsValue = champions.tags;
-            console.log("tags:", tagsValue);
-            
-            switch (abilitySelect) {
-                case 'info':
-                    cleanModalContent(tagsValue);
-                    containerInfo.setAttribute("class", "containerInfo");
-                    containerInfo.setAttribute("id", "containerInfo");
-                    textInfo = document.createTextNode(champions.blurb);
-                    containerInfo.appendChild(textInfo);
-                    containerDesAbil.appendChild(containerInfo);
-                    break;
+                switch (index) {
+                    case 0:
+                        imageRoles1.src = "/src/gif/green.gif";
+                        break;
+                    case 1:
+                        imageRoles1.src = "/src/gif/pink.gif";
+                        break;
+                    default:
+                        imageRoles1.src = "/src/gif/blue.gif";
+                        break;
+                }
 
-                case 'rol':
-                    cleanModalContent(tagsValue);
-                    printRol(tagsValue);
-                    break;
+                div1.appendChild(imageRoles1);
 
-                case 'ability':
-                    if (containerRoles.childNodes[0]) {
-                        for (let index = 0; index < tagsValue.length; index++) {
-                            divTextInfo.remove();
-                            console.log(tagsValue[index]);
-                        }
-                    }
-                    if (containerInfo.childNodes[0]) {
-                        containerInfo.remove();
-                        textInfo.remove();
-                    }
-                    containerAbilities.setAttribute("class", "containerAbilities");
-                    containerAbilities.setAttribute("id", "containerAbilities")
-                    containerDesAbil.appendChild(containerAbilities);
-                    google.charts.setOnLoadCallback(drawChart);
-                    break;
-                default:
-                    break;
+                div1.appendChild(textRole1);
+
+                containerRoles1.appendChild(div1);
+                containerDesAbil.appendChild(containerRoles1);
             }
-        });
+        }
     }
-    containerDesAbil.appendChild(descriptionModal);
-    containerAbilities.setAttribute("class", "containerAbilities");
-    containerAbilities.setAttribute("id", "containerAbilities")
-    containerDesAbil.appendChild(containerAbilities);
 
-    // Add function grafic
-    google.charts.setOnLoadCallback(drawChart);
+    //printAbility
+    function printAbility() {
+        containerAbilities.setAttribute("class", "containerAbilities");
+        containerAbilities.setAttribute("id", "containerAbilities")
+        containerDesAbil.appendChild(containerAbilities);
+        google.charts.setOnLoadCallback(drawChart);
+    }
 
-    //draw Abilities
+    //print Chart
     function drawChart() {
         let data = google.visualization.arrayToDataTable([
             ['Element', 'Values', { role: 'style' }],
@@ -227,7 +224,7 @@ function printModal(champions) {
         let options = {
             //   title: "INFO:",
             width: 500,
-            height: 170,
+            height: 190,
             fontSize: 18,
             backgroundColor: "none",
             color: 'white',
@@ -282,79 +279,48 @@ function printModal(champions) {
         chart.draw(view, options);
     }
 
-    //draw Roles
-    function drawRoles() {
-        let data = google.visualization.arrayToDataTable([
-            ['Element', 'Values', { role: 'style' }],
-            ['Attack', champions.info.attack, '#BB8FCE'],
-            ['Difficulty', champions.info.difficulty, '#F0B27A']
-        ]);
-        let view = new google.visualization.DataView(data);
-        view.setColumns([0, 1,
-            {
-                calc: "stringify",
-                sourceColumn: 1,
-                type: "string",
-                role: "annotation"
-            },
-            2]);
-        let options = {
-            //   title: "INFO:",
-            width: 500,
-            height: 170,
-            fontSize: 18,
-            backgroundColor: "none",
-            color: 'white',
-            bar: { groupWidth: "80%", color: "white" },
-            legend: { position: "none" },
+    //for each item in the array: 
+    for (let i = 0; i < arrayLinkModal.length; i++) {
 
-            titleTextStyle: {
-                color: 'white',
-                fontSize: 20,
-            },
+        descriptionModal.setAttribute("class", "descriptionModal");
+        //create elemnts a modal
+        enlace = document.createElement("a");
+        enlace.href = arrayLinkModal[i];
+        enlace.textContent += arrayNavModal[i].toString();
+        descriptionModal.appendChild(enlace);
+        //switch nav modal
+        enlace.addEventListener('click', function () {
+            let ability = arrayLinkModal[i];
+            let abilitySelect = ability.split("#")[1];
+            console.log("click ability:", abilitySelect);
+            let tagsValue;
+            tagsValue = champions.tags;
+            console.log("tags:", tagsValue);
 
-            hAxis: {
+            switch (abilitySelect) {
+                case 'info':
+                    cleanModalContent(tagsValue);
+                    printInfo(champions);
+                    break;
 
-                textStyle: {
-                    color: "white",
-                    fontSize: 20
-                },
-                minorGridlines: {
-                    color: "black",
-                    count: 0
-                },
-                gridlines: {
+                case 'rol':
+                    cleanModalContent(tagsValue);
+                    printRol(tagsValue);
+                    break;
 
-                    color: "black",
-                    count: 0
-                },
-                baselineColor: {
-                    color: "black"
-                },
-
-            },
-
-            vAxis: {
-                textStyle: {
-                    color: "white",
-                    fontSize: 20
-                },
-                baselineColor: {
-                    color: "white"
-                },
-                minorGridlines: {
-                    color: "white"
-                },
-                gridlines: {
-
-                    color: "white",
-                    count: 0
-                },
-            },
-        };
-        let chart = new google.visualization.ColumnChart(document.getElementById('containerAbilities'));
-        chart.draw(view, options);
+                case 'ability':
+                    cleanModalContent(tagsValue);
+                    printAbility();
+                    break;
+                default:
+                    break;
+            }
+        });
     }
+    containerDesAbil.appendChild(descriptionModal);
+
+    // First: Add print Info
+    printInfo(champions);
 
     //properties modal
     modalC.style.opacity = "1";
@@ -428,7 +394,6 @@ function printChampions(arraychampion) {
     let textoUper = arraychampion.title;
     let texto = document.createTextNode(textoUper.toUpperCase());
     p.appendChild(texto);
-
 
     let idcard = document.getElementById(arraychampion.key);
 

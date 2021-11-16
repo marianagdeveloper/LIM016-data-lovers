@@ -677,7 +677,6 @@ h6 {
   }
 }
 
-
 /* modal */
 .modal-container {
   opacity: 0;
@@ -709,11 +708,11 @@ h6 {
 
 .modal {
   width: 40%;
-  height: 90%;
+  height: 95%;
   overflow: hidden;
   /* background: rgba(0, 0, 0, 0.7); */
   /* background:#2C2458; */
-  background:#5b43e4;
+  background: #5b43e4;
   /* background: black; */
   /* background:#12cf0b; */
   text-align: center;
@@ -738,7 +737,7 @@ h6 {
   flex-direction: column;
 } */
 .divNameRole {
-  width:90%;
+  width: 90%;
   height: 40px;
   display: flex;
   flex-direction: column;
@@ -760,19 +759,19 @@ h6 {
   text-shadow: 2px 2px 2px rgb(21, 21, 22);
   padding: 15px;
   background: rgb(241, 235, 235) -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#222),
-    to(#222),
-    color-stop(0.5, #fff)
-  ) 0 0 no-repeat;
--webkit-background-size: 125px;
-color: rgba(255, 255, 255, 0.1);
--webkit-background-clip: text;
--webkit-animation-name: shine;
--webkit-animation-duration: 3s;
--webkit-animation-iteration-count: infinite;
+      linear,
+      left top,
+      right top,
+      from(#222),
+      to(#222),
+      color-stop(0.5, #fff)
+    ) 0 0 no-repeat;
+  -webkit-background-size: 125px;
+  color: rgba(255, 255, 255, 0.1);
+  -webkit-background-clip: text;
+  -webkit-animation-name: shine;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
 }
 
 /* contenido del modal: img, nav, chart */
@@ -789,15 +788,15 @@ color: rgba(255, 255, 255, 0.1);
 
 .imageModal {
   /* display: block; */
-  display:flex;
+  display: flex;
   width: 100%;
   border-radius: 20px 20px 0 0;
   border-image-outset: 1.5;
 }
 
 .descriptionModal {
-  display:flex;
-  justify-content:space-around;
+  display: flex;
+  justify-content: space-around;
   /* background: rgb(119, 226, 18); */
   background: #000;
   width: 100%;
@@ -812,19 +811,15 @@ color: rgba(255, 255, 255, 0.1);
   font-size: 18px;
   text-decoration: none;
   text-transform: uppercase;
-  /* box-sizing: 20px  ; */
-  /* background: brown; */
   width: 80%;
-  /* border-radius: 20px; */
   padding: 10px;
+  margin-bottom: 9px;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background-color: transparent;
   border-radius: 0.6em;
-  /* cursor: pointer; */
-  /* margin: 10px; */
   border-color: #3498db;
   letter-spacing: 0.7px;
   text-align: center !important;
@@ -856,13 +851,99 @@ color: rgba(255, 255, 255, 0.1);
   }
 }
 
-/* .containerDesAbil {
+/* div padre de roles en el modal */
+.containerDesAbil {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   border-radius: 0 0 10px 10px;
-} */
+  /* background:rgb(212, 10, 10); */
+  background: black;
+}
+
+/* roles */
+.containerRoles {
+  background: rgb(17, 226, 52);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0 0 10px 10px;
+}
+
+/* cajita 1 solo tag img + tag */
+.divTextInfo {
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 18px;
+  flex-direction: column;
+  align-items: center;
+  height: 210px;
+  justify-content: center;
+  font-family: "MedievalSharp", cursive;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+/* padre 2 cajitas img roles + tag */
+.containerRoles1 {
+  background:black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 0 10px 10px;
+}
+
+/* cajita de tags > 1  */
+.div1 {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  width: 180px;
+  font-size: 18px;
+  align-items: center;
+  height: 178px;
+  /* justify-content: center; */
+  justify-content: space-between;
+  font-family: "MedievalSharp", cursive;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  height: 210px;
+  padding-top: -20px;
+  /* margin-bottom: 20px; */
+}
+
+/* gif 1 tag*/
+.imageRoles {
+  display: block;
+  margin: auto;
+  width: 20%;
+  border-radius: 50%;
+}
+/* gif 2 tags*/
+.imageRoles1 {
+  display: block;
+  margin: auto;
+  width: 60%;
+  border-radius: 50%;
+}
+
+/* info */
+.containerInfo {
+  background: black;
+  width: 100%;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: "MedievalSharp", cursive;
+  padding: 10px 40px 10px 40px;
+  border-radius: 0 0 10px 10px;
+  line-height: 22px;
+}
 
 /* chart */
 .containerAbilities {
@@ -873,51 +954,5 @@ color: rgba(255, 255, 255, 0.1);
   margin-bottom: 10px;
   border-radius: 0 0 10px 10px;
   padding-bottom: 10px;
-}
-
-/* roles */
-.containerRoles {
-  background: rgb(17, 226, 52);
-  width: 100%;
-  /* height: 100px; */
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  margin-bottom: 10px;
-  border-radius: 0 0 10px 10px;
-  padding-bottom: 10px;
-  font-size: 20px;
-  font-family: "MedievalSharp", cursive;
-}
-
-.divTextInfo{
-  background: rgb(214, 16, 148);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 150px;
-  width: 50%;
-}
-
-
-
-.imageRoles{
-  display:flex;
-  width: 45%;
-  /* background: crimson; */
-}
-
-/* info */
-.containerInfo {
-  background: black;
-  width: 100%;
-  height: 178px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  font-family: "MedievalSharp", cursive;
-  padding: 10px 10px 10px 10px;
-  border-radius: 0 0 10px 10px;
-  /* padding-bottom: 10px; */
+  padding-top: -10px;
 }
