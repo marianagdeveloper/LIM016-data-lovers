@@ -828,7 +828,7 @@ figure{
 
 .modal {
   width: 40%;
-  height: 95%;
+  height: 87%;
   overflow: hidden;
   background: #5b43e4;
   text-align: center;
@@ -888,6 +888,7 @@ figure{
   padding: 5px;
   display: flex;
   flex-direction: column;
+/*   height: 600px; */
 }
 
 .containerImage {
@@ -909,6 +910,8 @@ figure{
   width: 100%;
   font-family: "MedievalSharp", cursive;
   text-shadow: 2px 2px 2px rgb(21, 21, 22);
+  height: 60px;
+  padding-top: 3px;
 }
 
 .descriptionModal a {
@@ -918,7 +921,7 @@ figure{
   text-decoration: none;
   text-transform: uppercase;
   width: 80%;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 9px;
   box-sizing: border-box;
   -webkit-appearance: none;
@@ -961,6 +964,7 @@ figure{
   justify-content: center;
   border-radius: 0 0 10px 10px;
   background: black;
+ /*  height: 500px; */
 }
 
 /* roles */
@@ -981,7 +985,7 @@ figure{
   font-size: 18px;
   flex-direction: column;
   align-items: center;
-  height: 210px;
+  height: 290px;
   justify-content: center;
   font-family: "MedievalSharp", cursive;
   padding: 20px;
@@ -992,6 +996,7 @@ figure{
 .containerRoles1 {
   background:black;
   width: 100%;
+ 
   display: flex;
   justify-content: center;
   border-radius: 0 0 10px 10px;

@@ -20,8 +20,8 @@ async function carga() {
         arraychampion = data;
 
         const URLactual = window.location;
-        // const urlM = "/champions"; //URL Milagros
-        const urlM = "/src/champions.html"; //URL Mariana
+     const urlM = "/champions"; //URL Milagros
+        //const urlM = "/src/champions.html"; //URL Mariana
     
         if (URLactual.pathname == urlM) {
 
