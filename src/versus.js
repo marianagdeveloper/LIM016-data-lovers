@@ -2,6 +2,7 @@
 import { dataChampions } from './data.js';
 let image = [];
 let arraychampion = [];
+let primero=[],segundo=[];
 let arrayRole = ["Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let arrayIdPanel = ["uno", "dos", "tres", "cuatro", "cinco", "seis"];
 let containerImage = document.getElementById("img1");
@@ -9,6 +10,7 @@ let containerImage2 = document.getElementById("img2");
 let pName1 = document.getElementById("pName1");
 let pName2 = document.getElementById("pName2");
 let divGraficVersus = document.getElementById("graficVersus");
+let btnvs = document.getElementById("btnvs");
 async function carga() {
   await dataChampions().then((data) => {
     arraychampion = data;
@@ -40,7 +42,7 @@ window.onload = () => {
 }
 
 function carga2(arraychampion) {
-
+  let css=[];
   let ivi = [];
   let name = [];
   for (let i = 0; i < arraychampion.length; i++) {
@@ -58,95 +60,84 @@ function carga2(arraychampion) {
         console.log("acaaaaaa");
         containerImage.src = image[i];
         let texto = document.createTextNode(name[i]);
-        let primero = name[i];
+        primero = name[i];
         console.log("eeeeeeeeeeeeeeeeeeee", primero);
         pName1.appendChild(texto);
       } else {
         containerImage2.src = image[i];
         let texto2 = document.createTextNode(name[i]);
-        let segundo = name[i];
+        segundo = name[i];
         console.log("eeeeeeeeeeeeeeeeeeee", segundo);
         pName2.appendChild(texto2);
-        championElegido(primero, segundo);
-      }
+        btnvs.addEventListener("click",function championElegido(){
+        
 
-
-
-      //aqui realizar los graficos
-
-      function championElegido(primero, segundo) {
-
-        for (let i = 0; i < arraychampion.length; i++) {
-
-          if (arraychampion[i].name == primero) {
-            let cpp = arraychampion[i];
             for (let i = 0; i < arraychampion.length; i++) {
-              if (arraychampion[i].name == segundo) {
-                let css = arraychampion[i];
+    
+              if (arraychampion[i].name == primero) {
+                let cpp = arraychampion[i];
+                for (let i = 0; i < arraychampion.length; i++) {
+                  if (arraychampion[i].name == segundo) {
+                    css = arraychampion[i];
+                  }
+                }
+                /* eslint-disable */
+                google.charts.setOnLoadCallback(drawChartVersus);
+    
+                function drawChartVersus() {
+    
+                  let arrayColors = ["blue", "red"];
+                  let datas = google.visualization.arrayToDataTable([
+   
+                    ['Abilities', cpp.name, css.name],
+                    ['Hp', cpp.stats.hp, css.stats.hp],
+                    ['Mp', cpp.stats.mp, css.stats.mp],
+ 
+                    ['Move Speed', cpp.stats.movespeed,css.stats.movespeed],
+                    
+                    ['Atacck Range', cpp.stats.attackrange, css.stats.attackrange],
+                    
+                    ['Attack Damage', cpp.stats.attackdamage, css.stats.attackdamage],
+                    ['hpperlevel', cpp.stats.hpperlevel, css.stats.hpperlevel],
+                    ['spellblock', cpp.stats.spellblock, css.stats.spellblock],
+                    ['armor', cpp.stats.armor, css.stats.armor],
+                    ['hpregen', cpp.stats.hpregen,css.stats.hpregen],
+                /*     ['attackdamageperlevel', cpp.stats.attackdamageperlevel, css.stats.attackdamageperlevel],
+                    ['armorperlevel', cpp.stats.armorperlevel, css.stats.armorperlevel],
+                    ['Criattackspeedperlevelt', cpp.stats.attackspeedperlevel, css.stats.attackspeedperlevel], */
+                 
+    
+                  ]);
+    
+                  let view = new google.visualization.DataView(datas);
+                  view.setColumns([0, 1,
+                    {
+                      calc: "stringify",
+                      sourceColumn: 1,
+                      type: "string",
+                      role: "annotation"
+                    },
+                    2]);
+    
+                  let options = {
+                    title: "The most populares Champions",
+                    width: 600,
+                    height: 350,
+                    bar: { groupWidth: "95%" },
+                    legend: { position: "none" },
+                  };
+                  let chart = new google.visualization.ColumnChart(divGraficVersus);
+                  chart.draw(view, options);
+    
+                }
               }
             }
-            /* eslint-disable */
-            google.charts.setOnLoadCallback(drawChartVersus);
-
-            function drawChartVersus() {
-
-              let arrayColors = ["blue", "red"];
-              let datas = google.visualization.arrayToDataTable([
-//falta cambiar 
-                ['Abilities', cpp.name, css.name],
-                ['Hp', cpp.stats.hp, arrayColors[0]],
-                ['Move Speed', cpp.stats.movespeed, arrayColors[0]],
-                ['hpperlevel', cpp.stats.hpperlevel, arrayColors[0]],
-                ['spellblock', cpp.stats.spellblock, arrayColors[0]],
-                ['armor', cpp.stats.armor, arrayColors[0]],
-                ['hpregen', cpp.stats.hpregen, arrayColors[0]],
-                ['Atacck Range', cpp.stats.attackrange, arrayColors[0]],
-                ['Crit', cpp.stats.crit, arrayColors[0]],
-                ['Attack Damage', cpp.stats.attackdamage, arrayColors[0]],
-                ['attackdamageperlevel', cpp.stats.attackdamageperlevel, arrayColors[0]],
-
-                //fdsfsdfd
-                /* var data = google.visualization.arrayToDataTable([
-                  ['Galaxy', 'Distance', 'Brightness'],
-                  ['Canis Major Dwarf', 8000, 23.3],
-                  ['Sagittarius Dwarf', 24000, 4.5],
-                  ['Ursa Major II Dwarf', 30000, 14.3],
-                  ['Lg. Magellanic Cloud', 50000, 0.9],
-                  ['Bootes I', 60000, 13.1]
-                ]); */
-                //dsfsdfdsf
-
-              ]);
-
-              let view = new google.visualization.DataView(datas);
-              view.setColumns([0, 1,
-                {
-                  calc: "stringify",
-                  sourceColumn: 1,
-                  type: "string",
-                  role: "annotation"
-                },
-                2]);
-
-              let options = {
-                title: "The most populares Champions",
-                width: 600,
-                height: 350,
-                bar: { groupWidth: "95%" },
-                legend: { position: "none" },
-              };
-              let chart = new google.visualization.ColumnChart(divGraficVersus);
-              chart.draw(view, options);
-
-            }
-          }
-        }
+          
+        })
+       ;
       }
 
 
-
-
-      //aqui termina grafico
 
     });
 
