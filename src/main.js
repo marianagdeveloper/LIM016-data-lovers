@@ -8,6 +8,8 @@ let inputSearch = document.getElementById("inputSearch");
 let arrayButton = ["All", "Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let button, btnRol = [], textButton, cards = [], rolChampion;
 
+/* let selectAlpha = document.getElementById("selectAlpha").value; */
+
 //modal
 let cerrar = document.getElementById("close");
 let modal = document.getElementById("modal");
@@ -20,20 +22,20 @@ async function carga() {
         arraychampion = data;
 
         const URLactual = window.location;
-     const urlM = "/champions"; //URL Milagros
+        const urlM = "/champions"; //URL Milagros
         //const urlM = "/src/champions.html"; //URL Mariana
-    
+
         if (URLactual.pathname == urlM) {
 
             printNav();
             recorrerData();
             printButton();
             searchChampion();
-           
+
         }
-        else{
+        else {
             printNav();
-           /*  slide(); */
+            /*  slide(); */
         }
 
     });
@@ -165,13 +167,13 @@ function printModal(champions) {
 
                 switch (index) {
                     case 0:
-                        imageRoles1.src = "/src/gif/green.gif";
+                        imageRoles1.src = "./public/green.gif";
                         break;
                     case 1:
-                        imageRoles1.src = "/src/gif/pink.gif";
+                        imageRoles1.src = "./public/pink.gif";
                         break;
                     default:
-                        imageRoles1.src = "/src/gif/blue.gif";
+                        imageRoles1.src = "./public/blue.gif";
                         break;
                 }
 
@@ -356,7 +358,7 @@ function recorrerData() {
 
 }
 function printChampions(arraychampion) {
-
+    console.log("entroa quiii")
     let imagen;
     imagen = arraychampion.splash;
     cards = document.createElement("div");
@@ -433,6 +435,27 @@ function filterByRole(btnRol) {
 
 }
 
+
+
+//feliz como una lombriz
+
+/* Para obtener el texto */
+const select = document.getElementById('selectAlpha');
+
+select.addEventListener('change', function () {
+
+    divChampion.innerHTML = "";
+
+    const selectedOption = this.options[select.selectedIndex];
+
+    (selectedOption.value == "az") ? arraychampion.reverse().map(e => printChampions(e)) : arraychampion.reverse().map(e => printChampions(e));
+
+});
+
+
+
+
+
 /* ----creando template para slideeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee --- */
 
 
@@ -459,10 +482,10 @@ function filterByRole(btnRol) {
 
 function slideTemplate(champion) {
 
-   
+
     return `
       <div class="slide">
-      <img class="imgSlide" src=${champion.splash} alt="">       
+      <img class="imgSlide" src=${champion.splash} alt="">
       </div>
     `
 }
