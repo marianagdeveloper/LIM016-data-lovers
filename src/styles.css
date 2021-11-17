@@ -346,8 +346,9 @@ background-size: cover;
 padding: 20px;
 padding-top: 200px;
 }
+
 #divHome{
-background:rgba(0,0,0,0.7) ;
+background:radial-gradient(rgba(0, 0, 0, 0.801) 30%, rgba(42, 41, 41, 0.534));
 width: 70%;
 margin: auto !important;
 padding: 100px;
@@ -374,11 +375,12 @@ font-family: 'MedievalSharp', cursive;
 #pHome{
 text-align: center;
 color:white;
-padding: 40px;
+padding: 20px;
 margin-bottom: 100px;
 margin: auto;
-font-size: 18px;
-font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+line-height: 2; 
+font-family: "MedievalSharp", cursive;
 }
 
 #seeMore{
@@ -496,8 +498,22 @@ padding: 10px;
   padding-top: 2px;
 }
 
+.footerII{
+  justify-content: center;
+  align-items: center;
+  background: black;
+  display: flex;
+  padding-top: 2px;
+}
+
 /* lista horizontal */
 .footerI > ul{
+  display: flex;
+  list-style-type: none;
+  padding-top: 10px;
+}
+
+.footerII > ul{
   display: flex;
   list-style-type: none;
   padding-top: 10px;
@@ -522,6 +538,18 @@ padding: 10px;
   border: black 2px solid;
   background:radial-gradient(rgb(9, 196, 221), black,black);
   border-radius: 50%;
+  margin-left: 12px;
+  background-clip: content-box;
+  padding: 5px;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.footerII ul > li > a > img{
+  width: 50px; 
+  height: 50px;
+  border: black 2px solid;
+  background:radial-gradient(white 15%, black,black);
   margin-left: 12px;
   background-clip: content-box;
   padding: 5px;
