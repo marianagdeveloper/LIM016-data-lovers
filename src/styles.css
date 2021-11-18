@@ -635,21 +635,37 @@ width: 100%;
   padding: 500px 200px 150px 100px;
   overflow: hidden;
 }
-.header-content h1{
+
+/* logo :lol */
+.header-content img{
+  width: 300px;
+  display: block;
+  margin: auto;
+}
+
+/* .header-content h1{
   font-size: 35px;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 20px;
   font-family: 'MedievalSharp', cursive;
+} */
 
+.header-content h1{
+  font-size: 35px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'MedievalSharp', cursive;
+  color: rgb(233, 212, 161);
 }
+
 .header-content p{
   font-size: 18px;
   display: block;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
- 
- /*  padding: 150px; */
+  color: goldenrod;
 }
 
 /* ranking */
