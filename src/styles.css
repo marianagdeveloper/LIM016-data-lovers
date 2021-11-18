@@ -632,7 +632,8 @@ width: 100%;
 .header-content{
   margin: auto;
   z-index: 2; 
-  padding: 500px 200px 150px 100px;
+  /* padding: 500px 200px 150px 100px; */
+  padding: 360px 100px 0px 100px;
   overflow: hidden;
 }
 
