@@ -384,7 +384,7 @@ font-family: 'MedievalSharp', cursive;
   margin: auto;
   font-size: 20px;
   line-height: 2; 
-  font-family: "MedievalSharp", cursive;
+  /* font-family: "MedievalSharp", cursive; */
   }
 
 #seeMore{
