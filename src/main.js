@@ -1,16 +1,11 @@
 import { dataChampions, isFilterRol } from './data.js';
 
 let arraychampion = [];
-/* let newArray=[]; */
 let divChampion = document.getElementById("divShowChampions");
 let inputSearch = document.getElementById("inputSearch");
 /* let containerSlider = document.getElementById("slide-track"); */
 let arrayButton = ["All", "Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let button, btnRol = [], textButton, cards = [], rolChampion;
-
-/* let selectAlpha = document.getElementById("selectAlpha").value; */
-
-//modal
 let cerrar = document.getElementById("close");
 let modal = document.getElementById("modal");
 let modalC = document.getElementById("modal-container");
@@ -20,28 +15,43 @@ let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/up
 async function carga() {
     await dataChampions().then((data) => {
         arraychampion = data;
-
         const URLactual = window.location;
-        const urlM = "/champions"; //URL Milagros
+        const urlM = "/champions";            //URL Milagros
         //const urlM = "/src/champions.html"; //URL Mariana
-
         if (URLactual.pathname == urlM) {
-
             printNav();
             recorrerData();
             printButton();
             searchChampion();
 
+            //ordnear alfabeticamnete
+            let select = document.getElementById('selectAlpha');
+            select.addEventListener('change', function () {
+                divChampion.innerHTML = "";
+                let selectedOperation = select.options[select.selectedIndex].value;
+
+                console.log("select ", selectedOperation);
+
+                switch (selectedOperation) {
+                    
+                    case "az":
+                       arraychampion.reverse().sort().map(e => printChampions(e));
+                        break;
+                    case "za":
+                        (arraychampion.reverse()).map(e => printChampions(e));
+                        break;
+                }
+            });
+            //aquiiii termina el ordenamiento
         }
         else {
             printNav();
-            /*  slide(); */
         }
-
     });
 }
 
 carga();
+
 
 function searchChampion() {
     inputSearch.addEventListener("keyup", function () {
@@ -190,6 +200,7 @@ function printModal(champions) {
         containerAbilities.setAttribute("class", "containerAbilities");
         containerAbilities.setAttribute("id", "containerAbilities")
         containerDesAbil.appendChild(containerAbilities);
+        /* eslint-disable */
         google.charts.setOnLoadCallback(drawChart);
     }
 
@@ -435,24 +446,11 @@ function filterByRole(btnRol) {
 
 }
 
-
+/* let arra = []; */
 
 //feliz como una lombriz
 
 /* Para obtener el texto */
-const select = document.getElementById('selectAlpha');
-
-select.addEventListener('change', function () {
-
-    divChampion.innerHTML = "";
-
-    const selectedOption = this.options[select.selectedIndex];
-
-    (selectedOption.value == "az") ? arraychampion.reverse().map(e => printChampions(e)) : arraychampion.reverse().map(e => printChampions(e));
-
-});
-
-
 
 
 
