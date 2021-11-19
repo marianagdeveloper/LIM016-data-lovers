@@ -15,7 +15,8 @@ let cerrar = document.getElementById("close");
 let modal = document.getElementById("modal");
 let modalC = document.getElementById("modal-container");
 const arrayNavEnlaces = ["champions.html", "ranking.html", "index.html", "download.html", "versus.html"]
-let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "Versus"];
+// let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "Versus"];
+let arrayNav = ["Champions", "Ranking", "Home", "Download", "Versus"];
 
 async function carga() {
     await dataChampions().then((data) => {
@@ -374,15 +375,16 @@ function printNav() {
         list = document.createElement("li");
         enlace = document.createElement("a");
         enlace.href = arrayNavEnlaces[i];
-        if (arrayNav[i] == arrayNav[2]) {
-            b = document.createElement("img");
-            enlace.appendChild(b);
-            b.src = arrayNav[2].toString();
-            enlace.href = arrayNavEnlaces[i];
-            // console.log(b);
-        } else {
-            enlace.textContent += arrayNav[i].toString();
-        }
+        // if (arrayNav[i] == arrayNav[2]) {
+        //     b = document.createElement("img");
+        //     enlace.appendChild(b);
+        //     b.src = arrayNav[2].toString();
+        //     enlace.href = arrayNavEnlaces[i];
+        //     // console.log(b);
+        // } else {
+        //     enlace.textContent += arrayNav[i].toString();
+        // }
+        enlace.textContent += arrayNav[i].toString();
         list.appendChild(enlace);
         item.appendChild(list);
 
