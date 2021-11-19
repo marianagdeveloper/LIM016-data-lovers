@@ -491,11 +491,28 @@ label {
     line-height: 1.5;
     font-family: 'Lato', sans-serif;
   }
+  /* champions sectionChampions3 */
+  .sectionChampions3{
+    max-height: 40rem;
+  }
+  .articleChampions{
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
+  #divHome1 {
+    width: 100vw;
+    margin: 0rem !important;
+    padding: 0rem !important;
+  }
 }
 
 @media all and (min-width: 1200px) {
   #divHome {
     width: 50%;
+  }
+  #divHome1 {
+    width: 50%;
+    padding: 0rem !important;
   }
   #imageHome {
     display: block;
