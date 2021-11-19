@@ -451,14 +451,13 @@ footer{
   padding: 30px;
   font-family: sans-serif;
   letter-spacing: 1.2px;
+  margin-right: 10rem;
 }
-
 
 h6{
 color: white;
 text-align: center;
 font-size: 20px;
-
 }
 
 /* ------ aplicate medias queries----- */
