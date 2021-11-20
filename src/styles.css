@@ -18,11 +18,6 @@ a {
   color: black;
 }
 
-/* body {
-  font: normal 16px/1.5 Helvetica, sans-serif;
-  background: linear-gradient(to right, #6814cd 0%, #3163f3 100%);
-} */
-
 .tabs-container {
   max-width: 1200px;
   margin: 50px auto;
@@ -160,12 +155,7 @@ a {
   padding-top: 50px;
   padding-left: 180px;
 }
-/* .carousel{
-  width: 100%;
-  height: 150px;
-  background: crimson;
-  margin-top: 20px;
-} */
+
 .chooseChampion {
   margin: 50px;
   width: 300px;
@@ -553,10 +543,11 @@ padding: 15px;
 
   .sectionRanking{
     padding: 30px 50px 50px 50px;
-    height: 1080px;
+    height: 1000px;
   }
   .topRankig{
     margin-bottom: 50px;
+    height: 930px;
   }
  
   .menuRanking{
@@ -582,13 +573,12 @@ padding: 15px;
   .div-videoRanking>p{
     padding-left: 20px;
     padding-right: 20px;
-
   }
   
- /*  .infoRanking{
-    height: 200px;
-   
-  } */
+  .infoRanking{
+  flex-direction: row;
+  height: 150px;   
+  }
 .optionRanking{
   width: 70%;
     padding: 15px;
@@ -606,6 +596,12 @@ padding: 15px;
     font-size: 18px;
     color: white;
     font-family: "MedievalSharp", cursive;
+    }
+    .footerI {
+
+      padding: 0;
+      margin: 0 !important;
+      
     }
 }
 
