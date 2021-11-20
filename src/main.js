@@ -6,7 +6,7 @@ let divChampion = document.getElementById("divShowChampions");
 let inputSearch = document.getElementById("inputSearch");
 /* let containerSlider = document.getElementById("slide-track"); */
 let arrayButton = ["All", "Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
-let button, btnRol = [], textButton, cards = [], rolChampion;
+let button, btnRol = [], textButton, cards = [],array=[], rolChampion;
 //difficulty
 const selectDificult = document.getElementById('selectDificult');
 /* let selectAlpha = document.getElementById("selectAlpha").value; */
@@ -33,6 +33,7 @@ async function carga() {
             printButton();
             searchChampion();
             difficulty();
+            OrderAlpha();
 
         }
         else {
@@ -44,6 +45,22 @@ async function carga() {
 }
 
 carga();
+function OrderAlpha() {
+    array=arraychampion;
+    let select = document.getElementById('selectAlpha');
+    select.addEventListener('change', function () {
+        divChampion.innerHTML = "";
+
+        let selectedOperation = select.options[select.selectedIndex].value;
+
+        function SortArray(x, y) {
+            return x.name.localeCompare(y.name);
+        }
+        selectedOperation == 'az' ? array.sort(SortArray).map(e => printChampions(e)) : array.reverse().map(e => printChampions(e));
+
+    });
+}
+
 
 function searchChampion() {
     inputSearch.addEventListener("keyup", function () {
@@ -477,7 +494,7 @@ function filterByRole(btnRol) {
 //feliz como una lombriz
 
 /* Para obtener el texto */
-const select = document.getElementById('selectAlpha');
+/* const select = document.getElementById('selectAlpha');
 
 select.addEventListener('change', function () {
 
@@ -488,7 +505,7 @@ select.addEventListener('change', function () {
     (selectedOption.value == "az") ? arraychampion.reverse().map(e => printChampions(e)) : arraychampion.reverse().map(e => printChampions(e));
 
 });
-
+ */
 
 
 
