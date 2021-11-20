@@ -592,11 +592,10 @@ padding: 15px;
     padding-right: 20px;
 
   }
-  
- /*  .infoRanking{
-    height: 200px;
-   
-  } */
+  .infoRanking{
+    flex-direction: row;
+    height: 150px;   
+    }
 .optionRanking{
   width: 70%;
     padding: 15px;
