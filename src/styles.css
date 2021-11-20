@@ -868,3 +868,85 @@ width: 100%;
 
     /* border-radius: 50%; */
 }
+/* -------------------------------------------------------------------------------------------------------------------------- */
+.footerI {
+  margin-top: 180px;
+  justify-content: center;
+  align-items: center;
+  /* background: rgb(230, 14, 14); */
+  background: black;
+  display: flex;
+  padding-top: 2px;
+}
+
+.footerII {
+  justify-content: center;
+  align-items: center;
+  background: black;
+  display: flex;
+  padding-top: 2px;
+}
+
+/* lista horizontal */
+.footerI > ul {
+  display: flex;
+  list-style-type: none;
+  padding-top: 10px;
+  margin-right: 2rem;
+}
+
+.footerII > ul {
+  display: flex;
+  list-style-type: none;
+  padding-top: 10px;
+}
+
+.footerI ul > li > a > img {
+  width: 50px;
+  height: 50px;
+  border: black 2px solid;
+  background: radial-gradient(white 15%, black, black);
+  margin-left: 12px;
+  background-clip: content-box;
+  padding: 5px;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.footerI ul > li > a > img:hover {
+  width: 50px;
+  height: 50px;
+  border: black 2px solid;
+  background: radial-gradient(rgb(9, 196, 221), black, black);
+  border-radius: 50%;
+  margin-left: 12px;
+  background-clip: content-box;
+  padding: 5px;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.footerII ul > li > a > img {
+  width: 50px;
+  height: 50px;
+  border: black 2px solid;
+  background: radial-gradient(white 15%, black, black);
+  margin-left: 12px;
+  background-clip: content-box;
+  padding: 5px;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.footerII ul > li > a > img:hover {
+  width: 50px;
+  height: 50px;
+  border: black 2px solid;
+  background: radial-gradient(rgb(9, 196, 221), black, black);
+  border-radius: 50%;
+  margin-left: 12px;
+  background-clip: content-box;
+  padding: 5px;
+  justify-items: center;
+  cursor: pointer;
+}
