@@ -172,12 +172,7 @@ a {
   padding-top: 50px;
   padding-left: 180px;
 }
-/* .carousel{
-  width: 100%;
-  height: 150px;
-  background: crimson;
-  margin-top: 20px;
-} */
+
 .chooseChampion{
   margin: 50px;
   width: 300px;
@@ -227,7 +222,7 @@ h3{
   .sectionRanking2{
     background: url(   https://pbs.twimg.com/media/COdcRZ9UcAA3CRQ.jpg);
     width: 100%;
-    height: 950px;
+    height: 850px;
     background-position: center;
     background-size: cover;
     padding: 20px;
@@ -237,22 +232,60 @@ h3{
   padding: 20px;
   margin: auto;
   width: 90%;
+  height: 750px;
   background:rgba(0,0,0,0.7) ;
   display: flex;
+   border-radius: 20px ;
   justify-content: space-between;
 }
 /*   videoooo ranking */
   .div-videoRanking{
   width: 50%;
-  margin-left: auto;
+  margin-top: 15px;
+  padding: 30px;
+  background: rgba(146, 148, 38, 0.713) ;
+  border-radius: 20px;
+  }
+  .div-videoRanking > p{
+
+     padding: 10px;
+     color: white;
+
+     font-size: 16px;
+     font-family: 'Lato', sans-serif;
+     text-align: justify;
+    }
+  .div-descripVideo{
+    width: 50%;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    }
+    .div-descripVideo > p{
+     margin: 50px 10px 30px 10px;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    }
+    .div-descripVideo > img{
     
-  }
+   display: block;
+   margin: auto;
+   width: 50%;
+     }
+     .div-descripVideo > h3{
+    color: white;
+text-align: center;
+text-transform: uppercase;
+        }
   .div-videoRanking video{
+   
     width: 100%;
-  /*   min-width: 100%;
-    min-height: 100%; */
+    border-radius: 20px;
+ margin-bottom: 40px;
   }
- /*  video ranking */
 
   .topRankig{
     background:rgba(0,0,0,0.7) ;
@@ -265,18 +298,27 @@ h3{
   .menuRanking{
     width: 100%;
     height: 50px;
-    padding: 10px;
+  /*   padding: 10px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .menuRanking > h2{
+  .topIcon > h2{
+  margin: 30px;
+  padding: 20px;
     font-size: 25px;
     color: white;
-    width: 30%;
-    text-align: center;
-    padding-top: 20px;
+ width: 50%;
+    text-align: center; 
+/*  background: blue; */
     font-family: "MedievalSharp", cursive;
+  }
+  .topIcon{
+   
+    display: flex;
+    justify-content: center;
+    color: white;    
+ /*   background: yellow; */
   }
   label{
   font-size: 20px;
@@ -295,24 +337,27 @@ h3{
     color: white;
     padding: 20px;
     border-radius: 20px;
+    justify-content: space-evenly;
     font-family: "MedievalSharp", cursive;
   }
 
   .infoRanking p{
     display: flex ;
     color: white;
-    padding: 18px;
+    padding: 25px;
     border-radius: 20px;
-    font-size: 22px;
-    font-family: "MedievalSharp", cursive;
+    font-size: 16px;
+    font-family: 'Lato', cursive;
     text-align: center;
+    width: 50%;
+ /*    margin-right: 40px; */
   }
   .graficRanking{
     width: 100%;
     padding: 20px;
     border-radius: 20px;
-    /* background: rgba(218, 118, 140, 0.6) ; */
-    background: #3b1de4a8; ;
+    background: rgba(218, 118, 140, 0.6) ;
+   /*  background: palevioletred; ; */
     height: 600px;
     margin-top: 20px;
   }
@@ -326,31 +371,37 @@ h3{
   .nameTop{
     padding-top: 10px;
     color: white;
+   
   }
   .nameTop b{
     padding-top: 10px;
     color: white;
-    font-size: 20px;
-    font-family: "MedievalSharp", cursive;
+    font-size: 18px;
+    font-family: 'Lato',arial;
   }
   .puntajeTop{
     padding-top: 10px;
     color: white;
-    font-size: 22px;
-    font-family: "MedievalSharp", cursive;
+    font-size: 16px;
+    font-family: lato, cursive;
   }
  .sectionGrafic{
    width: 100%;
    display: flex;
    justify-content: space-between;
    height: 650px;
+   font-family: 'Lato';
+  
  }
  .grafic{
   margin: 20px 0px 20px 20px;
-  padding:0 20px 20px;
+  padding-left: 50px;
+  padding-top: 20px;
   border-radius: 20px;
-  /* background: rgba(227, 230, 241, 0.753); */
-  background: rgba(223, 203, 154, 0.712);
+  font-family: 'Lato';
+  
+  background: rgba(161, 168, 208, 0.57);
+/*   background: rgba(223, 203, 154, 0.712); */
  } 
 .rayita{
   width: 100px;
@@ -360,9 +411,211 @@ h3{
   display: block;
   width: 100%;
  }
- /*  .imgTop{
-    padding-top: 10px;
+
+/* --------------------------------------------aplicando media query RANKING --------------------------------------------- */
+
+@media all and (min-width:360px){
+  .sectionRanking{
+    height: 1050px;
+  }
+  .sectionRanking2{
+    height: 1300px;
+    padding: 5px;
+  }
+  .containerRanking2{
+    width: 100%;
+    height: 650px; 
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .infoRanking{
+    height: 200px;
+    flex-direction: column;
+  }
+  .infoRanking > p{
+    padding: 0;
+    margin: 0;
+    padding-top: 30px;
+    width: 100%;
+    font-size: 14px;
+  }
+ .optionRanking{
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+ }
+ .optionRanking > label{
+  font-size: 14px;
+ }
+ .menuRanking{
+   flex-direction: column;
+   height: 100px;
+   margin-bottom: 20px;
+ }
+ .sectionRanking{
+   padding: 5px;  
+ }
+ .topRankig{ 
+   width: 100%;
+  height: 1000px;
+ }
+ .topIcon > h2{
+   padding-top: 15px;
+   margin: 0;
+ }
+ .sectionGrafic{
+  
+  flex-direction:column ;
+ }
+ .nameTop > b{
+ font-size: 14px;
+ }
+.puntajeTop{
+  font-size: 12px;
+}
+.grafic{
+  display:none;
+}
+.div-descripVideo{
+  margin: 0;
+padding: 5px;
+width: 100%;
+
+}
+.div-descripVideo >h3{
+
+  padding: 20px;
+  width: 100%;
+  margin: 0;
+  margin-top: 30px;
+ text-align: center;
+ font-size: 18px;
+  }
+  .div-descripVideo >p{
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+    line-height: normal;
+    font-size: 15px;
+    }
+    .div-videoRanking{
+      margin: 0;
+padding: 5px;
+width: 100%;
+margin-top: 20px;
+padding-bottom: 20px;
+    }
+   
+
+
+
+}
+@media all and (min-width:650px){
+
+  .sectionRanking2{
+    height: 1380px;
+    padding: 5px;
+  }
+  .containerRanking2{
+    width: 100%;
+    height: 650px; 
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+  }
+  .sectionRanking2{
+    height: 700px;
+    padding: 20px;
+  }
+  .sectionGrafic{
+  
+    flex-direction:row ;
+    
+   }
+ .menuRanking{
+   margin-bottom: 30px;
+ }
+
+  .grafic{
+    display:block;
+  }
+  .div-videoRanking{
+    margin: 10;
+padding: 15px;
+
+  }
+
+}
+@media all and (min-width:1000px){
+ 
+  .sectionRanking2{
+    height: 830px;
+    padding: 50px;
+  }
+  .containerRanking2{
+    height: 730px;
+    padding: 20px;
+  }
+
+  .sectionRanking{
+    padding: 30px 50px 50px 50px;
+    height: 1080px;
+  }
+  .topRankig{
+    margin-bottom: 50px;
+  }
+ 
+  .menuRanking{
+    flex-direction: row;
+    height: 80px;
+    margin-bottom: 0;
+}
+.div-descripVideo >p{
+  padding: 40px;
+  width: 100%;
+ }
+
+  .div-videoRanking{
+    padding: 20px;
+    padding-bottom: 0px;
+   margin-right:20px;
+   margin-bottom: 20px;
+  }
+  .div-videoRanking > video{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  .div-videoRanking>p{
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+  
+ /*  .infoRanking{
+    height: 200px;
+   
   } */
+.optionRanking{
+  width: 70%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+  .infoRanking > p{
+    padding: 0;
+    margin: 0;
+    padding-top: 30px;
+    width: 50%;
+    font-size: 16px;
+  }
+  .optionRanking > label{
+    font-size: 18px;
+    color: white;
+    font-family: "MedievalSharp", cursive;
+    }
+}
 
 /* --------------------------END RANKING ------ ranking.html------------------------------------------ */
 
@@ -611,5 +864,7 @@ width: 100%;
     display: block;
     margin: auto;
     width: 20%;
+  /*   background: red; */
+
     /* border-radius: 50%; */
 }

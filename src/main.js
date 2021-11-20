@@ -5,7 +5,7 @@ let divChampion = document.getElementById("divShowChampions");
 let inputSearch = document.getElementById("inputSearch");
 /* let containerSlider = document.getElementById("slide-track"); */
 let arrayButton = ["All", "Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
-let button, btnRol = [], textButton, cards = [], rolChampion;
+let button, btnRol = [], textButton, cards = [],array=[], rolChampion;
 let cerrar = document.getElementById("close");
 let modal = document.getElementById("modal");
 let modalC = document.getElementById("modal-container");
@@ -15,6 +15,7 @@ let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/up
 async function carga() {
     await dataChampions().then((data) => {
         arraychampion = data;
+       
         const URLactual = window.location;
         const urlM = "/champions";            //URL Milagros
         //const urlM = "/src/champions.html"; //URL Mariana
@@ -23,26 +24,9 @@ async function carga() {
             recorrerData();
             printButton();
             searchChampion();
+            OrderAlpha();
 
-            //ordnear alfabeticamnete
-            let select = document.getElementById('selectAlpha');
-            select.addEventListener('change', function () {
-                divChampion.innerHTML = "";
-                let selectedOperation = select.options[select.selectedIndex].value;
 
-                console.log("select ", selectedOperation);
-
-                switch (selectedOperation) {
-                    
-                    case "az":
-                       arraychampion.reverse().sort().map(e => printChampions(e));
-                        break;
-                    case "za":
-                        (arraychampion.reverse()).map(e => printChampions(e));
-                        break;
-                }
-            });
-            //aquiiii termina el ordenamiento
         }
         else {
             printNav();
@@ -52,6 +36,21 @@ async function carga() {
 
 carga();
 
+function OrderAlpha() {
+    array=arraychampion;
+    let select = document.getElementById('selectAlpha');
+    select.addEventListener('change', function () {
+        divChampion.innerHTML = "";
+
+        let selectedOperation = select.options[select.selectedIndex].value;
+
+        function SortArray(x, y) {
+            return x.name.localeCompare(y.name);
+        }
+        selectedOperation == 'az' ? array.sort(SortArray).map(e => printChampions(e)) : array.reverse().map(e => printChampions(e));
+
+    });
+}
 
 function searchChampion() {
     inputSearch.addEventListener("keyup", function () {

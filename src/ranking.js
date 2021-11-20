@@ -11,11 +11,14 @@ async function carga() {
         /* eslint-disable */
         google.charts.setOnLoadCallback(drawChartTop);
 
-        document.getElementsByName("menuRanking")[0].addEventListener('change', function () { graficAbility(aux[0]); });
-        document.getElementsByName("menuRanking")[1].addEventListener('change', function () { graficAbility(aux[1]); });
-        document.getElementsByName("menuRanking")[2].addEventListener('change', function () { graficAbility(aux[2]); });
-        document.getElementsByName("menuRanking")[3].addEventListener('change', function () { graficAbility(aux[3]); });
-
+        for (let i = 0; i < 5; i++) {
+            document.getElementsByName("menuRanking")[i].addEventListener('change', function () { graficAbility(aux[i]); });
+        }
+        /*      document.getElementsByName("menuRanking")[0].addEventListener('change', function () { graficAbility(aux[0]); });
+             document.getElementsByName("menuRanking")[1].addEventListener('change', function () { graficAbility(aux[1]); });
+             document.getElementsByName("menuRanking")[2].addEventListener('change', function () { graficAbility(aux[2]); });
+             document.getElementsByName("menuRanking")[3].addEventListener('change', function () { graficAbility(aux[3]); });
+      */
     });
 }
 
@@ -55,7 +58,7 @@ function topTemplate(champion) {
     `
 }
 function drawChartTop() {
-    let arrayColors = ["blue", "yellow", "green", "black", "red", "grey", "silver", "gold", "platinum", "copper"];
+    let arrayColors = ["#98E55B", "#F39C12", "#B479EC", "#3498DB", "#F0F3F4", "#FFC300", "#C70039", "#76D7C4", "#EC7063 ", "#E283C2"];
     console.log("arraycolor", arrayColors);
 
     let datas = google.visualization.arrayToDataTable([
@@ -94,9 +97,22 @@ function drawChartTop() {
         bar: { groupWidth: "80%" },
         legend: { position: "none" },
         titleTextStyle: {
-            color: 'black',
-            fontSize: 21,
+            color: 'white',
+            fontSize: 20,
         },
+        hAxis: {
+
+            textStyle: {
+                color: "white",
+                fontSize: 14
+            },
+        },
+        vAxis: {
+            textStyle: {
+                color: "white",
+                fontSize: 14
+            },
+        }
     };
     let chart = new google.visualization.BarChart(grafic);
     chart.draw(view, options);
@@ -122,14 +138,14 @@ function graficAbility(ability) {
             }
         }
     }
-  
+
     viewRanking(ability, arrayAbility);
     /* eslint-disable */
     google.charts.setOnLoadCallback(drawChartAbility);
 
     function drawChartAbility() {
 
-        let arrayColors = ["blue", "yellow", "green", "black", "red", "grey", "silver", "gold", "platinum", "copper"];
+        let arrayColors =["#98E55B", "#F39C12", "#B479EC", "#3498DB", "#F0F3F4", "#FFC300", "#C70039", "#76D7C4", "#EC7063 ", "#E283C2"];
         let datas = google.visualization.arrayToDataTable([
 
             ['Element', 'Values', { role: 'style' }],
@@ -160,15 +176,29 @@ function graficAbility(ability) {
             title: "The most popular Champions",
             width: 500,
             height: 580,
-            fontSize: 18,
+            fontSize: 16,
             backgroundColor: "none",
-            color: 'black',
+            color: 'white',
             bar: { groupWidth: "80%" },
             legend: { position: "none" },
             titleTextStyle: {
-                color: 'black',
-                fontSize: 21,
+                color: 'white',
+                fontSize: 20,
+                fontName:'Flamenco',   
             },
+            hAxis: {
+
+                textStyle: {
+                    color: "white",
+                    fontSize: 14
+                },
+            },
+            vAxis: {
+                textStyle: {
+                    color: "white",
+                    fontSize: 14
+                },
+            }
         };
         let chart = new google.visualization.BarChart(grafic);
         chart.draw(view, options);

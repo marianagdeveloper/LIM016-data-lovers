@@ -1,9 +1,8 @@
 * {
   box-sizing: border-box;
   margin:0;
-  padding:0;
-  font-family: 'Flamenco', cursive;
- 
+  padding:0;  
+  font-family: 'Lato';  
   }
 
 /* ----- style scrollbar div champions----- */
@@ -67,6 +66,7 @@ header{
     justify-content: space-between;
     text-transform: uppercase;
     padding: 20px 10px;
+    font-family: 'Flamenco', cursive;
   
   } 
   nav ul li a:hover {
@@ -327,21 +327,11 @@ color: white;
   background-color: transparent;
   border-radius: 0.6em;
   cursor: pointer;
-  /* 
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center; */
   font-size: 18px;
   line-height: 1;
   margin: auto;
   padding: 20px;
   margin-top: 20px;
-
-
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -687,22 +677,16 @@ nav ul{
     display: none;
     margin-top: 10px;
   }
-  article{   
-  
+  article{     
     max-width: 500px;
     height: 500px;
     margin: 120px;
-
   }
   .sectionChampions{
-
-    height: 1200px;  
-  
+    height: 1200px;    
   }
   header label {
-    display: none;
-    
-  
+    display: none;  
   }
 }
 
@@ -874,12 +858,12 @@ figure{
       to(#222),
       color-stop(0.5, #fff)
     ) 0 0 no-repeat;
-  -webkit-background-size: 125px;
+/*   -webkit-background-size: 125px;
   color: rgba(255, 255, 255, 0.1);
   -webkit-background-clip: text;
   -webkit-animation-name: shine;
   -webkit-animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite; */
 }
 
 /* contenido del modal: img, nav, chart */
