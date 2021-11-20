@@ -14,11 +14,6 @@ async function carga() {
         for (let i = 0; i < 5; i++) {
             document.getElementsByName("menuRanking")[i].addEventListener('change', function () { graficAbility(aux[i]); });
         }
-        /*      document.getElementsByName("menuRanking")[0].addEventListener('change', function () { graficAbility(aux[0]); });
-             document.getElementsByName("menuRanking")[1].addEventListener('change', function () { graficAbility(aux[1]); });
-             document.getElementsByName("menuRanking")[2].addEventListener('change', function () { graficAbility(aux[2]); });
-             document.getElementsByName("menuRanking")[3].addEventListener('change', function () { graficAbility(aux[3]); });
-      */
     });
 }
 
@@ -145,7 +140,7 @@ function graficAbility(ability) {
 
     function drawChartAbility() {
 
-        let arrayColors =["#98E55B", "#F39C12", "#B479EC", "#3498DB", "#F0F3F4", "#FFC300", "#C70039", "#76D7C4", "#EC7063 ", "#E283C2"];
+        let arrayColors = ["#98E55B", "#F39C12", "#B479EC", "#3498DB", "#F0F3F4", "#FFC300", "#C70039", "#76D7C4", "#EC7063 ", "#E283C2"];
         let datas = google.visualization.arrayToDataTable([
 
             ['Element', 'Values', { role: 'style' }],
@@ -184,7 +179,7 @@ function graficAbility(ability) {
             titleTextStyle: {
                 color: 'white',
                 fontSize: 20,
-                fontName:'Flamenco',   
+                fontName: 'Flamenco',
             },
             hAxis: {
 
