@@ -18,12 +18,6 @@ a {
   text-decoration: none;
   color: black;
 }
-
-/* body {
-  font: normal 16px/1.5 Helvetica, sans-serif;
-  background: linear-gradient(to right, #6814cd 0%, #3163f3 100%);
-} */
-
 .tabs-container {
   max-width: 1200px;
   margin: 50px auto;
@@ -81,34 +75,7 @@ a {
   margin-top: 15px;
 }
 
-@media screen and (max-width: 600px) {
-  .tabs {
-    flex-direction: column;
-  }
 
-  .tabs li {
-    width: 100%;
-  }
-
-  .tabs li:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .tabs li a {
-    border-radius: 0;
-    opacity: 1;
-    top: 0;
-  }
-
-  .tabs li.active a::before {
-    content: "•";
-    padding-right: 5px;
-  }
-
-  .tabs-content {
-    border-radius: 0;
-  }
-}
 
 
 
@@ -144,9 +111,7 @@ a {
   }
 .sectionVersus{
 
-    background: url(  https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);
- /*    background: url(   https://pbs.twimg.com/media/COdcRZ9UcAA3CRQ.jpg); */
-  
+  background: url(  https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);  
   width: 100%;  
   height: 1800px;
   background-position: center;
@@ -621,12 +586,13 @@ padding: 15px;
 /* --------------------------HOME ------ index.html------------------------------------------ */
 #sectionHome{
 
-background: url(./public/thumb-1920-607280.png);
+/* background: url(./public/thumb-1920-607280.png); */
+background: url(https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2021/10/league-legends-2505891.jpg?itok=Zr7tj_vo);
+
 width: 100%;
-height: 950px;
+height: 350px;
 background-position: center;
 background-size: cover;
-
 /* background-attachment: fixed; */
 padding: 20px;
 padding-top: 200px;
@@ -691,7 +657,36 @@ padding: 10px;
  margin-top: -260px;
  margin-left: -80px;
 }
-@media all and (min-width:1200px){
+@media screen and (max-width: 600px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tabs li {
+    width: 100%;
+  }
+
+  .tabs li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .tabs li a {
+    border-radius: 0;
+    opacity: 1;
+    top: 0;
+  }
+
+  .tabs li.active a::before {
+    content: "•";
+    padding-right: 5px;
+  }
+
+  .tabs-content {
+    border-radius: 0;
+  }
+}
+
+/* @media all and (min-width:1200px){
   #divHome{
 
     width: 50%;
@@ -712,7 +707,7 @@ padding: 10px;
       display: block;
       width: 40%;
     }
-}
+} */
 
 /* --------------------------END ------ index.html------------------------------------------ */
 .bannere{
@@ -788,28 +783,32 @@ padding: 10px;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 200px;
+/*   height: 100vh; este es para grande */
   overflow: hidden;
-  margin-top: 100px;
+  margin-top: 50px;
   
 }
 .header-video video{
-  min-width: 100%;
-  min-height: 100%;
+/*   min-width: 100%;
+  min-height: 100%;  este es grande*/
+height: 400px;
 }
 
 .header-content{
   margin: auto;
   z-index: 2; 
-  padding: 500px 200px 150px 100px;
+  padding: 105px 50px 25px 50px; 
+/* padding: 255px 100px 50px 100px;  este va para grande*/
   overflow: hidden;
 }
 .header-content h1{
-  font-size: 35px;
+  font-size: 18px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 20px;
-  font-family: 'MedievalSharp', cursive;
+  font-family: 'Flamenco', cursive;
+  text-transform: uppercase;
 
 }
 .header-content p{

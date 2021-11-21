@@ -35,7 +35,7 @@
 /*------ TagName HEADER and NAV (ul - li - a) -------*/
 header{
   width: 100%;
-  height: 70px;
+  height: 40px;
   background: black;
 }
 
@@ -458,8 +458,8 @@ font-size: 20px;
     display: none;
   }
 header{
-  height: 100px;
-  padding: 30px;
+  height: 60px;
+ /*  padding: 30px; */
   
 
   /* z-index: 100; */
@@ -595,8 +595,8 @@ nav ul{
   }
   
   header{
-    height: 100px;
-    padding: 20px;
+    height: 70px;
+    padding: 10px;
     position: relative;
   }
   
