@@ -459,11 +459,649 @@ text-align: center;
 font-size: 20px;
 }
 
+/* modal */
+.modal-container {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(14, 13, 13, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: #3386df;
+  line-height: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.modal {
+  width: 40%;
+  height: 95%;
+  overflow: hidden;
+  background: #5b43e4;
+  text-align: center;
+  color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0;
+  transform: translateX(0%);
+  border-radius: 20px;
+  border-color: #3498db;
+  transition: all 150ms ease-in-out;
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
+}
+
+/* -------------Styles container modal---------- */
+
+.divNameRole {
+  width: 90%;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 20px;
+  padding: 10px;
+  top: -20px;
+  margin-left: 20px;
+  font-size: 22px;
+  letter-spacing: 0.1em;
+}
+.nameModal {
+  width: 100%;
+  text-align: center;
+  font-family: "MedievalSharp", cursive;
+  text-shadow: 2px 2px 2px rgb(21, 21, 22);
+  padding: 15px;
+  background: rgb(241, 235, 235) -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#222),
+      to(#222),
+      color-stop(0.5, #fff)
+    ) 0 0 no-repeat;
+  -webkit-background-size: 125px;
+  color: rgba(255, 255, 255, 0.1);
+  -webkit-background-clip: text;
+  -webkit-animation-name: shine;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+/* contenido del modal: img, nav, chart */
+.containerImageDescrip {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerImage {
+  width: 100%;
+}
+
+.imageModal {
+  /* display: block; */
+  display: flex;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  border-image-outset: 1.5;
+}
+
+.descriptionModal {
+  display: flex;
+  justify-content: space-around;
+  background: #000;
+  width: 100%;
+  font-family: "MedievalSharp", cursive;
+  text-shadow: 2px 2px 2px rgb(21, 21, 22);
+}
+
+.descriptionModal a {
+  color: #ffffff;
+  font-family: "MedievalSharp", cursive;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 9px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 0.6em;
+  border-color: #3498db;
+  letter-spacing: 0.7px;
+  text-align: center !important;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 2px blue;
+  box-shadow: 0 0 40px 40px #3498db00 inset, 0 0 0 0 #006fe6;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.descriptionModal a:hover,
+.descriptionModal a:focus {
+  color: #fff;
+  outline: 0;
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
+}
+
+@-webkit-keyframes shine {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+/* div padre de roles en el modal */
+.containerDesAbil {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  border-radius: 0 0 10px 10px;
+  background: black;
+}
+
+/* roles */
+.containerRoles {
+  background: black;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0 0 10px 10px;
+}
+
+/* cajita 1 solo tag img + tag */
+.divTextInfo {
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 18px;
+  flex-direction: column;
+  align-items: center;
+  height: 210px;
+  justify-content: center;
+  font-family: "MedievalSharp", cursive;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+/* padre 2 cajitas img roles + tag */
+.containerRoles1 {
+  background: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 0 10px 10px;
+}
+
+/* cajita de 2 tags */
+.div1 {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  width: 180px;
+  font-size: 18px;
+  align-items: center;
+  height: 178px;
+  justify-content: space-between;
+  font-family: "MedievalSharp", cursive;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  height: 210px;
+  padding-top: -20px;
+}
+
+/* gif 1 tag*/
+.imageRoles {
+  display: block;
+  margin: auto;
+  width: 20%;
+  border-radius: 50%;
+}
+/* gif 2 tags*/
+.imageRoles1 {
+  display: block;
+  margin: auto;
+  width: 60%;
+  border-radius: 50%;
+}
+
+/* info */
+.containerInfo {
+  background: black;
+  width: 100%;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: "MedievalSharp", cursive;
+  padding: 10px 40px 10px 40px;
+  border-radius: 0 0 10px 10px;
+  line-height: 22px;
+}
+
+/* chart */
+.containerAbilities {
+  background: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 10px;
+  padding-top: -10px;
+}
+
 /* ------ aplicate medias queries----- */
 
 
 /* ultima modificacin solucionar la linea webkit 11 */
 /* ultima modificacin solucionar la linea webkit 11 */
+
+@media all and (min-width:300px){
+  #divimageHome{
+    display: none;
+  }
+  .bannere{
+    display: none;
+  }
+  #btn-menu{
+    display: none;
+  }
+header{
+  height: 100px;
+
+  padding-left: 20px;
+  padding-top: 10px;
+  
+
+}
+header label {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+ 
+
+}
+header label img {
+  display: block;
+  width: 40px;
+  
+ 
+ 
+}
+header label:hover{
+  cursor: pointer;
+  background: rgba(0,0,0,0.3);
+}
+nav ul{
+  flex-direction: column;
+}
+#navDinamic{
+  margin-left: -100%;
+  position: absolute;
+}
+
+  nav ul li  {
+  
+    width: 100%;
+    display: block;
+  } 
+  nav ul li:hover  {
+  
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
+  } 
+ 
+  #btn-menu:checked ~ .container > #navDinamic{
+    margin-left:-10%;
+    width: 580px;   
+    position: relative;
+    z-index: 100;
+    padding: 20px;
+    padding-left: 20px;
+    background: black;
+    border-radius: 20px;
+    
+
+  }
+/* -----------------champions-------------- */
+  #inputSearch{
+    width:150px;
+  }
+  .h2Champions{
+    display: none;
+  }
+  #rolChampion{
+    display: none;
+  }
+  h4{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
+    letter-spacing: 1.5px;
+  }
+  article{
+  
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+ 
+    padding-top: 50px;
+    margin: auto;
+    
+  }
+  .textArticle{
+    width: 100%;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: flamenco;
+ 
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: rgba(0,0 ,0, 0.9);
+  }
+  .textArticle1{
+    width: 100%;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: flamenco;
+
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: rgba(0,0 ,0, 0.9);
+  }
+  figure > img{
+    display: block;
+    margin: auto;
+    width: 400px;
+    margin-bottom: 40px;
+  }
+/* -------------------champions.---------------- */
+
+/* -------------------modal------------------- */
+.modal {
+  width: 80%;
+  height: 80%;
+}
+
+/* title modal */
+.divNameRole{
+  width: 80%;
+}
+
+.nameModal{
+  font-size: 100%;
+}
+
+/* info */
+.containerInfo {
+  width: 100%;
+  height: 80%;
+  font-size: 14px;
+}
+/* -------------------modal------------------- */
+}
+@media all and (min-width:500px){
+ 
+  #btn-menu:checked ~ .container > #navDinamic{
+    margin-left:0;
+    width: 100%;   
+    position: relative;
+    padding: 0px;
+   
+    border-radius: 0;  
+    height: 70px;     
+  }
+
+  #navDinamic{
+    margin-left: 0;
+    margin: 0;
+    position: relative;
+  }
+  #btn-menu{
+    display: none;
+  }
+  
+  header{
+    height: 100px;
+    padding: 10px;
+    position: relative;
+  }
+  
+    nav ul li  {
+    
+      width: auto;
+      display: block;
+    } 
+    .hide{
+     display: none;
+    } 
+ 
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: auto;
+  
+  }
+  nav ul li {
+    font-family: sans-serif;
+   
+    display: inline-block;
+   justify-content: space-between;
+    color: #fff;
+  }
+
+  nav ul li a {
+    display: inline-block; 
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 20px 10px;
+  
+  } 
+  nav ul li:hover  {
+  
+    box-shadow: 0 0 0;
+  } 
+  #rolChampion{   
+    
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width:100%;
+  background-color: rgba(0,0 ,0, 0.9);
+  padding: 10px;
+ 
+  }
+  li a > img{
+     display: inline-block; 
+    width: 120px;
+    margin-top: -10px;
+  }
+  nav ul li a {
+  
+    font-size: 14px;    
+    } 
+    #inputSearch{
+
+      width: 300px;
+   }
+   #selectDificult{
+    font-size: 16px;
+    width: 200px;
+  }
+  #selectDificult{
+    display:block;
+  }
+ 
+  .h2Champions{
+    display: none;
+    margin-top: 10px;
+  }
+  article{   
+  
+    max-width: 500px;
+    height: 500px;
+    margin: 120px;
+
+  }
+  .sectionChampions{
+
+    height: 1200px;  
+  
+  }
+  header label {
+    display: none;
+    
+  
+  }
+
+  /* -------------------modal------------------- */
+.modal {
+  width: 80%;
+  height: 90%;
+}
+
+/* title modal */
+.divNameRole{
+  width: 80%;
+}
+
+.nameModal{
+  font-size: 2rem;
+}
+
+/* info */
+.containerInfo {
+  width: 100%;
+  height: 13rem;
+  font-size: 1rem;
+}
+/* -------------------modal------------------- */
+
+}
+@media all and (min-width:1200px){
+  #rolChampion{
+    width: 20%;
+    padding-left: 10px;
+    border-radius: 0 0 0 50px;
+
+  }
+  .champions{
+    width: 80%;
+  }
+  
+  li a > img{
+  
+    width: 150px;
+    margin-top: -20px;
+  
+  }
+  nav ul li a {
+  
+    font-size:16px;    
+  
+  } 
+  .sectionChampions{
+    height: 1000px;
+ 
+  }
+.h2Champions{
+  display: block;
+  color: #a2c7ee;
+ margin-right: 500px; 
+}
+article{
+ 
+  max-width: 1200px;
+  margin: 200px;
+  height: 550px;
+  margin: auto;
+  margin-top: 270px;
+  display: flex;
+  justify-content: left;
+
+  
+}
+figure > img{
+  margin-top: 100px;
+  display: block;
+  margin: auto;
+  width: 500px;
+}
+.textArticle{
+  max-width: 500px;
+  padding: 70px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Open Sans';  
+  margin-bottom: 100px;
+  text-align: center;
+  background: linear-gradient(70deg, rgba(46, 42, 42, 0.514), rgba(64, 11, 133, 0.698));
+  border-radius: 60%;
+  height: 550px;
+}
+.textArticle1{
+  max-width: 500px;
+  padding: 80px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Open Sans';
+  text-align: center;
+  background-color: rgba(10, 38, 39, 0.7);
+  border-radius: 60%;
+ /*  height: 550px; */
+  
+}
+b{
+  font-size: 30px;
+}
+figure{
+  border-radius: 300px;
+  /* background-color: rgba(0,0 ,0, 0.6); */
+  padding-top: 10px;
+}
+
+.search{
+  border-radius: 50px 0 0 0;
+
+}
 
 /* modal */
 .modal-container {
@@ -722,337 +1360,5 @@ font-size: 20px;
   padding-bottom: 10px;
   padding-top: -10px;
 }
-@media all and (min-width:300px){
-  #divimageHome{
-    display: none;
-  }
-  .bannere{
-    display: none;
-  }
-  #btn-menu{
-    display: none;
-  }
-header{
-  height: 100px;
 
-  padding-left: 20px;
-  padding-top: 10px;
-  
-
-}
-header label {
-  display: block;
-  width: 50px;
-  height: 50px;
-  padding: 5px;
- 
-
-}
-header label img {
-  display: block;
-  width: 40px;
-  
- 
- 
-}
-header label:hover{
-  cursor: pointer;
-  background: rgba(0,0,0,0.3);
-}
-nav ul{
-  flex-direction: column;
-}
-#navDinamic{
-  margin-left: -100%;
-  position: absolute;
-}
-
-  nav ul li  {
-  
-    width: 100%;
-    display: block;
-  } 
-  nav ul li:hover  {
-  
-    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
-  } 
- 
-  #btn-menu:checked ~ .container > #navDinamic{
-    margin-left:-10%;
-    width: 580px;   
-    position: relative;
-    z-index: 100;
-    padding: 20px;
-    padding-left: 20px;
-    background: black;
-    border-radius: 20px;
-    
-    
-  }
-/* -----------------champions-------------- */
-  #inputSearch{
-    width:150px;
-  }
-  .h2Champions{
-    display: none;
-  }
-  #rolChampion{
-    display: none;
-  }
-  h4{
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    padding-top: 50px;
-    letter-spacing: 1.5px;
-  }
-  article{
-  
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
- 
-    padding-top: 50px;
-    margin: auto;
-    
-  }
-  .textArticle{
-    width: 100%;
-    padding: 20px;
-    color: white;
-    font-size: 18px;
-    font-family: flamenco;
- 
-    margin-bottom: 30px;
-    text-align: center;
-    background-color: rgba(0,0 ,0, 0.9);
-  }
-  .textArticle1{
-    width: 100%;
-    padding: 20px;
-    color: white;
-    font-size: 18px;
-    font-family: flamenco;
-
-    margin-bottom: 30px;
-    text-align: center;
-    background-color: rgba(0,0 ,0, 0.9);
-  }
-  figure > img{
-    display: block;
-    margin: auto;
-    width: 400px;
-    margin-bottom: 40px;
-  }
-/* -------------------champions.---------------- */
-}
-@media all and (min-width:500px){
- 
-  #btn-menu:checked ~ .container > #navDinamic{
-    margin-left:0;
-    width: 100%;   
-    position: relative;
-    padding: 0px;
-   
-    border-radius: 0;  
-    height: 70px;     
-  }
-
-  #navDinamic{
-    margin-left: 0;
-    margin: 0;
-    position: relative;
-  }
-  #btn-menu{
-    display: none;
-  }
-  
-  header{
-    height: 100px;
-    padding: 10px;
-    position: relative;
-  }
-  
-    nav ul li  {
-    
-      width: auto;
-      display: block;
-    } 
-    .hide{
-     display: none;
-    } 
- 
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1300px;
-    margin: auto;
-  
-  }
-  nav ul li {
-    font-family: sans-serif;
-   
-    display: inline-block;
-   justify-content: space-between;
-    color: #fff;
-  }
-
-  nav ul li a {
-    display: inline-block; 
-    color: #fff;
-    font-size: 12px;
-    text-decoration: none;
-    justify-content: space-between;
-    text-transform: uppercase;
-    padding: 20px 10px;
-  
-  } 
-  nav ul li:hover  {
-  
-    box-shadow: 0 0 0;
-  } 
-  #rolChampion{   
-    
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  max-width:100%;
-  background-color: rgba(0,0 ,0, 0.9);
-  padding: 10px;
- 
-  }
-  li a > img{
-     display: inline-block; 
-    width: 120px;
-    margin-top: -10px;
-  }
-  nav ul li a {
-  
-    font-size: 14px;    
-    } 
-    #inputSearch{
-
-      width: 300px;
-   }
-   #selectDificult{
-    font-size: 16px;
-    width: 200px;
-  }
-  #selectDificult{
-    display:block;
-  }
- 
-  .h2Champions{
-    display: none;
-    margin-top: 10px;
-  }
-  article{   
-  
-    max-width: 500px;
-    height: 500px;
-    margin: 120px;
-
-  }
-  .sectionChampions{
-
-    height: 1200px;  
-  
-  }
-  header label {
-    display: none;
-    
-  
-  }
-
-}
-@media all and (min-width:1200px){
-  #rolChampion{
-    width: 20%;
-    padding-left: 10px;
-    border-radius: 0 0 0 50px;
-
-  }
-  .champions{
-    width: 80%;
-  }
-  
-  li a > img{
-  
-    width: 150px;
-    margin-top: -20px;
-  
-  }
-  nav ul li a {
-  
-    font-size:16px;    
-  
-  } 
-  .sectionChampions{
-    height: 1000px;
- 
-  }
-.h2Champions{
-  display: block;
-  color: #a2c7ee;
- margin-right: 500px; 
-}
-article{
- 
-  max-width: 1200px;
-  margin: 200px;
-  height: 550px;
-  margin: auto;
-  margin-top: 270px;
-  display: flex;
-  justify-content: left;
-
-  
-}
-figure > img{
-  margin-top: 100px;
-  display: block;
-  margin: auto;
-  width: 500px;
-}
-.textArticle{
-  max-width: 500px;
-  padding: 70px;
-  color: white;
-  font-size: 20px;
-  font-family: 'Open Sans';  
-  margin-bottom: 100px;
-  text-align: center;
-  background: linear-gradient(70deg, rgba(46, 42, 42, 0.514), rgba(64, 11, 133, 0.698));
-  border-radius: 60%;
-  height: 550px;
-}
-.textArticle1{
-  max-width: 500px;
-  padding: 80px;
-  color: white;
-  font-size: 20px;
-  font-family: 'Open Sans';
-  text-align: center;
-  background-color: rgba(10, 38, 39, 0.7);
-  border-radius: 60%;
- /*  height: 550px; */
-  
-}
-b{
-  font-size: 30px;
-}
-figure{
-  border-radius: 300px;
-  /* background-color: rgba(0,0 ,0, 0.6); */
-  padding-top: 10px;
-}
-
-.search{
-  border-radius: 50px 0 0 0;
-
-}
 }
