@@ -76,7 +76,7 @@ a {
 
 
 
-}
+
 
 .containerIcono {
   background: black;
@@ -665,19 +665,19 @@ padding: 10px;
 }
 
 /* home y champions */
-@media all and (max-width: 420px) {
+/* @media all and (max-width: 420px) {
   #pHome {
     max-height: 12rem;
     text-align: center;
     color: white;
     padding: 1rem;
-    /* margin-bottom: 100px; */
+    
     font-size: 1.1rem !important;
     line-height: 1.5;
     font-family: "Lato", sans-serif;
   }
  
-}
+} */
 
  
 
@@ -795,14 +795,14 @@ padding: 10px;
   text-transform: uppercase;
 }
 /* aquiiiiiiiiiiiiiiii cambiarrr */
-.header-content h1 {
+/* .header-content h1 {
   font-size: 35px;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
   font-family: "MedievalSharp", cursive;
   color: rgb(233, 212, 161);
-}
+} */
 
 .header-content p {
   font-size: 18px;

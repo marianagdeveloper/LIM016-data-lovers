@@ -17,6 +17,9 @@ async function carga() {
         arraychampion = data;
        
         const URLactual = window.location;
+
+        console.log("aaaaaaaaaaaaa",URLactual);
+        
         const urlM = "/champions";            //URL Milagros
         //const urlM = "/src/champions.html"; //URL Mariana
         if (URLactual.pathname == urlM) {
@@ -35,7 +38,7 @@ async function carga() {
 }
 
 carga();
-function OrderAlpha() {
+/* function OrderAlpha() {
     array=arraychampion;
     let select = document.getElementById('selectAlpha');
     select.addEventListener('change', function () {
@@ -50,7 +53,7 @@ function OrderAlpha() {
 
     });
 }
-
+ */
 
 function OrderAlpha() {
     array=arraychampion;
