@@ -136,6 +136,10 @@ El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
 desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
 diseño debe seguir los fundamentos de _visual design_.
 
+
+![figma_home](https://user-images.githubusercontent.com/74887104/142940888-cfe3c078-1f50-4ee7-b6a6-a0f46155a2aa.png)
+
+
 #### Testeos de usabilidad
 
 Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
