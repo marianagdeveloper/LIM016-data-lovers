@@ -716,7 +716,6 @@ font-size: 20px;
   padding-bottom: 10px;
   padding-top: -10px;
 }
-
 /* ------ aplicate medias queries----- */
 
 
@@ -1016,7 +1015,7 @@ nav ul{
 /* -------------------modal------------------- */
 
 }
-@media all and (min-width:1200px){
+@media all and (min-width:1200px){  
   #rolChampion{
     width: 20%;
     padding-left: 10px;
@@ -1028,7 +1027,7 @@ nav ul{
   }
   
   li a > img{
-  
+
     width: 150px;
     margin-top: -20px;
   
