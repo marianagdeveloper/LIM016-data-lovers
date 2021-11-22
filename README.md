@@ -136,9 +136,11 @@ El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
 desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
 diseño debe seguir los fundamentos de _visual design_.
 
-
 ![figma_home](https://user-images.githubusercontent.com/74887104/142940888-cfe3c078-1f50-4ee7-b6a6-a0f46155a2aa.png)
-
+![figma_champions](https://user-images.githubusercontent.com/74887104/142941888-eb4c32b5-9df8-4a24-a9d4-a41bb9543f96.png)
+![figma_modal](https://user-images.githubusercontent.com/74887104/142943094-d3bdf2dc-01f0-468b-9731-545953cd6db7.png)
+![figma_ranking](https://user-images.githubusercontent.com/74887104/142944176-385b7e0b-9506-465c-92fc-1392f26241ea.png)
+![figma_vs](https://user-images.githubusercontent.com/74887104/142944207-4aac3bde-b2a8-4d1b-98b8-0a8664c1033e.png)
 
 #### Testeos de usabilidad
 
