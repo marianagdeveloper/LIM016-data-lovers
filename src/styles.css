@@ -126,30 +126,30 @@ a {
   height: 40px;
   padding: 0;
 }
-.sectionVersus {
-  background: url(https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);
-  /*    background: url(   https://pbs.twimg.com/media/COdcRZ9UcAA3CRQ.jpg); */
+
+/* ------------------------------- */
+.sectionVersus{
 
   background: url(  https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);    
   width: 100%;  
   height: 1800px;
   background-position: center;
   background-size: cover;
-  padding: 20px;
-  padding-top: 50px;
-}
-.versus {
-  background: rgba(0, 0, 0, 0.7);
-  width: 80%;
+  padding: 5px;
+ /*  padding-top: 20px; */
+  }
+.versus{
+  background:rgba(0,0,0,0.7) ;
+  width: 100%;
   height: 1700px;
   margin: auto !important;
-  padding: 20px;
+  padding: 5px;
   border-radius: 20px;
 }
-.graficVersus {
+.graficVersus{
   padding: 20px;
   border-radius: 20px;
-  background: rgba(225, 247, 130, 0.6);
+  background: rgba(225, 247, 130, 0.6) ;
   height: 500px;
   margin-top: 20px;
   margin: auto;
@@ -165,28 +165,30 @@ a {
   padding: 20px;
   border-radius: 20px;
 }
-.chooseChampion > h2 {
-  text-align: center;
+.chooseChampion > h2{
+ text-align: center;
 }
-.choose {
+.choose{
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
-h3 {
+
+h3{
   color: white;
   text-align: center;
   margin: 20px;
   font-size: 24px;
 }
-#img1 {
+#img1{
   display: block;
   margin: auto;
 }
-#img2 {
+#img2{
   display: block;
   margin: auto;
 }
+
 
 /* --------------------------END VERSUS ------ versus.html------------------------------------------ */
 

@@ -1395,7 +1395,7 @@ figure{
 
 }
 
-@media all and (min-width:300px){
+/* @media all and (min-width:300px){
   .sectionVersus{
     height: 2000px;
   }
@@ -1442,10 +1442,7 @@ figure{
     margin: 0;
     padding-top: 20px;
   }
-/*   .graficVersus{
-    margin: 0;
-    padding: 0;
-  } */
+
 
 }
 @media all and (min-width:600px){
@@ -1537,10 +1534,7 @@ figure{
     margin: 0;
     padding-top: 20px;
   }
-/*   .graficVersus{
-    margin: 0;
-    padding: 0;
-  } */
+
 
 }
 @media all and (min-width:600px){
@@ -1583,5 +1577,5 @@ figure{
     border-radius: 20px;
   }
 
-}
+} */
 
