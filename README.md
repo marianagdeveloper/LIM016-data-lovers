@@ -116,30 +116,25 @@ a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
 
 ### Diseño de la Interfaz de Usuario
 
-#### Prototipo de baja fidelidad
-
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
-
 #### Prototipo de alta fidelidad
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
+La Interfaz de Usuario (UI por sus siglas en inglés -
+_User Interface_) se desarrolló con la herramienta de
+diseño visual [Figma](https://www.figma.com/).
 
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
-
+### Vista Inicial (Home)
 ![figma_home](https://user-images.githubusercontent.com/74887104/142940888-cfe3c078-1f50-4ee7-b6a6-a0f46155a2aa.png)
+
+### Vista Lista (Campeones)
 ![figma_champions](https://user-images.githubusercontent.com/74887104/142941888-eb4c32b5-9df8-4a24-a9d4-a41bb9543f96.png)
+
+### Vista Detalle (Campeón)
 ![figma_modal](https://user-images.githubusercontent.com/74887104/142943094-d3bdf2dc-01f0-468b-9731-545953cd6db7.png)
+
+### Vista Ranking
 ![figma_ranking](https://user-images.githubusercontent.com/74887104/142944176-385b7e0b-9506-465c-92fc-1392f26241ea.png)
+
+### Vista VS.
 ![figma_vs](https://user-images.githubusercontent.com/74887104/142944207-4aac3bde-b2a8-4d1b-98b8-0a8664c1033e.png)
 
 #### Testeos de usabilidad
