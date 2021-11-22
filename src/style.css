@@ -544,6 +544,12 @@ font-size: 20px;
       to(#222),
       color-stop(0.5, #fff)
     ) 0 0 no-repeat;
+    -webkit-background-size: 125px;
+    color: rgba(255, 255, 255, 0.1);
+    -webkit-background-clip: text;
+    -webkit-animation-name: shine;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite
   
 }
 
@@ -610,6 +616,14 @@ font-size: 20px;
   color: #fff;
   outline: 0;
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
 }
 
 /* div padre de roles en el modal */
