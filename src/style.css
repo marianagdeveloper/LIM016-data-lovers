@@ -2,8 +2,7 @@
   box-sizing: border-box;
   margin:0;
   padding:0 ;   
-  font-family: 'Lato';
-  
+  font-family: 'Lato';  
   }
 
 /* ----- style scrollbar div champions----- */
@@ -13,8 +12,7 @@
     border-radius: 10px;
   }  
   .champions::-webkit-scrollbar
-  {
-    
+  {    
     width: 18px;
     background-color: rgba(0,0,0,0.3);
   }  
@@ -786,7 +784,7 @@ nav ul{
     
     
   }
-
+/* -----------------champions-------------- */
   #inputSearch{
     width:150px;
   }
@@ -841,12 +839,9 @@ nav ul{
     width: 400px;
     margin-bottom: 40px;
   }
-
+/* -------------------champions.---------------- */
 }
-
-
 @media all and (min-width:500px){
-
  
   #btn-menu:checked ~ .container > #navDinamic{
     margin-left:0;
@@ -857,8 +852,6 @@ nav ul{
     border-radius: 0;  
     height: 70px;     
   }
- 
-
 
   #navDinamic{
     margin-left: 0;
@@ -971,7 +964,6 @@ nav ul{
   }
 
 }
-
 @media all and (min-width:1200px){
   #rolChampion{
     width: 20%;
