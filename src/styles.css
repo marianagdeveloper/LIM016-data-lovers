@@ -1356,3 +1356,97 @@ font-family: "Flamenco";
     height: 105px;
   }
 }
+@media all and (min-width:300px){
+  .sectionVersus{
+    height: 2000px;
+  }
+  .versus{
+    height: 1980px;
+  }
+  .versus h3{
+    font-size: 16px;
+  }
+  .graficVersus{
+    height: 400px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .pVersus{
+    margin: 10px;
+    padding: 20px;
+    font-size: 14px;
+    background: rgba(160, 193, 255, 0.748);
+    border-radius: 20px;
+  }
+  .tabs{
+    flex-direction: column;
+  }
+  .tabs-container{
+    margin-top: 5px 0px 0px 0px;
+    padding: 10px;
+
+  }
+  .choose{
+    flex-direction: column;
+    padding: 10px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+  }
+  .chooseChampion{
+    margin: auto;
+    margin-top: 20px;
+  }
+  h4  {
+    margin: 0;
+    padding-top: 20px;
+  }
+/*   .graficVersus{
+    margin: 0;
+    padding: 0;
+  } */
+
+}
+@media all and (min-width:600px){
+
+.graficVersus{
+  height: 400px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+ width: 80%;
+}
+.tabs{
+  flex-direction: row;
+}
+.sectionVersus{
+  height: 1750px;
+}
+.versus{
+  height: 1730px;
+}
+}
+@media all and (min-width:900px){
+  .choose{
+    flex-direction: row;
+    padding: 10px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+  }
+  .sectionVersus{
+    height: 1450px;
+  }
+  .versus{
+    height: 1430px;
+  }
+  .pVersus{
+    margin: 10px;
+    padding: 20px;
+    font-size: 16px;
+    background: rgba(235, 225, 149, 0.72);
+    border-radius: 20px;
+  }
+
+}
