@@ -1,3 +1,30 @@
+button a{
+  color: white;
+}
+h4 a{
+  color: skyblue;
+}
+h4 a:hover{
+  color: steelblue;
+}
+
+#sectionDownload{
+
+  /* background: url(./public/thumb-1920-607280.png); */
+  background: url("public/red.png");  
+  width: 100%;
+  height: 380px;
+  background-position: center;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  padding: 20px;
+  padding-top: 180px;
+  }
+
+
+
+
+/* ------------------------------------------------------------------------ */
 #pName1 {
   text-align: center;
   font-size: 18px;
@@ -1097,6 +1124,133 @@ font-family: "Flamenco";
  justify-content: center;
 
   width: 40%;
+ 
+}
+.textFooter{
+  
+  width: 60%;
+  padding-top: 10px;
+
+}
+
+}
+@media all and (min-width:1000px){
+  #sectionDownload{
+
+    /* background: url(./public/thumb-1920-607280.png); */
+    background: url("public/red.png");  
+    width: 100%;
+    height: 580px;
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    padding: 20px;
+    padding-top: 180px;
+    }
+  .pVersus{
+    margin: auto;
+   
+    padding: 20px;
+    font-size: 16px;
+    background: rgba(235, 225, 149, 0.72);
+    border-radius: 20px;
+    width: 85%;
+  }
+  
+  .bannere{  
+    margin-top: 0px;    
+  }
+ 
+  .versus h3{
+    font-size: 18px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .header-content{
+ 
+   margin-top: 200px;
+  }
+  #sectionHome{
+
+    background: url(./public/thumb-1920-607280.png);   
+    height: 580px;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    padding-top: 180px;
+    }
+  /*   #sectionHome2{
+    margin-top: 190px;
+      background: url(./public/wallpaperfucs.jpg);
+      width: 100%;
+      height: 470px;
+      background-position: center;
+      background-size: cover;
+      padding: 20px;
+      padding-top: 290px;
+      } */
+    #divHome{
+  
+    width: 35%;
+    border-radius: 50%;
+    height: 320px;
+    }
+   
+    #h1Home{
+/*   padding: 10px; */
+margin-top: 40px;
+font-family: "Flamenco";
+    }
+    #pHome{
+  padding: 30px;
+    }
+    #navDinamic ul{
+      max-width: 900px;
+     display: flex;
+     justify-content: space-evenly;
+    }
+    #sectionHome2 #divHome{
+/* margin-top: 400px; */
+      width: 30%;
+      border-radius: 50%;
+      height: 300px;
+      }
+      #sectionHome2 #divHome p {
+        /* margin-top: 400px; */
+             margin-top: 30px;
+              }
+      #sectionHome2{
+        /*  margin-top: 190px; */
+           background: url(./public/wallpaper.jpg);
+           width: 100%;
+           height: 600px;
+           background-position: center;
+           background-size: cover;
+           
+           padding: 20px;
+           padding-top: 200px;
+           }
+    .footerI {
+      width: 100%;
+      margin-top: 0px;
+      justify-content: space-around ;
+      align-items: center;
+      background: black;
+      display: flex;
+     /*  padding-top: 20px; */
+      flex-direction: row;
+      padding: 10px;
+      height: 100px;
+    }
+    
+.footerI > .ulFooter {
+  display: flex;
+  list-style-type: none;
+/*   padding-top: 10px; */
+ justify-content: center;
+
+  width: 40%;
+  margin-top: 10px;
  
 }
 .textFooter{
