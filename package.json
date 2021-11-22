@@ -15,7 +15,7 @@
   "dependencies": {
     "@babel/core": "^7.6.2",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
-    "babel-jest": "^27.0.1",
+    "babel-jest": "27.0.1",
     "eslint": "^7.12.1",
     "fetch": "^1.1.0",
     "gh-pages": "^3.1.0",
@@ -24,7 +24,9 @@
     "node-fetch": "^3.1.0",
     "opener": "^1.5.1",
     "serve": "^12.0.0"
+  },
+ 
+  "devDependencies": {
+    "jest-fetch-mock": "^3.0.3"
   }
-
-
 }

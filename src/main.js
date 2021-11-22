@@ -1,46 +1,36 @@
 import { dataChampions, isFilterRol } from './data.js';
 
 let arraychampion = [];
-/* let newArray=[]; */
 let divChampion = document.getElementById("divShowChampions");
 let inputSearch = document.getElementById("inputSearch");
 /* let containerSlider = document.getElementById("slide-track"); */
 let arrayButton = ["All", "Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let button, btnRol = [], textButton, cards = [],array=[], rolChampion;
-//difficulty
-const selectDificult = document.getElementById('selectDificult');
-/* let selectAlpha = document.getElementById("selectAlpha").value; */
-
-//modal
 let cerrar = document.getElementById("close");
 let modal = document.getElementById("modal");
 let modalC = document.getElementById("modal-container");
 const arrayNavEnlaces = ["champions.html", "ranking.html", "index.html", "download.html", "versus.html"]
-// let arrayNav = ["Champions", "Ranking", "https://www.gamerfocus.co/wp-content/uploads/2013/12/league-of-legends-modo-showdown-riot-games-experimental-1.png", "Download", "Versus"];
 let arrayNav = ["Champions", "Ranking", "Home", "Download", "Versus"];
+
 async function carga() {
     await dataChampions().then((data) => {
         arraychampion = data;
-
+       
         const URLactual = window.location;
-        const urlM = "/champions"; //URL Milagros
-        // const urlM = "/src/champions.html"; //URL Mariana
-
+        const urlM = "/champions";            //URL Milagros
+        //const urlM = "/src/champions.html"; //URL Mariana
         if (URLactual.pathname == urlM) {
-
             printNav();
             recorrerData();
             printButton();
             searchChampion();
-            difficulty();
             OrderAlpha();
+
 
         }
         else {
             printNav();
-            /*  slide(); */
         }
-
     });
 }
 
@@ -61,6 +51,22 @@ function OrderAlpha() {
     });
 }
 
+
+function OrderAlpha() {
+    array=arraychampion;
+    let select = document.getElementById('selectAlpha');
+    select.addEventListener('change', function () {
+        divChampion.innerHTML = "";
+
+        let selectedOperation = select.options[select.selectedIndex].value;
+
+        function SortArray(x, y) {
+            return x.name.localeCompare(y.name);
+        }
+        selectedOperation == 'az' ? array.sort(SortArray).map(e => printChampions(e)) : array.reverse().map(e => printChampions(e));
+
+    });
+}
 
 function searchChampion() {
     inputSearch.addEventListener("keyup", function () {
@@ -246,6 +252,7 @@ function printModal(champions) {
         containerAbilities.setAttribute("class", "containerAbilities");
         containerAbilities.setAttribute("id", "containerAbilities")
         containerDesAbil.appendChild(containerAbilities);
+        /* eslint-disable */
         google.charts.setOnLoadCallback(drawChart);
     }
 
@@ -389,15 +396,15 @@ function printNav() {
         list = document.createElement("li");
         enlace = document.createElement("a");
         enlace.href = arrayNavEnlaces[i];
-        // if (arrayNav[i] == arrayNav[2]) {
-        //     b = document.createElement("img");
-        //     enlace.appendChild(b);
-        //     b.src = arrayNav[2].toString();
-        //     enlace.href = arrayNavEnlaces[i];
-        //     // console.log(b);
-        // } else {
-        //     enlace.textContent += arrayNav[i].toString();
-        // }
+      /*   if (arrayNav[i] == arrayNav[2]) {
+            b = document.createElement("img");
+            enlace.appendChild(b);
+            b.src = arrayNav[2].toString();
+            enlace.href = arrayNavEnlaces[i];
+            // console.log(b);
+        } else {
+            enlace.textContent += arrayNav[i].toString();
+        } */
         enlace.textContent += arrayNav[i].toString();
         list.appendChild(enlace);
         item.appendChild(list);
@@ -489,24 +496,11 @@ function filterByRole(btnRol) {
 
 }
 
-
+/* let arra = []; */
 
 //feliz como una lombriz
 
 /* Para obtener el texto */
-/* const select = document.getElementById('selectAlpha');
-
-select.addEventListener('change', function () {
-
-    divChampion.innerHTML = "";
-
-    const selectedOption = this.options[select.selectedIndex];
-
-    (selectedOption.value == "az") ? arraychampion.reverse().map(e => printChampions(e)) : arraychampion.reverse().map(e => printChampions(e));
-
-});
- */
-
 
 
 

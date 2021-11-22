@@ -18,10 +18,8 @@
     google.charts.load('current', { packages: ['corechart'] });
   </script>
 </head>
-
 <body>
   <header>
-
     <input type="checkbox" id="btn-menu">
     <label for="btn-menu"><img src="https://image.flaticon.com/icons/png/128/1215/1215141.png" alt="">
     </label>
@@ -45,10 +43,10 @@
         <option value="alta">High</option>
         <option value="all">All</option>
       </select>
-      <select name="" id="selectAlpha">
+      <select id="selectAlpha">
         <option style="display: none;" selected>Ordenar </option>
-        <option value="az">A-Z</option>
-        <option value="za">Z-A</option>
+        <option id="az" value="az">A-Z</option>
+        <option id="za" value="za">Z-A</option>
       </select>
     </div>
     <div class="containerChampionsRol">

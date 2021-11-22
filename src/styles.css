@@ -17,7 +17,6 @@ a {
   text-decoration: none;
   color: black;
 }
-
 .tabs-container {
   max-width: 1200px;
   margin: 50px auto;
@@ -75,33 +74,7 @@ a {
   margin-top: 15px;
 }
 
-@media screen and (max-width: 600px) {
-  .tabs {
-    flex-direction: column;
-  }
 
-  .tabs li {
-    width: 100%;
-  }
-
-  .tabs li:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .tabs li a {
-    border-radius: 0;
-    opacity: 1;
-    top: 0;
-  }
-
-  .tabs li.active a::before {
-    content: "•";
-    padding-right: 5px;
-  }
-
-  .tabs-content {
-    border-radius: 0;
-  }
 
 }
 
@@ -130,7 +103,8 @@ a {
   background: url(https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);
   /*    background: url(   https://pbs.twimg.com/media/COdcRZ9UcAA3CRQ.jpg); */
 
-  width: 100%;
+  background: url(  https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);    
+  width: 100%;  
   height: 1800px;
   background-position: center;
   background-size: cover;
@@ -156,7 +130,7 @@ a {
   padding-left: 180px;
 }
 
-.chooseChampion {
+.chooseChampion{
   margin: 50px;
   width: 300px;
   height: 250px;
@@ -543,11 +517,10 @@ padding: 15px;
 
   .sectionRanking{
     padding: 30px 50px 50px 50px;
-    height: 1000px;
+    height: 1080px;
   }
   .topRankig{
     margin-bottom: 50px;
-    height: 930px;
   }
  
   .menuRanking{
@@ -573,12 +546,12 @@ padding: 15px;
   .div-videoRanking>p{
     padding-left: 20px;
     padding-right: 20px;
+
   }
-  
   .infoRanking{
-  flex-direction: row;
-  height: 150px;   
-  }
+    flex-direction: row;
+    height: 150px;   
+    }
 .optionRanking{
   width: 70%;
     padding: 15px;
@@ -597,86 +570,89 @@ padding: 15px;
     color: white;
     font-family: "MedievalSharp", cursive;
     }
-    .footerI {
-
-      padding: 0;
-      margin: 0 !important;
-      
-    }
 }
 
 /* --------------------------END RANKING ------ ranking.html------------------------------------------ */
 
 /* --------------------------HOME ------ index.html------------------------------------------ */
-#sectionHome {
-  /* background: url(https://cdn1.dotesports.com/wp-content/uploads/2020/02/18153120/League.jpg); */
-  /* background: url(./homeb.jpg); */
-  background: url(./public/thumb-1920-607280.png);
+#sectionHome{
+
+/* background: url(./public/thumb-1920-607280.png); */
+background: url(https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2021/10/league-legends-2505891.jpg?itok=Zr7tj_vo);
+
+width: 100%;
+height: 380px;
+background-position: center;
+background-size: cover;
+/* background-attachment: fixed; */
+padding: 20px;
+padding-top: 180px;
+}
+#sectionHome2{
+margin-top: 190px;
+  background: url(./public/wallpaperfucs.jpg);
+/*   background: url(https://cdn.game.tv/game-tv-content/images_2/mobile/game_banner/0489fb4c58b81e8685c49d3f4996745b/en/0489fb4c58b81e8685c49d3f4996745b.jpg);
+ */  
   width: 100%;
-  height: 950px;
+  height: 470px;
   background-position: center;
   background-size: cover;
+  /* background-attachment: fixed; */
   padding: 20px;
-  padding-top: 200px;
+  padding-top: 290px;
+  }
+#divHome{
+background:rgba(0,0,0,0.7) ;
+width: 100%;
+margin: auto !important;
+padding: 20px;
+border-radius: 20px;
 }
 
-#divHome {
-  background: radial-gradient(
-    rgba(0, 0, 0, 0.931) 40%,
-    rgba(42, 41, 41, 0.534)
-  );
-  width: 70%;
-  margin: auto !important;
-  padding: 100px;
-  border-radius: 60%;
-}
-
-#divHome1 {
-  /* background:rgba(0,0,0,0.7) ; */
+#divHome1{
   width: 70%;
   margin: auto !important;
   padding: 70px;
   border-radius: 60%;
 }
 
-#h1Home {
-  text-align: center;
-  color: white;
-  font-size: 25px;
-  text-transform: uppercase;
-  padding: 40px 0;
-  /* line-height: 2;  */
-  font-family: "MedievalSharp", cursive;
+#h1Home{
+text-align: center;
+color:white;
+font-size: 18px;
+text-transform: uppercase;
+padding: 10px;
+/* padding: 40px 0; */
+/* line-height: 2;  */
+font-family: 'MedievalSharp', cursive;
 }
 
-#pHome {
-  text-align: center;
-  color: white;
-  padding: 20px;
-  margin-bottom: 100px;
-  margin: auto;
-  font-size: 20px;
-  line-height: 2;
-  font-family: "Lato", sans-serif;
+#pHome{
+text-align: center;
+color:white;
+/* padding: 40px; */
+/* margin-bottom: 100px; */
+margin: auto;
+font-size: 14px;
+letter-spacing: 0.3px;
+
+font-family: Arial, Helvetica, sans-serif;
 }
 
-#seeMore {
-  margin: auto !important;
-  font-size: 14px;
-  width: 130px;
-  height: 50px;
-  padding: 10px;
+#seeMore{
+margin: auto !important;
+font-size: 12px;
+width: 100px;
+height: 40px;
+padding: 10px;
 }
-#divButton {
-  display: flex;
-  justify-content: center;
-  margin: 30px 0;
+#divButton{
+ display: flex;
+ justify-content: center;
+ margin-top: 20px;
 }
-/* .gif{
-  border-radius: 50px;
-} */
-.gif > img {
-  border-radius: 20px;
+.gif > img{
+  border-radius:20px;
 }
 
 #imageHome {
@@ -703,201 +679,7 @@ padding: 15px;
  
 }
 
-@media all and (max-width: 800px) {
-  body {
-    background: black;
-  }
-
-  .header {
-    background: rgba(0, 0, 0, 1);
-    /* background: url("./public/wallpaper.jpg"); */
-    height: 26rem !important;
-  }
-
-  .header-video {
-    max-width: 100%;
-    max-height: 25rem;
-    /* background: turquoise; */
-  }
-
-  .header-content {
-    /* background: teal;  */
-    height: 26rem !important;
-    padding: 1rem !important;
-    margin-top: 0rem !important;
-    margin-bottom: 2rem !important;
-    /* max-height: 2rem; */
-  }
-
-  .header-video video {
-    max-height: 20rem !important;
-    display: block;
-  }
-
-  .header-content img {
-    /* background: sienna; */
-    max-width: 7rem;
-    position: relative;
-    top: 1rem !important;
-  }
-
-  .header-content h1 {
-    text-align: center;
-    /* background: slateblue; */
-    max-width: 40rem;
-    max-height: 4rem;
-    font-size: 20px !important;
-    padding-top: 14rem;
-  }
-
-  .bannere {
-    background-color: black;
-    width: 100%;
-    height: 5rem !important;
-  }
-
-  .bannere > h4 {
-    padding-top: 0rem !important;
-    margin-top: 0rem !important;
-    font-size: 1rem;
-  }
-
-  #sectionHome {
-    background: url(./public/wallpaperbetter.jpg);
-    height: 25rem;
-    padding-top: 1rem;
-  }
-
-  #divButton {
-    display: flex;
-    margin: 0px !important;
-    /* background: chartreuse; */
-    padding-top: 1rem;
-  }
-
-  #divHome {
-    max-height: 23rem;
-    width: 90vw;
-    background: none;
-    border-radius: 2rem;
-    padding: 1rem !important;
-    padding-bottom: 2rem !important;
-  }
-
-  #divimageHome {
-    width: 20%;
-    margin-top: 0rem;
-    margin-left: 0rem;
-  }
-
-  #imageHome {
-    display: block;
-    width: 80%;
-  }
-
-  #h1Home {
-    padding: 1rem;
-    margin-top: 1rem !important;
-  }
-  #pHome {
-    max-height: 12rem;
-    text-align: center;
-    color: white;
-    padding: 1rem;
-    /* margin-bottom: 100px; */
-    font-size: 1.2rem;
-    line-height: 1.5;
-    font-family: "Lato", sans-serif;
-  }
-
-  .banner{
-    height: 22rem;
-  }
-
-  /* footer */
-  .footerI {
-    margin-top: 0rem !important;
-    justify-content: center;
-    align-items: center;
-    background:black !important;
-    display: flex;
-    flex-wrap: wrap-reverse;
-    padding-top: 1rem;
-    height: 8rem !important;
-  }
-
-  .textFooter{
-    text-align: center;
-    color: white;
-    padding: 1rem !important;
-    font-family: sans-serif;
-    letter-spacing: 1.2px;
-    margin-right: 0rem;
-  }
-
-  /* lista horizontal */
-.footerI > ul {
-  display: flex;
-  list-style-type: none;
-  padding-top: 10px;
-}
-
-.footerII > ul {
-  display: flex;
-  list-style-type: none;
-  padding-top: 10px;
-}
-
-.footerI ul > li > a > img {
-  border: black 2px solid;
-  background: radial-gradient(white 15%, black, black);
-  margin-left: 12px;
-  background-clip: content-box;
-  padding: 5px;
-  justify-items: center;
-  cursor: pointer;
-}
-
-.footerI ul > li > a > img:hover {
-  width: 50px;
-  height: 50px;
-  border: black 2px solid;
-  background: radial-gradient(rgb(9, 196, 221), black, black);
-  border-radius: 50%;
-  margin-left: 12px;
-  background-clip: content-box;
-  padding: 5px;
-  justify-items: center;
-  cursor: pointer;
-}
-}
-
-@media all and (min-width: 1200px) {
-  #divHome {
-    width: 50%;
-  }
-  #imageHome {
-    display: block;
-    width: 50%;
-  }
-  /*    #divimageHome{
-      margin-top: -500px;
-      margin-left: -100px;
-     } */
-}
-@media all and (min-width: 1400px) {
-  #divHome {
-    width: 50%;
-  }
-  #imageHome {
-    display: block;
-    width: 40%;
-  }
-  /*    #divimageHome{
-      margin-top: -290px;
-      margin-left: 50px;
-     } */
-}
+ 
 
 /* --------------------------END ------ index.html------------------------------------------ */
 .bannere {
@@ -905,13 +687,12 @@ padding: 15px;
   width: 100%;
   height: 150px;
   padding-top: 15px;
-  /* margin-top: 150px; */
+
 }
 .imgSlide {
   height: 200px;
   width: 350px;
 }
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -930,9 +711,7 @@ padding: 15px;
   width: 100%;
   padding-top: 50px;
 }
-.slider::before,
-.slider::after {
-  /*  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); */
+.slider::before, .slider::after {
   content: "";
   height: 100px;
   position: absolute;
@@ -954,8 +733,7 @@ padding: 15px;
   width: calc(250px * 14);
 }
 .slider .slide {
-  /* height: 200px; */
-  width: 450px;
+   width: 450px;
 }
 
 /* footer */
@@ -976,34 +754,125 @@ padding: 15px;
   display: flex;
   padding-top: 2px;
 }
+/* -------------------videooooooooooooooooooooooooooooooooooooo--------------*/
+.header{
+  height: 300px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+}
 
-/* lista horizontal */
-.footerI > ul {
+.header-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 70px;  
+}
+.header-video video{
+/*   min-width: 100%;
+  min-height: 100%; */
+  width: 100%;
+}
+
+.header-content{
+  margin: auto;
+  z-index: 2; 
+  padding: 80px 20px 20px 20px;
+/* padding: 255px 100px 50px 100px; */
+  overflow: hidden;
+}
+.header-content h1{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: 'MedievalSharp', cursive;
+  text-transform: uppercase;
+}
+/* aquiiiiiiiiiiiiiiii cambiarrr */
+.header-content h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "MedievalSharp", cursive;
+  color: rgb(233, 212, 161);
+}
+
+.header-content p {
+  font-size: 18px;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+ 
+
+}
+.imgTop10{
+    display: block;
+    margin: auto;
+    width: 20%;
+
+}
+/* -------------------------------------------------------------------------------------------------------------------------- */
+.footerI {
+  margin-top: 0px;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  display: flex;
+ /*  padding-top: 20px; */
+  flex-direction: column;
+  padding: 10px;
+  height: 180px;
+}
+
+.footerII {
+  justify-content: center;
+  align-items: center;
+  background: black;
+  display: flex;
+  padding-top: 2px;
+}
+
+.footerI > .ulFooter {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  justify-content: center;
+}
+
+.footerII > .ulFooter {
   display: flex;
   list-style-type: none;
   padding-top: 10px;
-  margin-right: 2rem;
+ 
+}
+.footerI .ulFooter > .liFooter  {
+  width: 50px;
+  height: 30px;
+ display: flex;
+ justify-content: center;
 }
 
-.footerII > ul {
-  display: flex;
-  list-style-type: none;
-  padding-top: 10px;
-}
 
-.footerI ul > li > a > img {
+.footerI .ulFooter > .liFooter > .aFooter > img {
+  display: block;
   width: 50px;
   height: 50px;
   border: black 2px solid;
   background: radial-gradient(white 15%, black, black);
   margin-left: 12px;
-  background-clip: content-box;
   padding: 5px;
   justify-items: center;
   cursor: pointer;
 }
 
-.footerI ul > li > a > img:hover {
+.footerI .ulFooter > .liFooter > .aFooter > img:hover {
   width: 50px;
   height: 50px;
   border: black 2px solid;
@@ -1041,90 +910,279 @@ padding: 15px;
   cursor: pointer;
 }
 
-/* -------------------videooooooooooooooooooooooooooooooooooooo--------------
- */
-.header {
-  height: 100%;
+
+@media all and (min-width:500px){
+  #divimageHome{
+    display: none;
+   
+ 
+  }
+  .header{   
+    width: 100%;
+    height: 100% ;
+    }
+    .header-content{
+     padding: 0;
+     margin-top: 10px;
+    }
+    .bannere{
+      position: relative;
+      width: 100%;
+      display: block;
+      height: 100px;
+      margin-top: 10px;      
+    }
+    .bannere h4{
+      font-size: 15px;
+      margin: 0;
+      padding: 15px;
+    }
+    #sectionHome{
+     /*  margin-top: 190px; */
+        background: url(./public/wallpaperbetter.jpg);
+        width: 100%;
+        height: 470px;
+        background-position: center;
+        background-size: cover;
+        
+        padding: 20px;
+        padding-top: 290px;
+        }
+        #sectionHome2{
+          /*  margin-top: 190px; */
+             background: url( https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);
+             width: 100%;
+             height: 570px;
+             background-position: center;
+             background-size: cover;
+             
+             padding: 20px;
+             padding-top: 390px;
+             }
+
+        #divHome{
+         
+            width: 70%;
+            border-radius: 20px;
+          /*   height: 320px; */
+            }
+        
+}
+@media all and (min-width:700px){
+ 
+    .header-content{
+      
+     padding: 20px;
+    /*  margin-top: 30px; */
+   
+    }
+    .header-video {
+      height: 100%;
+    }
+    .bannere{
+      position: relative;
+      width: 100%;
+      display: block;
+      height: 100px;
+      margin-top: 25px;
+      
+    }
+    .bannere h4{
+      font-size: 15px;
+      margin: 0;
+      padding: 15px;
+     /*  margin-top: 20px; */
+    }
+
+}
+@media all and (min-width:900px){
+  
+  .header-content{
+
+    margin-top: 100px;
+   }
+}
+@media all and (min-width:1000px){
+  .bannere{  
+    margin-top: 0px;    
+  }
+ 
+  .header-content{
+ 
+   margin-top: 200px;
+  }
+  #sectionHome{
+
+    background: url(./public/thumb-1920-607280.png);   
+    height: 580px;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    padding-top: 180px;
+    }
+  /*   #sectionHome2{
+    margin-top: 190px;
+      background: url(./public/wallpaperfucs.jpg);
+      width: 100%;
+      height: 470px;
+      background-position: center;
+      background-size: cover;
+      padding: 20px;
+      padding-top: 290px;
+      } */
+    #divHome{
+  
+    width: 35%;
+    border-radius: 50%;
+    height: 320px;
+    }
+   
+    #h1Home{
+/*   padding: 10px; */
+margin-top: 40px;
+font-family: "Flamenco";
+    }
+    #pHome{
+  padding: 30px;
+    }
+    #navDinamic ul{
+      max-width: 900px;
+     display: flex;
+     justify-content: space-evenly;
+    }
+    #sectionHome2 #divHome{
+/* margin-top: 400px; */
+      width: 30%;
+      border-radius: 50%;
+      height: 300px;
+      }
+      #sectionHome2 #divHome p {
+        /* margin-top: 400px; */
+             margin-top: 30px;
+              }
+      #sectionHome2{
+        /*  margin-top: 190px; */
+           background: url(./public/wallpaper.jpg);
+           width: 100%;
+           height: 600px;
+           background-position: center;
+           background-size: cover;
+           
+           padding: 20px;
+           padding-top: 200px;
+           }
+    .footerI {
+      width: 100%;
+      margin-top: 0px;
+      justify-content: space-around ;
+      align-items: center;
+      background: black;
+      display: flex;
+     /*  padding-top: 20px; */
+      flex-direction: row;
+      padding: 10px;
+      height: 100px;
+    }
+    
+.footerI > .ulFooter {
   display: flex;
-  align-items: center;
-  color: #fff;
-  overflow: hidden;
-  /* margin: 100px; */
+  list-style-type: none;
+/*   padding-top: 10px; */
+ justify-content: center;
+
+  width: 40%;
+ 
 }
-/* .content{
-width: 100%;
-  padding-left: 1rem;
-  padding-right:  1rem;
-  margin: auto;
-  text-align: center;
-} */
-.header-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  margin-top: 100px;
-}
-.header-video video {
-  min-width: 100%;
-  min-height: 100%;
-}
-/* .header-overlay{
-  height: 100%;
-  width: 100vw;
-  position:absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  opacity: .85;
-} */
-.header-content {
-  margin: auto;
-  z-index: 2;
-  /* padding: 500px 200px 150px 100px; */
-  padding: 360px 100px 0px 100px;
-  overflow: hidden;
+.textFooter{
+  
+  width: 60%;
+  padding-top: 10px;
+
 }
 
-/* logo :lol */
-.header-content img {
-  width: 300px;
-  display: block;
-  margin: auto;
 }
+@media all and (min-width:1200px){ 
+    .header-content{
+     padding: 0;
+     margin-top: 220px;
+     padding-bottom: 20px;
+    }
+    #navDinamic ul{
+      max-width: 1300px;
+     display: flex;
+     justify-content: space-evenly;
+    }
+    #sectionHome{
 
-/* .header-content h1{
-  font-size: 35px;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  font-family: 'MedievalSharp', cursive;
-} */
+  
+      height: 780px;
+     padding-top: 300px;
+      }
+      #divHome{     
+          width: 30%;
+          border-radius: 50%;
+          height: 350px;
+          }
+          #h1Home{
+            /*   padding: 10px; */
+            margin-top: 50px;
+            font-family: "Flamenco";
+                }
+                #pHome{
+              padding: 40px;
+                }
+                
+#sectionHome2 #divHome{
+  /* margin-top: 400px; */
+        width: 25%;
+        border-radius: 50%;
+        height: 300px;
+       
+   
+        }
+         #divHome p{
+          /* margin-top: 400px; */
+               font-family: "Lato";
+               font-size: 16px;
+               
+           
+                }
+        #divimageHome{
+          display: block;
+          background:rgba(0,0,0,0.7) ;
+          width: 800px;
+          height: 70px;
+          margin: auto;
+          margin-top: 50px !important;
+          border-radius: 20px;
+       
+        }
+        #divimageHome p{
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        font-family: "Lato";
+        }
 
-.header-content h1 {
-  font-size: 35px;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-family: "MedievalSharp", cursive;
-  color: rgb(233, 212, 161);
-}
+     
+        #sectionHome2 #divHome p {
+          /* margin-top: 400px; */
+               margin-top: 30px;
+               padding-bottom: 20px;
+               font-family: "Lato";
+               font-size: 16px;
+                }
+        #sectionHome2{
+          /*  margin-top: 190px; */
+             background: url(./public/wallpaper.jpg);
+             width: 100%;
+             height: 700px;
+             background-position: center;
+             background-size: cover;
+             
+             padding: 20px;
+             padding-top: 200px;
+             }
 
-.header-content p {
-  font-size: 18px;
-  display: block;
-  font-family: "Open Sans", sans-serif;
-  text-align: center;
-  color: goldenrod;
-}
-
-/* ranking */
-
-.imgTop10 {
-  display: block;
-  margin: auto;
-  width: 20%;
-  /* border-radius: 50%; */
 }

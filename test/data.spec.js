@@ -1,6 +1,4 @@
-
 import { dataChampions, isFilterRol } from '../src/data.js';
-let rate = [];
 const data = {
   data: {
     "Aatrox": {
@@ -471,6 +469,7 @@ const data = {
     }
   }
 }
+let rate = [];
 // ---------------------
 /* eslint-disable */
 global.fetch = jest.fn(() =>
@@ -478,9 +477,11 @@ global.fetch = jest.fn(() =>
     json: () => Promise.resolve(data),
   })
 );
+
 beforeEach(() => {
   fetch.mockClear();
 });
+
 it("debería de retornar '9' para data.length", async () => {
   rate = await dataChampions();
   expect(rate.length).toEqual(9);
