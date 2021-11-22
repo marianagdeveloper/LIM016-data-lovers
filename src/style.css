@@ -869,6 +869,18 @@ nav ul{
 }
 /* -------------------modal------------------- */
 }
+@media all and  (min-width:400px){
+  /* -------------------modal------------------- */
+.modal {
+  width: 90%;
+  height: 65%;
+}
+/* info */
+.containerInfo {
+  font-size: 15px;
+}
+/* -------------------modal------------------- */
+}
 @media all and (min-width:500px){
  
   #btn-menu:checked ~ .container > #navDinamic{
@@ -1014,6 +1026,27 @@ nav ul{
 }
 /* -------------------modal------------------- */
 
+}
+@media all and  (min-width:700px){
+  /* -------------------modal------------------- */
+.modal {
+  width: 80%;
+  height: 70%;
+}
+}
+@media all and  (min-width:1024px){
+  /* -------------------modal------------------- */
+.modal {
+  width: 60%;
+  height: 80%;
+}
+}
+@media all and  (min-width:1280px){
+  /* -------------------modal------------------- */
+.modal {
+  width: 60%;
+  height: 50%;
+}
 }
 @media all and (min-width:1200px){  
   #rolChampion{
