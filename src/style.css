@@ -496,7 +496,7 @@ font-size: 20px;
 
 .modal {
   width: 40%;
-  height: 87%;
+  height: 95%;
   overflow: hidden;
   background: #5b43e4;
   text-align: center;
@@ -519,7 +519,6 @@ font-size: 20px;
   height: 40px;
   display: flex;
   flex-direction: column;
-  /* position: fixed; */
   position: relative;
   border-radius: 20px;
   padding: 10px;
@@ -542,13 +541,12 @@ font-size: 20px;
       to(#222),
       color-stop(0.5, #fff)
     ) 0 0 no-repeat;
-    -webkit-background-size: 125px;
-    color: rgba(255, 255, 255, 0.1);
-    -webkit-background-clip: text;
-    -webkit-animation-name: shine;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite
-  
+  -webkit-background-size: 125px;
+  color: rgba(255, 255, 255, 0.1);
+  -webkit-background-clip: text;
+  -webkit-animation-name: shine;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
 }
 
 /* contenido del modal: img, nav, chart */
@@ -557,7 +555,6 @@ font-size: 20px;
   padding: 5px;
   display: flex;
   flex-direction: column;
-/*   height: 600px; */
 }
 
 .containerImage {
@@ -579,8 +576,6 @@ font-size: 20px;
   width: 100%;
   font-family: "MedievalSharp", cursive;
   text-shadow: 2px 2px 2px rgb(21, 21, 22);
-  height: 60px;
-  padding-top: 3px;
 }
 
 .descriptionModal a {
@@ -590,7 +585,7 @@ font-size: 20px;
   text-decoration: none;
   text-transform: uppercase;
   width: 80%;
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 9px;
   box-sizing: border-box;
   -webkit-appearance: none;
@@ -615,6 +610,7 @@ font-size: 20px;
   outline: 0;
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
 }
+
 @-webkit-keyframes shine {
   0% {
     background-position: top left;
@@ -632,7 +628,6 @@ font-size: 20px;
   justify-content: center;
   border-radius: 0 0 10px 10px;
   background: black;
- /*  height: 500px; */
 }
 
 /* roles */
@@ -653,7 +648,7 @@ font-size: 20px;
   font-size: 18px;
   flex-direction: column;
   align-items: center;
-  height: 290px;
+  height: 210px;
   justify-content: center;
   font-family: "MedievalSharp", cursive;
   padding: 20px;
@@ -662,9 +657,8 @@ font-size: 20px;
 
 /* padre 2 cajitas img roles + tag */
 .containerRoles1 {
-  background:black;
+  background: black;
   width: 100%;
- 
   display: flex;
   justify-content: center;
   border-radius: 0 0 10px 10px;
@@ -728,7 +722,6 @@ font-size: 20px;
   padding-bottom: 10px;
   padding-top: -10px;
 }
-
 @media all and (min-width:300px){
   #divimageHome{
     display: none;
