@@ -7,7 +7,7 @@ let inputSearch = document.getElementById("inputSearch");
 let selectDificult = document.getElementById("selectDificult");
 /* let containerSlider = document.getElementById("slide-track"); */
 let arrayButton = ["All", "Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
-let button, btnRol = [], textButton, cards = [],array=[], rolChampion;
+let button, btnRol = [], textButton, cards = [], array = [], rolChampion;
 let cerrar = document.getElementById("close");
 let modal = document.getElementById("modal");
 let modalC = document.getElementById("modal-container");
@@ -17,20 +17,20 @@ let arrayNav = ["Champions", "Ranking", "Home", "Download", "Versus"];
 async function carga() {
     await dataChampions().then((data) => {
         arraychampion = data;
-       
+
         const URLactual = window.location;
 
-       /*  console.log("aaaaaaaaaaaaa",URLactual); */
-        
-         const urlM = "/champions";            //URL Milagros
-        //const urlM = "/src/champions.html"; //URL Mariana
+        /*  console.log("URLactual",URLactual); */
+
+        //  const urlM = "/champions";            //URL Milagros
+        const urlM = "/src/champions.html"; //URL Mariana
         if (URLactual.pathname == urlM) {
             printNav();
             recorrerData();
             printButton();
             searchChampion();
             OrderAlpha();
-difficulty();
+            difficulty();
 
         }
         else {
@@ -58,7 +58,7 @@ carga();
  */
 
 function OrderAlpha() {
-    array=arraychampion;
+    array = arraychampion;
     let select = document.getElementById('selectAlpha');
     select.addEventListener('change', function () {
         divChampion.innerHTML = "";
@@ -109,10 +109,10 @@ function difficulty() {
                     searchDificult = arraychampion;
                     break;
                 default:
-                   /*  console.log('default'); */
+                    /*  console.log('default'); */
                     break;
             }
-           /*  console.log("filter:", searchDificult); */
+            /*  console.log("filter:", searchDificult); */
             for (let index = 0; index < searchDificult.length; index++) {
                 const element = searchDificult[index];
                 printChampions(element);
@@ -401,15 +401,6 @@ function printNav() {
         list = document.createElement("li");
         enlace = document.createElement("a");
         enlace.href = arrayNavEnlaces[i];
-      /*   if (arrayNav[i] == arrayNav[2]) {
-            b = document.createElement("img");
-            enlace.appendChild(b);
-            b.src = arrayNav[2].toString();
-            enlace.href = arrayNavEnlaces[i];
-            // console.log(b);
-        } else {
-            enlace.textContent += arrayNav[i].toString();
-        } */
         enlace.textContent += arrayNav[i].toString();
         list.appendChild(enlace);
         item.appendChild(list);
@@ -455,7 +446,7 @@ function printChampions(arraychampion) {
     let idcard = document.getElementById(arraychampion.key);
 
     idcard.addEventListener("click", function () {
-      /*   console.log("arraychampion.key:", arraychampion.key); */
+        /*   console.log("arraychampion.key:", arraychampion.key); */
         printModal(arraychampion);
     });
 
@@ -501,18 +492,7 @@ function filterByRole(btnRol) {
 
 }
 
-/* let arra = []; */
-
-//feliz como una lombriz
-
-/* Para obtener el texto */
-
-
-
 /* ----creando template para slideeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee --- */
-
-
-
 
 /* function slide() {
     let arraySlide = arraychampion.filter(e => (e.info.attack + e.info.defense + e.info.magic + e.info.difficulty) > 20);

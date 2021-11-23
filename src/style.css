@@ -1,103 +1,93 @@
 * {
   box-sizing: border-box;
-  margin:0;
-  padding:0 ;   
-  font-family: 'Lato';  
-  }
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+}
 
 /* ----- style scrollbar div champions----- */
-  .champions::-webkit-scrollbar-track
-  {
-    box-shadow: inset 0 0 6px rgba(133, 163, 209, 0.8);
-    border-radius: 10px;
-  }  
-  .champions::-webkit-scrollbar
-  {    
-    width: 18px;
-    background-color: rgba(0,0,0,0.3);
-  }  
-  .champions::-webkit-scrollbar-thumb
-  {
-  
-    border-radius: 10px;
-    height: 120px;
-    background-image: -webkit-gradient(linear,
-                       left bottom,
-                       left top,
-                       color-stop(0.44, rgb(122,153,217)),
-                       color-stop(0.72, rgb(73,125,189)),
-                       color-stop(0.86, rgb(28,58,148)));
-  }
-  
+.champions::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(133, 163, 209, 0.8);
+  border-radius: 10px;
+}
+.champions::-webkit-scrollbar {
+  width: 18px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.champions::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  height: 120px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(122, 153, 217)),
+    color-stop(0.72, rgb(73, 125, 189)),
+    color-stop(0.86, rgb(28, 58, 148))
+  );
+}
+
 /* ----- End scrollbar div champions----- */
 
 /*------ TagName HEADER and NAV (ul - li - a) -------*/
-header{
+header {
   width: 100%;
   height: 70px;
   background: black;
 }
 
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  max-width: 1300px;
+  margin: auto;
+}
+nav ul li {
+  font-family: sans-serif;
 
-    max-width: 1300px;
-    margin: auto;
-  
-  }
-  nav ul li {
-    font-family: sans-serif;
-   
-    display: inline-block;
-   justify-content: space-between;
-    color: #fff;
-  }
+  display: inline-block;
+  justify-content: space-between;
+  color: #fff;
+}
 
-  nav ul li a {
-    display: inline-block; 
-    color: #fff;
-    font-size: 12px;
-    text-decoration: none;
-    justify-content: space-between;
-    text-transform: uppercase;
-    padding: 20px 10px;
-    
-  
-  } 
-  nav ul li a:hover {
-    color: rgb(165, 218, 230);
- 
-  }
+nav ul li a {
+  display: inline-block;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding: 20px 10px;
+}
+nav ul li a:hover {
+  color: rgb(165, 218, 230);
+}
 
- li a > img{
+li a > img {
   /*   display: inline-block; */
-    display: none;
-    margin: auto;
-    width: 120px;
-    margin-top: -10px;
-  }
-
+  display: none;
+  margin: auto;
+  width: 120px;
+  margin-top: -10px;
+}
 
 /*   ----------------- end nav ----------------------- */
 /* ------------- class section champions -------------- */
 
-.sectionChampions{
- 
+.sectionChampions {
   width: 100%;
 
   height: 1000px;
 
-  background-image:url(https://fondosmil.com/fondo/5089.jpg) ;
+  background-image: url(https://fondosmil.com/fondo/5089.jpg);
   background-position: center;
   background-size: cover;
   padding: 40px;
-
 }
-.sectionHome2{
+.sectionHome2 {
   /* background: url(  http://www.plusgamingmagazine.com/wp-content/uploads/2020/07/LOL_PROMOART_4.jpg
   ); */
   /* background: url(  https://p4.wallpaperbetter.com/wallpaper/647/27/594/neeko-league-of-legends-league-of-legends-video-games-video-game-characters-video-game-girls-hd-wallpaper-preview.jpg
@@ -108,9 +98,8 @@ header{
   height: 1000px;
   background-position: center;
   background-size: cover;
-  
 }
-.sectionChampions2{
+.sectionChampions2 {
   /* background: url(  http://www.plusgamingmagazine.com/wp-content/uploads/2020/07/LOL_PROMOART_4.jpg
   ); */
   /* background: url(  https://p4.wallpaperbetter.com/wallpaper/647/27/594/neeko-league-of-legends-league-of-legends-video-games-video-game-characters-video-game-girls-hd-wallpaper-preview.jpg
@@ -121,10 +110,9 @@ header{
   height: 1000px;
   background-position: center;
   background-size: cover;
- 
 }
 
-.sectionChampions3{
+.sectionChampions3 {
   /* background: url(  http://www.plusgamingmagazine.com/wp-content/uploads/2020/07/LOL_PROMOART_4.jpg
   ); */
   /* background: url(  https://p4.wallpaperbetter.com/wallpaper/647/27/594/neeko-league-of-legends-league-of-legends-video-games-video-game-characters-video-game-girls-hd-wallpaper-preview.jpg
@@ -135,10 +123,9 @@ header{
   height: 1000px;
   background-position: center;
   background-size: cover;
-  
 }
-.search{
-  background-color: rgba(0,0 ,0, 0.9);
+.search {
+  background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 80px;
   margin: auto;
@@ -146,62 +133,57 @@ header{
   display: flex;
   justify-content: right;
   padding: 20px;
-
 }
-#inputSearch{
-width: 100px;
+#inputSearch {
+  width: 100px;
 
-height: 40px; 
-font-family: sans-serif;
-padding: 5px;
-margin-left: 10px;
-margin-right: 10px;
-margin-bottom: 10px;
-background: #a2c7ee;
-font-size: 16px;
+  height: 40px;
+  font-family: sans-serif;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #a2c7ee;
+  font-size: 16px;
+}
 
-  }
+#selectDificult {
+  font-family: sans-serif;
 
-#selectDificult{
-
-    font-family: sans-serif;
-
-    display:none;
-    font-size: 16px;
-    width: 120px;
-    height: 40px;
-    padding: 5px;
-    margin-left: 10px;
-margin-bottom: 10px;
-background: #3386df;
-margin-right: 10px;
-color: white;
-  }
- #rolChampion{
-  
+  display: none;
+  font-size: 16px;
+  width: 120px;
+  height: 40px;
+  padding: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background: #3386df;
+  margin-right: 10px;
+  color: white;
+}
+#rolChampion {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  max-width:100%;
-  background-color: rgba(0,0 ,0, 0.9);
- }
- .containerChampionsRol{
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.containerChampionsRol {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  max-width:100%;
+  max-width: 100%;
   margin: auto;
-  
- }
+}
 .champions {
   background-color: #000000b3;
   display: flex;
   width: 100%;
-  max-width:100%;
+  max-width: 100%;
   height: 770px;
   padding-top: 30px;
   justify-content: space-around;
@@ -211,14 +193,11 @@ color: white;
   flex-wrap: wrap;
   overflow-y: scroll;
   color: white;
-  
- 
-  background-color: rgba(0,0 ,0, 0.9);
 
+  background-color: rgba(0, 0, 0, 0.9);
 }
 /* ----------------------- */
 /* ------Cards Champions----------- */
-
 
 .champions .card {
   position: relative;
@@ -231,9 +210,7 @@ color: white;
   margin-bottom: 30px;
   margin: 20px 15px;
   height: 200px;
- 
 }
-
 
 .champions .card:hover {
   -webkit-transform: translateY(-20px);
@@ -276,7 +253,7 @@ color: white;
   height: 100%;
   bottom: -65%;
   padding: 10px;
-  padding-top:40px;
+  padding-top: 40px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
@@ -287,22 +264,26 @@ color: white;
 
 .champions .card:hover .content {
   bottom: 0;
-  
 }
 .champions .card:nth-child(n) .content {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgb(109, 42, 42)), to(transparent));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgb(109, 42, 42)),
+    to(transparent)
+  );
   background: -webkit-linear-gradient(bottom, black, transparent);
-  background: -o-linear-gradient(bottom, black );
+  background: -o-linear-gradient(bottom, black);
   background: linear-gradient(0deg, black, transparent);
 }
 .champions .card .content h2 {
-  margin: 0 0 10px; 
-  padding: 0;  
+  margin: 0 0 10px;
+  padding: 0;
   font-size: 20px;
   text-transform: uppercase;
   text-shadow: 2px 2px 2px blue;
   color: #fff;
-
 }
 .champions .card .content p {
   margin: 10px;
@@ -321,8 +302,8 @@ color: white;
   height: 60px;
   box-sizing: border-box;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
   border-radius: 0.6em;
   cursor: pointer;
@@ -340,14 +321,13 @@ color: white;
   padding: 20px;
   margin-top: 20px;
 
-
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'Flamenco', cursive;
-
+  font-family: "Flamenco", cursive;
 }
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   color: #fff;
   outline: 0;
 }
@@ -365,70 +345,67 @@ color: white;
 .third:hover {
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
 }
-.btnSearch{
+.btnSearch {
   width: 100px;
   height: 40px;
   box-sizing: border-box;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
   border-radius: 0.6em;
   cursor: pointer;
   font-size: 18px;
   margin: auto;
-/*   padding: 20px; */
+  /*   padding: 20px; */
 }
-.btnSearch:hover, .btnSearch:focus {
+.btnSearch:hover,
+.btnSearch:focus {
   color: #fff;
   outline: 0;
 }
 /* ------ styles two part----- */
-.banner{
-  background-color: rgba(0,0 ,0, 0.9);
+.banner {
+  background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 150px;
 }
-.banner2{
-  background-color: rgba(0,0 ,0, 0.9);
+.banner2 {
+  background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100px;
 }
-h4{
+h4 {
   color: white;
   font-size: 30px;
   text-align: center;
   padding-top: 50px;
   letter-spacing: 1.5px;
 }
-article{
-
+article {
   width: 100%;
   max-width: 500px;
   height: 200px;
-  margin-top: 150px; 
+  margin-top: 150px;
   margin: auto;
-/*  float: right; */
- 
+  /*  float: right; */
 }
-.articleChampions{
-  
+.articleChampions {
   width: 100%;
- /*  max-width: 500px; */
+  /*  max-width: 500px; */
   height: 200px;
-  margin-top: 100px; 
- margin-left: -180px;
- /*  margin: auto; */
-
+  margin-top: 100px;
+  margin-left: -180px;
+  /*  margin: auto; */
 }
 
-#divHome1{
+#divHome1 {
   width: 70%;
   margin: auto !important;
   padding: 70px;
   /* border-radius: 60%; */
 }
-.textArticle{
+.textArticle {
   width: 100%;
   padding: 100px;
   color: white;
@@ -440,18 +417,18 @@ article{
   text-align: center;
   background-color: rgba(0, 0, 0, 0.9);
 }
-article > img{
+article > img {
   display: block;
   margin: auto;
   width: 500px;
 }
 
-footer{
+footer {
   width: 100%;
   height: 90px;
   background: black;
 }
-.textFooter{
+.textFooter {
   text-align: center;
   color: white;
   padding: 20px;
@@ -460,10 +437,10 @@ footer{
   font-size: 12px;
 }
 
-h6{
-color: white;
-text-align: center;
-font-size: 20px;
+h6 {
+  color: white;
+  text-align: center;
+  font-size: 20px;
 }
 
 /* modal */
@@ -725,133 +702,109 @@ font-size: 20px;
 }
 /* ------ aplicate medias queries----- */
 
-
 /* ultima modificacin solucionar la linea webkit 11 */
 /* ultima modificacin solucionar la linea webkit 11 */
 
-@media all and (min-width:300px){
-  #divimageHome{
+@media all and (min-width: 300px) {
+  #divimageHome {
     display: none;
   }
-  .bannere{
+  .bannere {
     display: none;
   }
-  #btn-menu{
+  #btn-menu {
     display: none;
   }
-header{
- /*  height: 100px; */
+  header {
+    /*  height: 100px; */
 
-  padding-left: 20px;
-  padding-top: 10px;
-  
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+  header label {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+  }
+  header label img {
+    display: block;
+    width: 40px;
+  }
+  header label:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  #navDinamic {
+    margin-left: -100%;
+    position: absolute;
+  }
 
-}
-header label {
-  display: block;
-  width: 50px;
-  height: 50px;
-  padding: 5px;
- 
-
-}
-header label img {
-  display: block;
-  width: 40px;
-  
- 
- 
-}
-header label:hover{
-  cursor: pointer;
-  background: rgba(0,0,0,0.3);
-}
-nav ul{
-  flex-direction: column;
-}
-#navDinamic{
-  margin-left: -100%;
-  position: absolute;
-}
-
-  nav ul li  {
-  
+  nav ul li {
     width: 100%;
     display: block;
-  } 
-  nav ul li:hover  {
-  
+  }
+  nav ul li:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
-  } 
- 
-  #btn-menu:checked ~ .container > #navDinamic{
-    margin-left:-10%;
-    width: 580px;   
+  }
+
+  #btn-menu:checked ~ .container > #navDinamic {
+    margin-left: -10%;
+    width: 580px;
     position: relative;
     z-index: 100;
     padding: 20px;
     padding-left: 20px;
     background: black;
     border-radius: 20px;
-    
-
   }
-/* -----------------champions-------------- */
-.sectionChampions{
-  padding: 10px;
-  padding-top: 30px;
-  height: 900px;
-}
-.sectionChampions3{
-  background: url(https://universe.leagueoflegends.com/esimages/garen_first_shield_cover_es_latam__1g3Lc.jpg);
-  width:100%;
-  height: 700px;
-  background-position: center;
-  background-size: cover;
- /*  margin-top: 50px; */
-}
-  #inputSearch{
-    width:150px;
-  }
-  .h2Champions{
-    display: none;
-  }
-  #rolChampion{
-    display: none;
-  }
-  .banner{
-    height: 100px;
+  /* -----------------champions-------------- */
+  .sectionChampions {
     padding: 10px;
+    padding-top: 30px;
+    height: 900px;
   }
-  h4{
+  .sectionChampions3 {
+    background: url(https://universe.leagueoflegends.com/esimages/garen_first_shield_cover_es_latam__1g3Lc.jpg);
+    width: 100%;
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    /*  margin-top: 50px; */
+  }
+  #inputSearch {
+    width: 150px;
+  }
+  .h2Champions {
+    display: none;
+  }
+  #rolChampion {
+    display: none;
+  }
+  .banner {
+    width: 100%;
+    height: 100px;
+    /* padding: 10px; */
+  }
+  h4 {
     color: white;
     font-size: 14px;
     text-align: center;
- /*    padding-top: 90px; */
+    /*    padding-top: 90px; */
     letter-spacing: 1.5px;
   }
-  article{
-  
+  article {
     width: 100%;
     max-width: 300px;
     height: 200px;
- 
+
     padding-top: 50px;
     margin: auto;
-    
   }
-  .textArticle{
-    width: 100%;
-    padding: 20px;
-    color: white;
-    font-size: 18px;
-    font-family: flamenco;
- 
-    margin-bottom: 30px;
-    text-align: center;
-    background-color: rgba(0,0 ,0, 0.9);
-  }
-  .textArticle1{
+  .textArticle {
     width: 100%;
     padding: 20px;
     color: white;
@@ -860,109 +813,116 @@ nav ul{
 
     margin-bottom: 30px;
     text-align: center;
-    background-color: rgba(0,0 ,0, 0.9);
+    background-color: rgba(0, 0, 0, 0.9);
   }
-  figure > img{
+  .textArticle1 {
+    width: 100%;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: flamenco;
+
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  figure > img {
     display: block;
     margin: auto;
     width: 400px;
     margin-bottom: 40px;
   }
-  .articleChampions{
+  .articleChampions {
     margin: auto;
     margin-top: 250px;
-   /*  margin: 20px; */
+    /*  margin: 20px; */
   }
-  .articleChampions #divHome1{
+  .articleChampions #divHome1 {
     background-color: rgba(0, 0, 0, 0.604);
     border-radius: 20px;
     margin: 0;
     padding: 20px;
     width: 90%;
-   
   }
-/* -------------------champions.---------------- */
+  /* -------------------champions.---------------- */
 
-/* -------------------modal------------------- */
-.modal {
-  width: 80%;
-  height: 80%;
-}
-
-/* title modal */
-.divNameRole{
-  width: 80%;
-}
-
-.nameModal{
-  font-size: 100%;
-}
-
-/* info */
-.containerInfo {
-  width: 100%;
-  height: 80%;
-  font-size: 14px;
-}
-/* -------------------modal------------------- */
-}
-@media all and  (min-width:400px){
   /* -------------------modal------------------- */
-.modal {
-  width: 90%;
-  height: 65%;
-}
-/* info */
-.containerInfo {
-  font-size: 15px;
-}
-/* -------------------modal------------------- */
-}
-@media all and (min-width:500px){  
+  .modal {
+    width: 80%;
+    height: 80%;
+  }
 
-  .sectionChampions3{
+  /* title modal */
+  .divNameRole {
+    width: 80%;
+  }
+
+  .nameModal {
+    font-size: 100%;
+  }
+
+  /* info */
+  .containerInfo {
+    width: 100%;
+    height: 80%;
+    font-size: 14px;
+  }
+  /* -------------------modal------------------- */
+}
+@media all and (min-width: 400px) {
+  /* -------------------modal------------------- */
+  .modal {
+    width: 90%;
+    height: 65%;
+  }
+  /* info */
+  .containerInfo {
+    font-size: 15px;
+  }
+  /* -------------------modal------------------- */
+}
+@media all and (min-width: 500px) {
+  .sectionChampions3 {
     background: url(https://i.pinimg.com/736x/c3/6d/30/c36d3095740cb2d95e7dc3ebad195d25.jpg);
-    width:100%;
+    width: 100%;
     height: 700px;
     background-position: center;
     background-size: cover;
-
   }
- 
-  #btn-menu:checked ~ .container > #navDinamic{
-    margin-left:0;
-    width: 100%;   
+
+  #btn-menu:checked ~ .container > #navDinamic {
+    margin-left: 0;
+    width: 100%;
     position: relative;
     padding: 0px;
-   
-    border-radius: 0;  
-    height: 70px;     
+
+    border-radius: 0;
+    height: 70px;
   }
 
-  #navDinamic{
+  #navDinamic {
     margin-left: 0;
     margin: 0;
     position: relative;
   }
-  #btn-menu{
+  #btn-menu {
     display: none;
   }
-  
-  header{
-   /*  height: 100px; */
+
+  header {
+    /*  height: 100px; */
     padding: 10px;
     position: relative;
   }
-  
-    nav ul li  {
-    
-      width: auto;
-      display: block;
-    } 
-    .hide{
-     display: none;
-    } 
- 
+
+  nav ul li {
+    width: auto;
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+
   nav ul {
     display: flex;
     flex-direction: row;
@@ -970,122 +930,107 @@ nav ul{
     justify-content: space-between;
     max-width: 1300px;
     margin: auto;
-  
   }
   nav ul li {
     font-family: sans-serif;
-   
+
     display: inline-block;
-   justify-content: space-between;
+    justify-content: space-between;
     color: #fff;
   }
 
   nav ul li a {
-    display: inline-block; 
+    display: inline-block;
     color: #fff;
     font-size: 12px;
     text-decoration: none;
     justify-content: space-between;
     text-transform: uppercase;
     padding: 20px 10px;
-  
-  } 
-  nav ul li:hover  {
-  
-    box-shadow: 0 0 0;
-  } 
-  #rolChampion{   
-    
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  max-width:100%;
-  background-color: rgba(0,0 ,0, 0.9);
-  padding: 10px;
- 
   }
-  li a > img{
-     display: inline-block; 
+  nav ul li:hover {
+    box-shadow: 0 0 0;
+  }
+  #rolChampion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+  }
+  li a > img {
+    display: inline-block;
     width: 120px;
     margin-top: -10px;
   }
   nav ul li a {
-  
-    font-size: 14px;    
-    } 
-    #inputSearch{
-
-      width: 300px;
-   }
-   #selectDificult{
+    font-size: 14px;
+  }
+  #inputSearch {
+    width: 300px;
+  }
+  #selectDificult {
     font-size: 16px;
     width: 200px;
   }
-  #selectDificult{
-    display:block;
+  #selectDificult {
+    display: block;
   }
- 
-  .h2Champions{
+
+  .h2Champions {
     display: none;
     margin-top: 10px;
   }
-  article{   
-  
+  article {
     max-width: 700px;
     height: 500px;
     margin: 120px;
-
   }
-  .sectionChampions{
-
-    height: 1200px;  
-  
+  .sectionChampions {
+    height: 1200px;
   }
   header label {
     display: none;
-    
-  
   }
 
   /* -------------------modal------------------- */
-.modal {
-  width: 80%;
-  height: 90%;
-}
+  .modal {
+    width: 80%;
+    height: 90%;
+  }
 
-/* title modal */
-.divNameRole{
-  width: 80%;
-}
+  /* title modal */
+  .divNameRole {
+    width: 80%;
+  }
 
-.nameModal{
-  font-size: 2rem;
-}
+  .nameModal {
+    font-size: 2rem;
+  }
 
-/* info */
-.containerInfo {
-  width: 100%;
-  height: 13rem;
-  font-size: 1rem;
-}
-/* -------------------modal------------------- */
-
-}
-@media all and  (min-width:700px){
+  /* info */
+  .containerInfo {
+    width: 100%;
+    height: 13rem;
+    font-size: 1rem;
+  }
   /* -------------------modal------------------- */
-.modal {
-  width: 80%;
-  height: 70%;
 }
-.sectionChampions{
-  height: 950px;
+@media all and (min-width: 700px) {
+  /* -------------------modal------------------- */
+  .modal {
+    width: 80%;
+    height: 70%;
+  }
+  .sectionChampions {
+    height: 950px;
+  }
 }
-}
-@media all and  (min-width:800px){
-  
-  .sectionChampions3{
+@media all and (min-width: 800px) {
+  .sectionChampions3 {
     /* background: url(  http://www.plusgamingmagazine.com/wp-content/uploads/2020/07/LOL_PROMOART_4.jpg
     ); */
     /* background: url(  https://p4.wallpaperbetter.com/wallpaper/647/27/594/neeko-league-of-legends-league-of-legends-video-games-video-game-characters-video-game-girls-hd-wallpaper-preview.jpg
@@ -1096,388 +1041,375 @@ nav ul{
     height: 700px;
     background-position: center;
     background-size: cover;
-    
   }
-  .articleChampions{
-  /*   background-color: rgba(0, 0, 0, 0.01); */
-  /*   border-radius: 20px; */
-  display: flex;
+  .articleChampions {
+    /*   background-color: rgba(0, 0, 0, 0.01); */
+    /*   border-radius: 20px; */
+    display: flex;
     margin-top: 200px;
     padding: 20px;
     width: 90%;
-   height: 400px;
-  
+    height: 400px;
   }
   .articleChampions #divHome1 {
     background-color: rgba(0, 0, 0, 0.01);
-  /*   border-radius: 20px; */
+    /*   border-radius: 20px; */
     margin-top: 400px;
     padding: 20px;
     width: 100%;
-   
   }
+}
+@media all and (min-width: 1024px) {
+  /* -------------------modal------------------- */
+  .modal {
+    width: 60%;
+    height: 80%;
   }
-@media all and  (min-width:1024px){
+}
+@media all and (min-width: 1280px) {
   /* -------------------modal------------------- */
-.modal {
-  width: 60%;
-  height: 80%;
+  .modal {
+    width: 60%;
+    height: 50%;
+  }
 }
-
-}
-@media all and  (min-width:1280px){
-  /* -------------------modal------------------- */
-.modal {
-  width: 60%;
-  height: 50%;
-}
-
-}
-@media all and (min-width:1200px){  
-  #rolChampion{
+@media all and (min-width: 1200px) {
+  #rolChampion {
     width: 20%;
     padding-left: 10px;
     border-radius: 0 0 0 50px;
-
   }
-  .champions{
+  .champions {
     width: 80%;
   }
-  
-  li a > img{
 
+  li a > img {
     width: 150px;
     margin-top: -20px;
-  
   }
   nav ul li a {
-  
-    font-size:16px;    
-  
-  } 
-  .sectionChampions{
+    font-size: 16px;
+  }
+  .sectionChampions {
     height: 950px;
- 
   }
-.h2Champions{
-  display: block;
-  color: #a2c7ee;
- margin-right: 500px; 
-}
-article{
- 
-  max-width: 1200px;
-  margin: 200px;
-  height: 550px;
-  margin: auto;
-  margin-top: 270px;
-  display: flex;
-  justify-content: left;
-
-  
-}
-figure > img{
-  margin-top: 100px;
-  display: block;
-  margin: auto;
-  width: 500px;
-}
-.textArticle{
-  max-width: 500px;
-  padding: 70px;
-  color: white;
-  font-size: 20px;
-  font-family: 'Open Sans';  
-  margin-bottom: 100px;
-  text-align: center;
-  background: linear-gradient(70deg, rgba(46, 42, 42, 0.514), rgba(64, 11, 133, 0.698));
-  border-radius: 60%;
-  height: 550px;
-}
-.textArticle1{
-  max-width: 500px;
-  padding: 80px;
-  color: white;
-  font-size: 20px;
-  font-family: 'Open Sans';
-  text-align: center;
-  background-color: rgba(10, 38, 39, 0.7);
-  border-radius: 60%;
- /*  height: 550px; */
-  
-}
-b{
-  font-size: 30px;
-}
-figure{
-  border-radius: 300px;
-  /* background-color: rgba(0,0 ,0, 0.6); */
-  padding-top: 10px;
-}
-
-.search{
-  border-radius: 50px 0 0 0;
-
-}
-
-/* modal */
-.modal-container {
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background: rgba(14, 13, 13, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background: #3386df;
-  line-height: 25px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.modal {
-  width: 40%;
-  height: 95%;
-  overflow: hidden;
-  background: #5b43e4;
-  text-align: center;
-  color: antiquewhite;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  transition: transform 0;
-  transform: translateX(0%);
-  border-radius: 20px;
-  border-color: #3498db;
-  transition: all 150ms ease-in-out;
-  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
-}
-
-/* -------------Styles container modal---------- */
-
-.divNameRole {
-  width: 90%;
-  height: 40px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border-radius: 20px;
-  padding: 10px;
-  top: -20px;
-  margin-left: 20px;
-  font-size: 22px;
-  letter-spacing: 0.1em;
-}
-.nameModal {
-  width: 100%;
-  text-align: center;
-  font-family: "MedievalSharp", cursive;
-  text-shadow: 2px 2px 2px rgb(21, 21, 22);
-  padding: 15px;
-  background: rgb(241, 235, 235) -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(#222),
-      to(#222),
-      color-stop(0.5, #fff)
-    ) 0 0 no-repeat;
-  -webkit-background-size: 125px;
-  color: rgba(255, 255, 255, 0.1);
-  -webkit-background-clip: text;
-  -webkit-animation-name: shine;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-}
-
-/* contenido del modal: img, nav, chart */
-.containerImageDescrip {
-  width: 100%;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-}
-
-.containerImage {
-  width: 100%;
-}
-
-.imageModal {
-  /* display: block; */
-  display: flex;
-  width: 100%;
-  border-radius: 20px 20px 0 0;
-  border-image-outset: 1.5;
-}
-
-.descriptionModal {
-  display: flex;
-  justify-content: space-around;
-  background: #000;
-  width: 100%;
-  font-family: "MedievalSharp", cursive;
-  text-shadow: 2px 2px 2px rgb(21, 21, 22);
-}
-
-.descriptionModal a {
-  color: #ffffff;
-  font-family: "MedievalSharp", cursive;
-  font-size: 18px;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 80%;
-  padding: 10px;
-  margin-bottom: 9px;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  border-radius: 0.6em;
-  border-color: #3498db;
-  letter-spacing: 0.7px;
-  text-align: center !important;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 2px 2px 2px blue;
-  box-shadow: 0 0 40px 40px #3498db00 inset, 0 0 0 0 #006fe6;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
-}
-
-.descriptionModal a:hover,
-.descriptionModal a:focus {
-  color: #fff;
-  outline: 0;
-  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
-}
-
-@-webkit-keyframes shine {
-  0% {
-    background-position: top left;
+  .h2Champions {
+    display: block;
+    color: #a2c7ee;
+    margin-right: 500px;
   }
-  100% {
-    background-position: top right;
+  article {
+    max-width: 1200px;
+    margin: 200px;
+    height: 550px;
+    margin: auto;
+    margin-top: 270px;
+    display: flex;
+    justify-content: left;
   }
-}
+  figure > img {
+    margin-top: 100px;
+    display: block;
+    margin: auto;
+    width: 500px;
+  }
+  .textArticle {
+    max-width: 500px;
+    padding: 70px;
+    color: white;
+    font-size: 20px;
+    font-family: "Open Sans";
+    margin-bottom: 100px;
+    text-align: center;
+    background: linear-gradient(
+      70deg,
+      rgba(46, 42, 42, 0.514),
+      rgba(64, 11, 133, 0.698)
+    );
+    border-radius: 60%;
+    height: 550px;
+  }
+  .textArticle1 {
+    max-width: 500px;
+    padding: 80px;
+    color: white;
+    font-size: 20px;
+    font-family: "Open Sans";
+    text-align: center;
+    background-color: rgba(10, 38, 39, 0.7);
+    border-radius: 60%;
+    /*  height: 550px; */
+  }
+  b {
+    font-size: 30px;
+  }
+  figure {
+    border-radius: 300px;
+    /* background-color: rgba(0,0 ,0, 0.6); */
+    padding-top: 10px;
+  }
 
-/* div padre de roles en el modal */
-.containerDesAbil {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  border-radius: 0 0 10px 10px;
-  background: black;
-}
+  .search {
+    border-radius: 50px 0 0 0;
+  }
 
-/* roles */
-.containerRoles {
-  background: black;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  border-radius: 0 0 10px 10px;
-}
+  /* modal */
+  .modal-container {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(14, 13, 13, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-/* cajita 1 solo tag img + tag */
-.divTextInfo {
-  background: black;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  font-size: 18px;
-  flex-direction: column;
-  align-items: center;
-  height: 210px;
-  justify-content: center;
-  font-family: "MedievalSharp", cursive;
-  padding: 20px;
-  border-radius: 0 0 10px 10px;
-}
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #3386df;
+    line-height: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
 
-/* padre 2 cajitas img roles + tag */
-.containerRoles1 {
-  background: black;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  border-radius: 0 0 10px 10px;
-}
+  .modal {
+    width: 40%;
+    height: 95%;
+    overflow: hidden;
+    background: #5b43e4;
+    text-align: center;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0;
+    transform: translateX(0%);
+    border-radius: 20px;
+    border-color: #3498db;
+    transition: all 150ms ease-in-out;
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
+  }
 
-/* cajita de 2 tags */
-.div1 {
-  display: flex;
-  flex-direction: column;
-  background: black;
-  width: 180px;
-  font-size: 18px;
-  align-items: center;
-  height: 178px;
-  justify-content: space-between;
-  font-family: "MedievalSharp", cursive;
-  padding: 20px;
-  border-radius: 0 0 10px 10px;
-  height: 210px;
-  padding-top: -20px;
-}
+  /* -------------Styles container modal---------- */
 
-/* gif 1 tag*/
-.imageRoles {
-  display: block;
-  margin: auto;
-  width: 20%;
-  border-radius: 50%;
-}
-/* gif 2 tags*/
-.imageRoles1 {
-  display: block;
-  margin: auto;
-  width: 60%;
-  border-radius: 50%;
-}
+  .divNameRole {
+    width: 90%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 20px;
+    padding: 10px;
+    top: -20px;
+    margin-left: 20px;
+    font-size: 22px;
+    letter-spacing: 0.1em;
+  }
+  .nameModal {
+    width: 100%;
+    text-align: center;
+    font-family: "MedievalSharp", cursive;
+    text-shadow: 2px 2px 2px rgb(21, 21, 22);
+    padding: 15px;
+    background: rgb(241, 235, 235) -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#222),
+        to(#222),
+        color-stop(0.5, #fff)
+      ) 0 0 no-repeat;
+    -webkit-background-size: 125px;
+    color: rgba(255, 255, 255, 0.1);
+    -webkit-background-clip: text;
+    -webkit-animation-name: shine;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+  }
 
-/* info */
-.containerInfo {
-  background: black;
-  width: 100%;
-  height: 210px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  font-family: "MedievalSharp", cursive;
-  padding: 10px 40px 10px 40px;
-  border-radius: 0 0 10px 10px;
-  line-height: 22px;
-}
+  /* contenido del modal: img, nav, chart */
+  .containerImageDescrip {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+  }
 
-/* chart */
-.containerAbilities {
-  background: black;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-  border-radius: 0 0 10px 10px;
-  padding-bottom: 10px;
-  padding-top: -10px;
-}
+  .containerImage {
+    width: 100%;
+  }
 
+  .imageModal {
+    /* display: block; */
+    display: flex;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    border-image-outset: 1.5;
+  }
+
+  .descriptionModal {
+    display: flex;
+    justify-content: space-around;
+    background: #000;
+    width: 100%;
+    font-family: "MedievalSharp", cursive;
+    text-shadow: 2px 2px 2px rgb(21, 21, 22);
+  }
+
+  .descriptionModal a {
+    color: #ffffff;
+    font-family: "MedievalSharp", cursive;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 9px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0.6em;
+    border-color: #3498db;
+    letter-spacing: 0.7px;
+    text-align: center !important;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 2px blue;
+    box-shadow: 0 0 40px 40px #3498db00 inset, 0 0 0 0 #006fe6;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+
+  .descriptionModal a:hover,
+  .descriptionModal a:focus {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #006fe6;
+  }
+
+  @-webkit-keyframes shine {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+
+  /* div padre de roles en el modal */
+  .containerDesAbil {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    border-radius: 0 0 10px 10px;
+    background: black;
+  }
+
+  /* roles */
+  .containerRoles {
+    background: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0 0 10px 10px;
+  }
+
+  /* cajita 1 solo tag img + tag */
+  .divTextInfo {
+    background: black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 18px;
+    flex-direction: column;
+    align-items: center;
+    height: 210px;
+    justify-content: center;
+    font-family: "MedievalSharp", cursive;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  /* padre 2 cajitas img roles + tag */
+  .containerRoles1 {
+    background: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 10px 10px;
+  }
+
+  /* cajita de 2 tags */
+  .div1 {
+    display: flex;
+    flex-direction: column;
+    background: black;
+    width: 180px;
+    font-size: 18px;
+    align-items: center;
+    height: 178px;
+    justify-content: space-between;
+    font-family: "MedievalSharp", cursive;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    height: 210px;
+    padding-top: -20px;
+  }
+
+  /* gif 1 tag*/
+  .imageRoles {
+    display: block;
+    margin: auto;
+    width: 20%;
+    border-radius: 50%;
+  }
+  /* gif 2 tags*/
+  .imageRoles1 {
+    display: block;
+    margin: auto;
+    width: 60%;
+    border-radius: 50%;
+  }
+
+  /* info */
+  .containerInfo {
+    background: black;
+    width: 100%;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: "MedievalSharp", cursive;
+    padding: 10px 40px 10px 40px;
+    border-radius: 0 0 10px 10px;
+    line-height: 22px;
+  }
+
+  /* chart */
+  .containerAbilities {
+    background: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 10px;
+    padding-top: -10px;
+  }
 }
 /* @media all and (min-width:600px){
   
@@ -1674,4 +1606,3 @@ figure{
   }
 
 } */
-
