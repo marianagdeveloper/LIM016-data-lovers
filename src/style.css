@@ -421,6 +421,13 @@ article{
  /*  margin: auto; */
 
 }
+
+#divHome1{
+  width: 70%;
+  margin: auto !important;
+  padding: 70px;
+  /* border-radius: 60%; */
+}
 .textArticle{
   width: 100%;
   padding: 100px;
@@ -733,7 +740,7 @@ font-size: 20px;
     display: none;
   }
 header{
-  height: 100px;
+ /*  height: 100px; */
 
   padding-left: 20px;
   padding-top: 10px;
@@ -790,6 +797,19 @@ nav ul{
 
   }
 /* -----------------champions-------------- */
+.sectionChampions{
+  padding: 10px;
+  padding-top: 30px;
+  height: 900px;
+}
+.sectionChampions3{
+  background: url(https://universe.leagueoflegends.com/esimages/garen_first_shield_cover_es_latam__1g3Lc.jpg);
+  width:100%;
+  height: 700px;
+  background-position: center;
+  background-size: cover;
+ /*  margin-top: 50px; */
+}
   #inputSearch{
     width:150px;
   }
@@ -799,11 +819,15 @@ nav ul{
   #rolChampion{
     display: none;
   }
+  .banner{
+    height: 100px;
+    padding: 10px;
+  }
   h4{
     color: white;
-    font-size: 20px;
+    font-size: 14px;
     text-align: center;
-    padding-top: 50px;
+ /*    padding-top: 90px; */
     letter-spacing: 1.5px;
   }
   article{
@@ -844,6 +868,19 @@ nav ul{
     width: 400px;
     margin-bottom: 40px;
   }
+  .articleChampions{
+    margin: auto;
+    margin-top: 250px;
+   /*  margin: 20px; */
+  }
+  .articleChampions #divHome1{
+    background-color: rgba(0, 0, 0, 0.604);
+    border-radius: 20px;
+    margin: 0;
+    padding: 20px;
+    width: 90%;
+   
+  }
 /* -------------------champions.---------------- */
 
 /* -------------------modal------------------- */
@@ -881,7 +918,16 @@ nav ul{
 }
 /* -------------------modal------------------- */
 }
-@media all and (min-width:500px){
+@media all and (min-width:500px){  
+
+  .sectionChampions3{
+    background: url(https://i.pinimg.com/736x/c3/6d/30/c36d3095740cb2d95e7dc3ebad195d25.jpg);
+    width:100%;
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+
+  }
  
   #btn-menu:checked ~ .container > #navDinamic{
     margin-left:0;
@@ -903,7 +949,7 @@ nav ul{
   }
   
   header{
-    height: 100px;
+   /*  height: 100px; */
     padding: 10px;
     position: relative;
   }
@@ -987,7 +1033,7 @@ nav ul{
   }
   article{   
   
-    max-width: 500px;
+    max-width: 700px;
     height: 500px;
     margin: 120px;
 
@@ -1033,13 +1079,51 @@ nav ul{
   width: 80%;
   height: 70%;
 }
+.sectionChampions{
+  height: 950px;
 }
+}
+@media all and  (min-width:800px){
+  
+  .sectionChampions3{
+    /* background: url(  http://www.plusgamingmagazine.com/wp-content/uploads/2020/07/LOL_PROMOART_4.jpg
+    ); */
+    /* background: url(  https://p4.wallpaperbetter.com/wallpaper/647/27/594/neeko-league-of-legends-league-of-legends-video-games-video-game-characters-video-game-girls-hd-wallpaper-preview.jpg
+    ); */
+    /* background: url(./nekko.jpg); */
+    background: url(./public/section3.gif);
+    width: 100%;
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    
+  }
+  .articleChampions{
+  /*   background-color: rgba(0, 0, 0, 0.01); */
+  /*   border-radius: 20px; */
+  display: flex;
+    margin-top: 200px;
+    padding: 20px;
+    width: 90%;
+   height: 400px;
+  
+  }
+  .articleChampions #divHome1 {
+    background-color: rgba(0, 0, 0, 0.01);
+  /*   border-radius: 20px; */
+    margin-top: 400px;
+    padding: 20px;
+    width: 100%;
+   
+  }
+  }
 @media all and  (min-width:1024px){
   /* -------------------modal------------------- */
 .modal {
   width: 60%;
   height: 80%;
 }
+
 }
 @media all and  (min-width:1280px){
   /* -------------------modal------------------- */
@@ -1047,6 +1131,7 @@ nav ul{
   width: 60%;
   height: 50%;
 }
+
 }
 @media all and (min-width:1200px){  
   #rolChampion{
@@ -1071,7 +1156,7 @@ nav ul{
   
   } 
   .sectionChampions{
-    height: 1000px;
+    height: 950px;
  
   }
 .h2Champions{
@@ -1394,6 +1479,17 @@ figure{
 }
 
 }
+/* @media all and (min-width:600px){
+  
+  .sectionChampions3{
+    background: url(https://festigame.com/wp-content/uploads/elementor/thumbs/league-legends-1963735-p817sjs69vyxvfzvjz32yd75je9bsfv55ebnq7u1rk.jpg);
+    width:100%;
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+
+  }
+}  */
 
 /* @media all and (min-width:300px){
   .sectionVersus{
