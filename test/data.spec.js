@@ -477,7 +477,6 @@ global.fetch = jest.fn(() =>
     json: () => Promise.resolve(data),
   })
 );
-
 beforeEach(() => {
   fetch.mockClear();
 });

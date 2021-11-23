@@ -3,6 +3,8 @@ import { dataChampions, isFilterRol } from './data.js';
 let arraychampion = [];
 let divChampion = document.getElementById("divShowChampions");
 let inputSearch = document.getElementById("inputSearch");
+
+let selectDificult = document.getElementById("selectDificult");
 /* let containerSlider = document.getElementById("slide-track"); */
 let arrayButton = ["All", "Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
 let button, btnRol = [], textButton, cards = [],array=[], rolChampion;
@@ -18,7 +20,7 @@ async function carga() {
        
         const URLactual = window.location;
 
-        console.log("aaaaaaaaaaaaa",URLactual);
+       /*  console.log("aaaaaaaaaaaaa",URLactual); */
         
          const urlM = "/champions";            //URL Milagros
         //const urlM = "/src/champions.html"; //URL Mariana
@@ -28,7 +30,7 @@ async function carga() {
             printButton();
             searchChampion();
             OrderAlpha();
-
+difficulty();
 
         }
         else {
@@ -107,10 +109,10 @@ function difficulty() {
                     searchDificult = arraychampion;
                     break;
                 default:
-                    console.log('default');
+                   /*  console.log('default'); */
                     break;
             }
-            console.log("filter:", searchDificult);
+           /*  console.log("filter:", searchDificult); */
             for (let index = 0; index < searchDificult.length; index++) {
                 const element = searchDificult[index];
                 printChampions(element);
@@ -417,7 +419,7 @@ function printNav() {
 
 /* --Create function PrintChampions in cards-- */
 function recorrerData() {
-    console.log("arreglo array ", arraychampion);
+    /* console.log("arreglo array ", arraychampion); */
     arraychampion.map(element => printChampions(element));
 
 }
@@ -453,7 +455,7 @@ function printChampions(arraychampion) {
     let idcard = document.getElementById(arraychampion.key);
 
     idcard.addEventListener("click", function () {
-        console.log("arraychampion.key:", arraychampion.key);
+      /*   console.log("arraychampion.key:", arraychampion.key); */
         printModal(arraychampion);
     });
 

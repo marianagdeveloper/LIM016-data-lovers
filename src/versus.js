@@ -38,12 +38,15 @@ window.onload = () => {
 }
 
 
-function clearChampion() {
+/* function clearChampion() {
   containerImage.src = "";
+  pName1.innerHTML="";
 }
-
+ */
 function carga2(arraychampion) {
-
+  if(pName1.innerHTML!=""){
+    pName1.innerHTML="";
+  }
   let css = [];
   let ivi = [];
   let name = [];
@@ -52,25 +55,30 @@ function carga2(arraychampion) {
     ivi[i] = document.getElementById(arraychampion[i].id);
     name[i] = arraychampion[i].name;
     ivi[i].addEventListener("click", function () {
-      console.log("aaaa", ivi[i])
-      console.log("imagen ruta " + image[i]);
-      containerImage.addEventListener("click", clearChampion);
-
+   /*    console.log("aaaa", ivi[i])
+      console.log("imagen ruta " + image[i]); */
+     
+      let texto2;
+   
       if (containerImage.src == "") {
 
-        console.log("acaaaaaa");
         containerImage.src = image[i];
         let texto = document.createTextNode(name[i]);
         primero = name[i];
-        console.log("aaaaaaaaaaaaaaaaaaaa", primero);
+     /*    console.log("aaaaaaaaaaaaaaaaaaaa", primero); */
         pName1.appendChild(texto);
 
       } else {
 
+        
+        if(pName2.innerHTML!=""){
+          pName2.innerHTML="";
+        }
+       /*  containerImage2.addEventListener("click", clearChampion); */
         containerImage2.src = image[i];
-        let texto2 = document.createTextNode(name[i]);
+         texto2 = document.createTextNode(name[i]);
         segundo = name[i];
-        console.log("eeeeeeeeeeeeeeeeeeee", segundo);
+        /* console.log("eeeeeeeeeeeeeeeeeeee", segundo); */
         pName2.appendChild(texto2);
         btnvs.addEventListener("click", function championElegido() {
 
@@ -82,12 +90,12 @@ function carga2(arraychampion) {
                   css = arraychampion[i];
                 }
               }
-
+              /* eslint-disable */
               google.charts.setOnLoadCallback(drawChartVersus);
 
               function drawChartVersus() {
 
-                let arrayColors = ["blue", "red"];
+                /* let arrayColors = ["blue", "red"]; */
                 let datas = google.visualization.arrayToDataTable([
 
                   ['Abilities', cpp.name, css.name],
@@ -104,8 +112,6 @@ function carga2(arraychampion) {
                   ['armor', cpp.stats.armor, css.stats.armor],
                   ['hpregen', cpp.stats.hpregen, css.stats.hpregen],
 
-
-
                 ]);
 
                 let view = new google.visualization.DataView(datas);
@@ -120,8 +126,9 @@ function carga2(arraychampion) {
 
                 let options = {
                   title: "The most populares Champions",
-                  width: 950,
+                  width: 450,
                   height: 370,
+                  backgroundColor: "none",
                   bar: { groupWidth: "95%" },
                   legend: { position: "none" },
                 };
@@ -182,7 +189,7 @@ for (let el of tabLinks) {
     const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
 
     const panel = [...tabPanels].filter(el => el.getAttribute("data-index") == index);
-    console.log("poanel ", panel);
+  /*   console.log("poanel ", panel); */
     panel[0].classList.add("active");
 
   });

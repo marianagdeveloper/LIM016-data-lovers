@@ -1,3 +1,30 @@
+button a{
+  color: white;
+}
+h4 a{
+  color: skyblue;
+}
+h4 a:hover{
+  color: steelblue;
+}
+
+#sectionDownload{
+
+  /* background: url(./public/thumb-1920-607280.png); */
+  background: url("public/red.png");  
+  width: 100%;
+  height: 380px;
+  background-position: center;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  padding: 20px;
+  padding-top: 180px;
+  }
+
+
+
+
+/* ------------------------------------------------------------------------ */
 #pName1 {
   text-align: center;
   font-size: 18px;
@@ -99,30 +126,30 @@ a {
   height: 40px;
   padding: 0;
 }
-.sectionVersus {
-  background: url(https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);
-  /*    background: url(   https://pbs.twimg.com/media/COdcRZ9UcAA3CRQ.jpg); */
+
+/* ------------------------------- */
+.sectionVersus{
 
   background: url(  https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);    
   width: 100%;  
   height: 1800px;
   background-position: center;
   background-size: cover;
-  padding: 20px;
-  padding-top: 50px;
-}
-.versus {
-  background: rgba(0, 0, 0, 0.7);
-  width: 80%;
+  padding: 5px;
+ /*  padding-top: 20px; */
+  }
+.versus{
+  background:rgba(0,0,0,0.7) ;
+  width: 100%;
   height: 1700px;
   margin: auto !important;
-  padding: 20px;
+  padding: 5px;
   border-radius: 20px;
 }
-.graficVersus {
+.graficVersus{
   padding: 20px;
   border-radius: 20px;
-  background: rgba(225, 247, 130, 0.6);
+  background: rgba(223, 226, 211, 0.693) ;
   height: 500px;
   margin-top: 20px;
   margin: auto;
@@ -138,28 +165,30 @@ a {
   padding: 20px;
   border-radius: 20px;
 }
-.chooseChampion > h2 {
-  text-align: center;
+.chooseChampion > h2{
+ text-align: center;
 }
-.choose {
+.choose{
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
-h3 {
+
+h3{
   color: white;
   text-align: center;
   margin: 20px;
   font-size: 24px;
 }
-#img1 {
+#img1{
   display: block;
   margin: auto;
 }
-#img2 {
+#img2{
   display: block;
   margin: auto;
 }
+
 
 /* --------------------------END VERSUS ------ versus.html------------------------------------------ */
 
@@ -368,209 +397,6 @@ text-transform: uppercase;
   width: 100%;
  }
 
-/* --------------------------------------------aplicando media query RANKING --------------------------------------------- */
-
-@media all and (min-width:360px){
-  .sectionRanking{
-    height: 1050px;
-  }
-  .sectionRanking2{
-    height: 1300px;
-    padding: 5px;
-  }
-  .containerRanking2{
-    width: 100%;
-    height: 650px; 
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-  }
-
-  .infoRanking{
-    height: 200px;
-    flex-direction: column;
-  }
-  .infoRanking > p{
-    padding: 0;
-    margin: 0;
-    padding-top: 30px;
-    width: 100%;
-    font-size: 14px;
-  }
- .optionRanking{
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 0;
- }
- .optionRanking > label{
-  font-size: 14px;
- }
- .menuRanking{
-   flex-direction: column;
-   height: 100px;
-   margin-bottom: 20px;
- }
- .sectionRanking{
-   padding: 5px;  
- }
- .topRankig{ 
-   width: 100%;
-  height: 1000px;
- }
- .topIcon > h2{
-   padding-top: 15px;
-   margin: 0;
- }
- .sectionGrafic{
-  
-  flex-direction:column ;
- }
- .nameTop > b{
- font-size: 14px;
- }
-.puntajeTop{
-  font-size: 12px;
-}
-.grafic{
-  display:none;
-}
-.div-descripVideo{
-  margin: 0;
-padding: 5px;
-width: 100%;
-
-}
-.div-descripVideo >h3{
-
-  padding: 20px;
-  width: 100%;
-  margin: 0;
-  margin-top: 30px;
- text-align: center;
- font-size: 18px;
-  }
-  .div-descripVideo >p{
-    padding: 20px;
-    width: 100%;
-    margin: 0;
-    line-height: normal;
-    font-size: 15px;
-    }
-    .div-videoRanking{
-      margin: 0;
-padding: 5px;
-width: 100%;
-margin-top: 20px;
-padding-bottom: 20px;
-    }
-   
-
-
-
-}
-@media all and (min-width:650px){
-
-  .sectionRanking2{
-    height: 1380px;
-    padding: 5px;
-  }
-  .containerRanking2{
-    width: 100%;
-    height: 650px; 
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
-  }
-  .sectionRanking2{
-    height: 700px;
-    padding: 20px;
-  }
-  .sectionGrafic{
-  
-    flex-direction:row ;
-    
-   }
- .menuRanking{
-   margin-bottom: 30px;
- }
-
-  .grafic{
-    display:block;
-  }
-  .div-videoRanking{
-    margin: 10;
-padding: 15px;
-
-  }
-
-}
-@media all and (min-width:1000px){
- 
-  .sectionRanking2{
-    height: 830px;
-    padding: 50px;
-  }
-  .containerRanking2{
-    height: 730px;
-    padding: 20px;
-  }
-
-  .sectionRanking{
-    padding: 30px 50px 50px 50px;
-    height: 1080px;
-  }
-  .topRankig{
-    margin-bottom: 50px;
-  }
- 
-  .menuRanking{
-    flex-direction: row;
-    height: 80px;
-    margin-bottom: 0;
-}
-.div-descripVideo >p{
-  padding: 40px;
-  width: 100%;
- }
-
-  .div-videoRanking{
-    padding: 20px;
-    padding-bottom: 0px;
-   margin-right:20px;
-   margin-bottom: 20px;
-  }
-  .div-videoRanking > video{
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-  }
-  .div-videoRanking>p{
-    padding-left: 20px;
-    padding-right: 20px;
-
-  }
-  .infoRanking{
-    flex-direction: row;
-    height: 150px;   
-    }
-.optionRanking{
-  width: 70%;
-    padding: 15px;
-    display: flex;
-    justify-content: space-around;
-}
-  .infoRanking > p{
-    padding: 0;
-    margin: 0;
-    padding-top: 30px;
-    width: 50%;
-    font-size: 16px;
-  }
-  .optionRanking > label{
-    font-size: 18px;
-    color: white;
-    font-family: "MedievalSharp", cursive;
-    }
-}
 
 /* --------------------------END RANKING ------ ranking.html------------------------------------------ */
 
@@ -601,7 +427,7 @@ margin-top: 190px;
   padding: 20px;
   padding-top: 290px;
   }
-#divHome{
+.divHome{
 background:rgba(0,0,0,0.7) ;
 width: 100%;
 margin: auto !important;
@@ -609,14 +435,8 @@ padding: 20px;
 border-radius: 20px;
 }
 
-#divHome1{
-  width: 70%;
-  margin: auto !important;
-  padding: 70px;
-  border-radius: 60%;
-}
 
-#h1Home{
+.h1Home{
 text-align: center;
 color:white;
 font-size: 18px;
@@ -627,7 +447,7 @@ padding: 10px;
 font-family: 'MedievalSharp', cursive;
 }
 
-#pHome{
+.pHome{
 text-align: center;
 color:white;
 /* padding: 40px; */
@@ -639,14 +459,14 @@ letter-spacing: 0.3px;
 font-family: Arial, Helvetica, sans-serif;
 }
 
-#seeMore{
+.seeMore{
 margin: auto !important;
 font-size: 12px;
 width: 100px;
 height: 40px;
 padding: 10px;
 }
-#divButton{
+.divButton{
  display: flex;
  justify-content: center;
  margin-top: 20px;
@@ -909,6 +729,209 @@ padding: 10px;
   justify-items: center;
   cursor: pointer;
 }
+/* --------------------------------------------aplicando media query RANKING --------------------------------------------- */
+
+@media all and (min-width:360px){
+  .sectionRanking{
+    height: 1050px;
+  }
+  .sectionRanking2{
+    height: 1300px;
+    padding: 5px;
+  }
+  .containerRanking2{
+    width: 100%;
+    height: 650px; 
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .infoRanking{
+    height: 200px;
+    flex-direction: column;
+  }
+  .infoRanking > p{
+    padding: 0;
+    margin: 0;
+    padding-top: 30px;
+    width: 100%;
+    font-size: 14px;
+  }
+ .optionRanking{
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+ }
+ .optionRanking > label{
+  font-size: 14px;
+ }
+ .menuRanking{
+   flex-direction: column;
+   height: 100px;
+   margin-bottom: 20px;
+ }
+ .sectionRanking{
+   padding: 5px;  
+ }
+ .topRankig{ 
+   width: 100%;
+  height: 1000px;
+ }
+ .topIcon > h2{
+   padding-top: 15px;
+   margin: 0;
+ }
+ .sectionGrafic{
+  
+  flex-direction:column ;
+ }
+ .nameTop > b{
+ font-size: 14px;
+ }
+.puntajeTop{
+  font-size: 12px;
+}
+.grafic{
+  display:none;
+}
+.div-descripVideo{
+  margin: 0;
+padding: 5px;
+width: 100%;
+
+}
+.div-descripVideo >h3{
+
+  padding: 20px;
+  width: 100%;
+  margin: 0;
+  margin-top: 30px;
+ text-align: center;
+ font-size: 18px;
+  }
+  .div-descripVideo >p{
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+    line-height: normal;
+    font-size: 15px;
+    }
+    .div-videoRanking{
+      margin: 0;
+padding: 5px;
+width: 100%;
+margin-top: 20px;
+padding-bottom: 20px;
+    }
+   
+
+
+
+}
+@media all and (min-width:650px){
+
+  .sectionRanking2{
+    height: 1380px;
+    padding: 5px;
+  }
+  .containerRanking2{
+    width: 100%;
+    height: 650px; 
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+  }
+  .sectionRanking2{
+    height: 700px;
+    padding: 20px;
+  }
+  .sectionGrafic{
+  
+    flex-direction:row ;
+    
+   }
+ .menuRanking{
+   margin-bottom: 30px;
+ }
+
+  .grafic{
+    display:block;
+  }
+  .div-videoRanking{
+    margin: 10;
+padding: 15px;
+
+  }
+
+}
+@media all and (min-width:1000px){
+ 
+  .sectionRanking2{
+    height: 830px;
+    padding: 50px;
+  }
+  .containerRanking2{
+    height: 730px;
+    padding: 20px;
+  }
+
+  .sectionRanking{
+    padding: 30px 50px 50px 50px;
+    height: 1080px;
+  }
+  .topRankig{
+    margin-bottom: 50px;
+  }
+ 
+  .menuRanking{
+    flex-direction: row;
+    height: 80px;
+    margin-bottom: 0;
+}
+.div-descripVideo >p{
+  padding: 40px;
+  width: 100%;
+ }
+
+  .div-videoRanking{
+    padding: 20px;
+    padding-bottom: 0px;
+   margin-right:20px;
+   margin-bottom: 20px;
+  }
+  .div-videoRanking > video{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  .div-videoRanking>p{
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+  .infoRanking{
+    flex-direction: row;
+    height: 150px;   
+    }
+.optionRanking{
+  width: 70%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+  .infoRanking > p{
+    padding: 0;
+    margin: 0;
+    padding-top: 30px;
+    width: 50%;
+    font-size: 16px;
+  }
+  .optionRanking > label{
+    font-size: 18px;
+    color: white;
+    font-family: "MedievalSharp", cursive;
+    }
+}
 
 
 @media all and (min-width:500px){
@@ -960,7 +983,7 @@ padding: 10px;
              padding-top: 390px;
              }
 
-        #divHome{
+        .divHome{
          
             width: 70%;
             border-radius: 20px;
@@ -1036,7 +1059,7 @@ padding: 10px;
       padding: 20px;
       padding-top: 290px;
       } */
-    #divHome{
+    .divHome{
   
     width: 35%;
     border-radius: 50%;
@@ -1048,7 +1071,7 @@ padding: 10px;
 margin-top: 40px;
 font-family: "Flamenco";
     }
-    #pHome{
+    .pHome{
   padding: 30px;
     }
     #navDinamic ul{
@@ -1056,13 +1079,13 @@ font-family: "Flamenco";
      display: flex;
      justify-content: space-evenly;
     }
-    #sectionHome2 #divHome{
+    #sectionHome2 .divHome{
 /* margin-top: 400px; */
       width: 30%;
       border-radius: 50%;
       height: 300px;
       }
-      #sectionHome2 #divHome p {
+      #sectionHome2 .divHome p {
         /* margin-top: 400px; */
              margin-top: 30px;
               }
@@ -1107,6 +1130,232 @@ font-family: "Flamenco";
 }
 
 }
+
+@media all and (min-width:300px){
+  .sectionVersus{
+    height: 2000px;
+  }
+  .versus{
+    height: 1980px;
+  }
+  .versus h3{
+    font-size: 16px;
+  }
+  .graficVersus{
+    height: 400px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .pVersus{
+    margin: 10px;
+    padding: 20px;
+    font-size: 14px;
+    background: rgba(160, 193, 255, 0.748);
+    border-radius: 20px;
+  }
+  .tabs{
+    flex-direction: column;
+  }
+  .tabs-container{
+    margin-top: 5px 0px 0px 0px;
+    padding: 10px;
+
+  }
+  .choose{
+    flex-direction: column;
+    padding: 10px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+  }
+  .chooseChampion{
+    margin: auto;
+    margin-top: 20px;
+  }
+  h4  {
+    margin: 0;
+    padding-top: 20px;
+  }
+/*   .graficVersus{
+    margin: 0;
+    padding: 0;
+  } */
+
+}
+@media all and (min-width:600px){
+
+.graficVersus{
+  height: 400px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+ width: 80%;
+}
+.tabs{
+  flex-direction: row;
+}
+.sectionVersus{
+  height: 1750px;
+}
+.versus{
+  height: 1730px;
+}
+}
+@media all and (min-width:900px){
+  .choose{
+    flex-direction: row;
+    padding: 10px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+  }
+  .sectionVersus{
+    height: 1450px;
+  }
+  .versus{
+    height: 1430px;
+  }
+  .pVersus{
+    margin: 10px;
+    padding: 20px;
+    font-size: 16px;
+    background: rgba(235, 225, 149, 0.72);
+    border-radius: 20px;
+  }
+
+}
+
+@media all and (min-width:1000px){
+  .graficVersus{
+    width: 45%;
+  }
+  #sectionDownload{
+
+    /* background: url(./public/thumb-1920-607280.png); */
+    background: url("public/red.png");  
+    width: 100%;
+    height: 580px;
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    padding: 20px;
+    padding-top: 180px;
+    }
+  .pVersus{    
+   
+    padding: 20px;
+    font-size: 16px;
+    background: rgba(235, 225, 149, 0.72);
+    border-radius: 20px;
+    width: 85%;
+    margin: auto;
+  }
+  
+  .bannere{  
+    margin-top: 0px;    
+  }
+ 
+  .versus h3{
+    font-size: 18px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .header-content{
+ 
+   margin-top: 200px;
+  }
+  #sectionHome{
+
+    background: url(./public/thumb-1920-607280.png);   
+    height: 580px;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    padding-top: 180px;
+    }
+  /*   #sectionHome2{
+    margin-top: 190px;
+      background: url(./public/wallpaperfucs.jpg);
+      width: 100%;
+      height: 470px;
+      background-position: center;
+      background-size: cover;
+      padding: 20px;
+      padding-top: 290px;
+      } */
+    .divHome{
+  
+    width: 35%;
+    border-radius: 50%;
+    height: 320px;
+    }
+   
+    #h1Home{
+/*   padding: 10px; */
+margin-top: 40px;
+font-family: "Flamenco";
+    }
+    .pHome{
+  padding: 30px;
+    }
+    #navDinamic ul{
+      max-width: 900px;
+     display: flex;
+     justify-content: space-evenly;
+    }
+    #sectionHome2 .divHome{
+/* margin-top: 400px; */
+      width: 30%;
+      border-radius: 50%;
+      height: 300px;
+      }
+      #sectionHome2 .divHome p {
+        /* margin-top: 400px; */
+             margin-top: 30px;
+              }
+      #sectionHome2{
+        /*  margin-top: 190px; */
+           background: url(./public/wallpaper.jpg);
+           width: 100%;
+           height: 600px;
+           background-position: center;
+           background-size: cover;
+           
+           padding: 20px;
+           padding-top: 200px;
+           }
+    .footerI {
+      width: 100%;
+      margin-top: 0px;
+      justify-content: space-around ;
+      align-items: center;
+      background: black;
+      display: flex;
+     /*  padding-top: 20px; */
+      flex-direction: row;
+      padding: 10px;
+      height: 100px;
+    }
+    
+.footerI > .ulFooter {
+  display: flex;
+  list-style-type: none;
+/*   padding-top: 10px; */
+ justify-content: center;
+
+  width: 40%;
+  margin-top: 10px;
+ 
+}
+.textFooter{
+  
+  width: 60%;
+  padding-top: 10px;
+
+}
+
+}
 @media all and (min-width:1200px){ 
     .header-content{
      padding: 0;
@@ -1124,7 +1373,7 @@ font-family: "Flamenco";
       height: 780px;
      padding-top: 300px;
       }
-      #divHome{     
+      .divHome{     
           width: 30%;
           border-radius: 50%;
           height: 350px;
@@ -1134,11 +1383,11 @@ font-family: "Flamenco";
             margin-top: 50px;
             font-family: "Flamenco";
                 }
-                #pHome{
+                .pHome{
               padding: 40px;
                 }
                 
-#sectionHome2 #divHome{
+#sectionHome2 .divHome{
   /* margin-top: 400px; */
         width: 25%;
         border-radius: 50%;
@@ -1146,7 +1395,7 @@ font-family: "Flamenco";
        
    
         }
-         #divHome p{
+         .divHome p{
           /* margin-top: 400px; */
                font-family: "Lato";
                font-size: 16px;
@@ -1172,7 +1421,7 @@ font-family: "Flamenco";
         }
 
      
-        #sectionHome2 #divHome p {
+        #sectionHome2 .divHome p {
           /* margin-top: 400px; */
                margin-top: 30px;
                padding-bottom: 20px;
