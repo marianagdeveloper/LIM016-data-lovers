@@ -7,7 +7,7 @@
 * [1. Resumen del proyecto](#1--resumen-del-proyecto)
 * [2. Objetivos de aprendizaje](#2-objetivos-de-aprendizaje)
 * [3. Consideraciones generales](#3-consideraciones-generales)
-* [4. Historias de usuario](#4-Historias de usuario)
+* [4. Historias de usuario](#4-historias-de-usuario)
 * [5. Hacker edition](#5-hacker-edition)
 * [6. Consideraciones técnicas](#6-consideraciones-técnicas)
 * [7. Checklist](#7-checklist)
