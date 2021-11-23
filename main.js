@@ -18,13 +18,8 @@ async function carga() {
     await dataChampions().then((data) => {
         arraychampion = data;
 
-        const URLactual = window.location;
-
-        /*  console.log("URLactual",URLactual); */
-
-         const urlM = "/champions";      //URL Milagros
-        // const urlM = "/src/champions.html"; //URL Mariana
-        if (URLactual.pathname == urlM) {
+      
+        if (window.location.toString().includes("champions")) {
             printNav();
             recorrerData();
             printButton();
